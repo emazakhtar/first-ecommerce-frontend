@@ -19,7 +19,11 @@ export function fetchAllProducts() {
 //   brand: ["apple", "samsung", "oppo"],
 //   category: ["laptops", "smartphones", "perfumes"],
 // };
-export function fetchProductByFilter(filter, sort) {
+
+// filter = { category: ["laptops", "smartphones"] };
+// sort = {_sort:"price",_order:"asc"};
+// pagination = {_page:1,_limit:10}  url:_page=1&_limit=10
+export function fetchProductByFilter(filter, sort, pagination) {
   let queryString = "";
   for (let key in filter) {
     let filterBySomethingArray = filter[key];
@@ -31,12 +35,40 @@ export function fetchProductByFilter(filter, sort) {
   for (let key in sort) {
     queryString += `${key}=${sort[key]}&`;
   }
+  for (let key in pagination) {
+    queryString += `${key}=${pagination[key]}&`;
+  }
 
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
     const response = await fetch(
       "http://localhost:8080/products?" + queryString
     );
+    const data = await response.json();
+    const totalItems = await response.headers.get("X-Total-Count");
+    resolve({ data: { products: data, totalItems: totalItems } });
+  });
+}
+export function fetchProductById(id) {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch("http://localhost:8080/products/" + id);
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function fetchBrand() {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch("http://localhost:8080/brand");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function fetchCategory() {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch("http://localhost:8080/category");
     const data = await response.json();
     resolve({ data });
   });

@@ -1,15 +1,23 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchCount } from "./productAPI";
+import { checkUser, createUser } from "./authAPI";
 
 const initialState = {
-  users: {},
+  LoggedInUser: null,
   status: "idle",
+  error: null,
 };
 
-export const incrementAsync = createAsyncThunk(
-  "counter/fetchCount",
-  async (amount) => {
-    const response = await fetchCount(amount);
+export const createUserAsync = createAsyncThunk(
+  "auth/createUser",
+  async ({ email, password }) => {
+    const response = await createUser({ email, password });
+    return response.data;
+  }
+);
+export const checkUserAsync = createAsyncThunk(
+  "auth/checkUser",
+  async (data) => {
+    const response = await checkUser(data);
     return response.data;
   }
 );
@@ -33,18 +41,30 @@ export const authSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(incrementAsync.pending, (state) => {
+      .addCase(createUserAsync.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(incrementAsync.fulfilled, (state, action) => {
+      .addCase(createUserAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.value += action.payload;
+        state.LoggedInUser = action.payload;
+      })
+      .addCase(checkUserAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(checkUserAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.LoggedInUser = action.payload;
+      })
+      .addCase(checkUserAsync.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.error;
       });
   },
 });
 
 export const { increment, decrement, incrementByAmount } = authSlice.actions;
 
-export const selectProduct = (state) => state.product.products;
+export const selectLoggedInUser = (state) => state.auth.LoggedInUser;
+export const selectError = (state) => state.auth.error;
 
 export default authSlice.reducer;
