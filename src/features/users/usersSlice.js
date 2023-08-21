@@ -1,0 +1,58 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { loadUsersInfo, updateUser } from "./usersAPI";
+
+const initialState = {
+  LoggedInUserInfo: null,
+  status: "idle",
+  error: null,
+};
+
+export const updateUserAsync = createAsyncThunk(
+  "user/updateUser",
+  async (data) => {
+    const response = await updateUser(data);
+    return response.data;
+  }
+);
+export const loadUsersInfoAsync = createAsyncThunk(
+  "user/loadUsersInfo",
+  async (id) => {
+    const response = await loadUsersInfo(id);
+    return response.data;
+  }
+);
+
+export const usersSlice = createSlice({
+  name: "user",
+  initialState,
+
+  reducers: {
+    resetUserInfo: (state) => {
+      state.LoggedInUserInfo = null;
+    },
+  },
+
+  extraReducers: (builder) => {
+    builder
+      .addCase(updateUserAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(updateUserAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.LoggedInUserInfo = action.payload;
+      })
+      .addCase(loadUsersInfoAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(loadUsersInfoAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.LoggedInUserInfo = action.payload[0];
+      });
+  },
+});
+
+export const { resetUserInfo } = usersSlice.actions;
+
+export const selectLoggedInUserInfo = (state) => state.user.LoggedInUserInfo;
+
+export default usersSlice.reducer;

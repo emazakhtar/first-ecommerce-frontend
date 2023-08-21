@@ -4,7 +4,16 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductByIdAsync, selectProduct } from "../productSlice";
+import {
+  fetchProductByIdAsync,
+  selectProduct,
+  selectProductListStatus,
+} from "../productSlice";
+import { selectLoggedInUser } from "../../auth/authSlice";
+import { addToCartAsync, selectCart } from "../../cart/cartSlice";
+import { discountedPrice } from "../../../app/constants";
+import { useAlert } from "react-alert";
+import { Grid } from "react-loader-spinner";
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
   { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
@@ -31,18 +40,52 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 function ProductDetail() {
+  const user = useSelector(selectLoggedInUser);
   const dispatch = useDispatch();
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector(selectProduct);
   const params = useParams();
+  const cartItems = useSelector(selectCart);
+  const alert = useAlert();
+  const status = useSelector(selectProductListStatus);
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
   }, [dispatch, params.id]);
 
+  const handleCart = (e) => {
+    e.preventDefault();
+    if (cartItems.findIndex((item) => item.product_id === product.id) < 0) {
+      const newCartItem = {
+        ...product,
+        quantity: 1,
+        user: user.id,
+        product_id: product.id,
+      };
+      delete newCartItem["id"];
+      dispatch(addToCartAsync(newCartItem));
+      // it will be based on server response of backend
+      alert.success("item added to cart");
+    } else {
+      alert.error("item already added to cart");
+    }
+  };
+
   return (
     <div className="bg-white">
+      {status === "loading" && (
+        <Grid
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      )}
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
@@ -131,6 +174,9 @@ function ProductDetail() {
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
               <p className="text-3xl tracking-tight text-gray-900">
+                ${discountedPrice(product.price, product.discountPercentage)}
+              </p>
+              <p className="line-through text-2xl tracking-tight text-gray-500">
                 ${product.price}
               </p>
 
@@ -279,13 +325,19 @@ function ProductDetail() {
                     </div>
                   </RadioGroup>
                 </div>
-
-                <button
-                  type="submit"
-                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  Add to Cart
-                </button>
+                {product.stock > 0 ? (
+                  <button
+                    onClick={(e) => handleCart(e)}
+                    type="submit"
+                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  >
+                    Add to Cart
+                  </button>
+                ) : (
+                  <div className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                    Out Of Stock
+                  </div>
+                )}
               </form>
             </div>
 

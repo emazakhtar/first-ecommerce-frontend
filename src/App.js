@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -8,6 +8,25 @@ import CartPage from "./pages/CartPage";
 import Checkout from "./pages/Checkout";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Protected from "./features/auth/components/Protected";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllCartAsync } from "./features/cart/cartSlice";
+import { selectLoggedInUser } from "./features/auth/authSlice";
+import OrderSuccessPage from "./pages/OrderSuccessPage";
+import PageNotFound from "./pages/404";
+import MyOrdersPage from "./pages/MyOrdersPage";
+import { loadUsersInfoAsync } from "./features/users/usersSlice";
+import Logout from "./features/auth/components/Logout";
+import ProfilePage from "./pages/ProfilePage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import AdminOrdersPage from "./pages/AdminOrdersPage";
+import AdminProductListPage from "./pages/AdminProductListPage";
+import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
+import AdminProductEditForm from "./features/admin/components/AdminProductEditForm";
+import AdminOrderUpdateForm from "./features/admin/components/AdminOrderUpdateForm";
+import {
+  fetchBrandAsync,
+  fetchCategoryAsync,
+} from "./features/products/productSlice";
 
 const router = createBrowserRouter([
   {
@@ -51,8 +70,101 @@ const router = createBrowserRouter([
       </Protected>
     ),
   },
+  {
+    path: "/my-orders",
+    element: (
+      <Protected>
+        <MyOrdersPage></MyOrdersPage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/order-success/:id",
+    element: (
+      <Protected>
+        <OrderSuccessPage></OrderSuccessPage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/logout",
+    element: (
+      <Protected>
+        <Logout></Logout>
+      </Protected>
+    ),
+  },
+  {
+    path: "/profile",
+    element: (
+      <Protected>
+        <ProfilePage></ProfilePage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPasswordPage></ForgotPasswordPage>,
+  },
+  {
+    path: "/admin/orders",
+
+    element: (
+      <ProtectedAdmin>
+        <AdminOrdersPage />
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/home",
+    element: (
+      <ProtectedAdmin>
+        <AdminProductListPage />
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/product-edit-form/:id",
+    element: (
+      <ProtectedAdmin>
+        <AdminProductEditForm></AdminProductEditForm>
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/order-update-form/:id",
+    element: (
+      <ProtectedAdmin>
+        <AdminOrderUpdateForm></AdminOrderUpdateForm>
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/product-add-form",
+    element: (
+      <ProtectedAdmin>
+        <AdminProductEditForm></AdminProductEditForm>
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "*",
+    element: <PageNotFound></PageNotFound>,
+  },
 ]);
+
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectLoggedInUser);
+
+  useEffect(() => {
+    if (user) {
+      dispatch(loadUsersInfoAsync(user.id));
+      dispatch(fetchAllCartAsync(user.id));
+      dispatch(fetchBrandAsync());
+      dispatch(fetchCategoryAsync());
+    }
+  }, [dispatch, user]);
   return (
     <div className="App">
       <RouterProvider router={router} />

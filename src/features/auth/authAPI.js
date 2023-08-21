@@ -1,9 +1,14 @@
-export function createUser({ email, password }) {
+export function createUser({ email, password, address, role }) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
     const response = await fetch("http://localhost:8080/user", {
       method: "POST",
-      body: JSON.stringify({ email: email, password: password }),
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        address: address,
+        role: role,
+      }),
       headers: { "content-type": "application/json" },
     });
     const data = await response.json();
@@ -15,11 +20,7 @@ export function checkUser(userData) {
     const email = userData.email;
     const password = userData.password;
 
-    const response = await fetch("http://localhost:8080/user?email=" + email, {
-      method: "GET",
-      // body: JSON.stringify(userData),
-      // headers: { "content-type": "application/json" },
-    });
+    const response = await fetch("http://localhost:8080/user?email=" + email);
     const data = await response.json();
 
     if (data.length > 0) {
@@ -32,5 +33,11 @@ export function checkUser(userData) {
     } else {
       reject({ message: "no user exists" });
     }
+  });
+}
+export function signOut(userId) {
+  return new Promise(async (resolve) => {
+    // on server we will remove user session info
+    resolve({ data: "success" });
   });
 }

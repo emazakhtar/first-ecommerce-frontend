@@ -10,7 +10,6 @@ import {
   Squares2X2Icon,
   StarIcon,
 } from "@heroicons/react/20/solid";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -19,11 +18,11 @@ import {
   selectTotalItems,
   selectBrand,
   selectCategory,
-  selectProductListStatus,
-} from "../productSlice";
-import { ITEMS_PER_PAGE } from "../../../app/constants";
+  fetchBrandAsync,
+  fetchCategoryAsync,
+} from "../../products/productSlice";
+import { ITEMS_PER_PAGE, discountedPrice } from "../../../app/constants";
 import Pagination from "../../common/Pagination";
-import { Grid } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -40,7 +39,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function ProductList() {
+function AdminProductList() {
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const products = useSelector(selectAllProducts);
@@ -50,7 +49,7 @@ function ProductList() {
   const [filter, setFilter] = useState({});
   const [sort, setSort] = useState({});
   const [page, setPage] = useState(1);
-  const status = useSelector(selectProductListStatus);
+
   const filters = [
     {
       id: "brand",
@@ -76,6 +75,11 @@ function ProductList() {
     // why here why not after click of brand or category
     setPage(1);
   }, [totalItems]);
+
+  useEffect(() => {
+    dispatch(fetchBrandAsync());
+    dispatch(fetchCategoryAsync());
+  }, [dispatch]);
 
   const handleFilter = (e, option, section) => {
     console.log(section.id, option.value, e.target.checked);
@@ -206,7 +210,7 @@ function ProductList() {
                   filters={filters}
                 ></DesktopFilter>
                 {/* Product grid */}
-                <ProductGrid products={products} status={status}></ProductGrid>
+                <ProductGrid products={products}></ProductGrid>
                 {/* Product grid end  */}
               </div>
             </section>
@@ -400,72 +404,84 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
     </form>
   );
 }
-function ProductGrid({ products, status }) {
+function ProductGrid({ products }) {
   return (
     <div className="lg:col-span-3">
       {/* this is our products list  */}
-
+      <Link
+        to={`/admin/product-add-form`}
+        className="mx-10 rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+        Add Product
+      </Link>
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {status === "loading" ? (
-              <Grid
-                height="80"
-                width="80"
-                color="#4fa94d"
-                ariaLabel="grid-loading"
-                radius="12.5"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-              />
-            ) : null}
             {products.map((product, index) => (
-              <Link to={`/product-detail/${product.id}`}>
-                <div
-                  key={index}
-                  className="group relative border-solid border-2 border-gray-200 p-2"
-                >
-                  <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
-                    <img
-                      src={product.thumbnail}
-                      alt={product.title}
-                      className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                    />
-                  </div>
-                  <div className="mt-4 flex justify-between">
-                    <div>
-                      <h3 className="text-sm text-gray-700">
-                        <div href={product.thumbnail}>
-                          <span
-                            aria-hidden="true"
-                            className="absolute inset-0"
-                          />
-                          {product.title}
-                        </div>
-                      </h3>
-                      <p className="mt-1 text-sm text-gray-500">
-                        <StarIcon className="w-6 h-6 inline "></StarIcon>
-                        <span className="align-bottom">{product.rating}</span>
-                      </p>
+              <div>
+                <Link to={`/product-detail/${product.id}`}>
+                  <div
+                    key={index}
+                    className="group relative border-solid border-2 border-gray-200 p-2"
+                  >
+                    <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+                      <img
+                        src={product.thumbnail}
+                        alt={product.title}
+                        className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                      />
                     </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">
-                        $
-                        {Math.round(
-                          product.price * (1 - product.discountPercentage / 100)
-                        )}
-                      </p>
-                      <p className="line-through text-sm font-medium text-gray-400">
-                        ${product.price}
-                      </p>
+                    <div className="mt-4 flex justify-between">
+                      <div>
+                        <h3 className="text-sm text-gray-700">
+                          <div href={product.thumbnail}>
+                            <span
+                              aria-hidden="true"
+                              className="absolute inset-0"
+                            />
+                            {product.title}
+                          </div>
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-500">
+                          <StarIcon className="w-6 h-6 inline "></StarIcon>
+                          <span className="align-bottom">{product.rating}</span>
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">
+                          $
+                          {discountedPrice(
+                            product.price,
+                            product.discountPercentage
+                          )}
+                        </p>
+                        <p className="line-through text-sm font-medium text-gray-400">
+                          ${product.price}
+                        </p>
+                      </div>
                     </div>
+                    {product.stock <= 0 && (
+                      <div>
+                        <p className="text-red-500">Out Of Stock</p>
+                      </div>
+                    )}
+
+                    {product.deleted && (
+                      <div>
+                        <p className="text-red-500">Product Deleted</p>
+                      </div>
+                    )}
                   </div>
-                  {product.stock <= 0 && (
-                    <p className="text-red-500">Out Of Stock</p>
-                  )}
+                </Link>
+                <div className="my-5">
+                  <Link
+                    to={`/admin/product-edit-form/${product.id}`}
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Edit Product
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -474,4 +490,4 @@ function ProductGrid({ products, status }) {
   );
 }
 
-export default ProductList;
+export default AdminProductList;

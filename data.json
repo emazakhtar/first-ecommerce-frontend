@@ -2,12 +2,12 @@
   "products": [
     {
       "id": 1,
-      "title": "iPhone 9",
+      "title": "iPhone 9  updated Again AGAIN againish......??...",
       "description": "An apple mobile which is nothing like apple",
-      "price": 549,
+      "price": "1000",
       "discountPercentage": 12.96,
       "rating": 4.69,
-      "stock": 94,
+      "stock": 97,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
@@ -17,16 +17,17 @@
         "https://i.dummyjson.com/data/products/1/3.jpg",
         "https://i.dummyjson.com/data/products/1/4.jpg",
         "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-      ]
+      ],
+      "deleted": "true"
     },
     {
       "id": 2,
-      "title": "iPhone X",
+      "title": "iPhone X updateupdate",
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
       "price": 899,
       "discountPercentage": 17.94,
       "rating": 4.44,
-      "stock": 34,
+      "stock": 0,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
@@ -34,7 +35,8 @@
         "https://i.dummyjson.com/data/products/2/1.jpg",
         "https://i.dummyjson.com/data/products/2/2.jpg",
         "https://i.dummyjson.com/data/products/2/3.jpg",
-        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphonex.png"
       ]
     },
     {
@@ -48,9 +50,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
     },
     {
       "id": 4,
@@ -1428,9 +1428,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/78/thumbnail.jpg"]
     },
     {
       "id": 79,
@@ -1443,9 +1441,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/79/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/79/1.jpg"]
     },
     {
       "id": 80,
@@ -1838,6 +1834,82 @@
         "https://i.dummyjson.com/data/products/100/3.jpg",
         "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
       ]
+    },
+    {
+      "title": "appil ka phone",
+      "description": "bnbbb",
+      "discountPercentage": "123",
+      "rating": "6",
+      "stock": "6",
+      "brand": "appil",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      ],
+      "id": 101,
+      "price": "789"
+    },
+    {
+      "title": "nn",
+      "description": "nmnmn",
+      "discountPercentage": "9",
+      "price": "8979",
+      "rating": "5",
+      "stock": "6",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      ],
+      "id": 102,
+      "deleted": "true"
+    },
+    {
+      "title": "nn",
+      "description": "nmnmn",
+      "discountPercentage": "9",
+      "price": "8979",
+      "rating": "5",
+      "stock": "6",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "brand": "Al Munakh",
+      "category": "mens-shirts",
+      "images": [
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      ],
+      "id": 103,
+      "deleted": "true"
+    },
+    {
+      "title": "milk",
+      "description": "good milk",
+      "discountPercentage": "10",
+      "price": "456",
+      "stock": "5",
+      "brand": "Samsung",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "rating": 0,
+      "images": [
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      ],
+      "id": 104
     }
   ],
   "category": [
@@ -1942,7 +2014,7 @@
       "checked": false
     }
   ],
-  "brand": [
+  "brands": [
     {
       "value": "Apple",
       "label": "Apple",
@@ -2336,34 +2408,1620 @@
   ],
   "user": [
     {
-      "email": "EMAZAKHTAR11@GMAIL.COM",
-      "password": "qyZEve!.5SJmGUZ",
+      "email": "emaz@gmail.com",
+      "password": "K_G$-Q39C$rRaUg",
+      "role": "user",
+      "address": [
+        {
+          "name": "demo khan ji chi",
+          "email": "demokhan@gmail.com",
+          "city": "delhi",
+          "state": "uttar pradesh",
+          "pincode": "098765",
+          "phone": "123456789",
+          "street": "11th street near motassari"
+        },
+        {
+          "name": "chemo khan pagal",
+          "email": "chemo@gmail.com",
+          "city": "patna",
+          "state": "bihar",
+          "pincode": "800040",
+          "phone": "0987654321",
+          "street": "11th main"
+        },
+        {
+          "name": "remo",
+          "email": "remo@gmail.com",
+          "phone": "098765432",
+          "street": "machli gali",
+          "city": "mumbai",
+          "state": "maharashtra",
+          "pincode": "987654"
+        },
+        {
+          "name": "Emaz Akhtar",
+          "email": "emazakhtar11@gmail.com",
+          "phone": "+918294568786",
+          "street": "Raza Apt-205 , Khajpura Bailey Road Patna",
+          "city": "Patna",
+          "state": "Bihar",
+          "pincode": "800014"
+        },
+        {
+          "name": "demo khan ji chi",
+          "email": "demokhan@gmail.com",
+          "city": "delhi",
+          "state": "uttar pradesh",
+          "pincode": "0987654",
+          "phone": "123456789",
+          "street": "11th street near motassari"
+        }
+      ],
       "id": 1
     },
     {
-      "email": "emazakhtar2019@gmail.com",
-      "password": "F548s.x6@x#Y8k8",
+      "email": "chemo@gmail.com",
+      "password": "8Fhr8T4hX$5+Zmy",
+      "role": "user",
+      "address": [
+        {
+          "name": "chemo khan",
+          "email": "chemo@gmail.com",
+          "phone": "987654321",
+          "street": "11th main",
+          "city": "patna",
+          "state": "bihar",
+          "pincode": "800040"
+        }
+      ],
       "id": 2
     },
     {
-      "email": "emazakhtar2@gmail.com",
-      "password": "hk!N542v!kRH4ns",
+      "email": "demo@gmail.com",
+      "password": "b#9DAq+nk52*RYR",
+      "role": "user",
+      "address": [
+        {
+          "name": "demo khan",
+          "email": "demo@gmail.com",
+          "phone": "0987654321",
+          "street": "11th main",
+          "city": "patna",
+          "state": "bihar",
+          "pincode": "987654"
+        }
+      ],
       "id": 3
     },
     {
-      "email": "emazakhtar2019e@gmail.com",
-      "password": "Cee#6xr#TZFQXwv",
+      "email": "admin@gmail.com",
+      "password": "S5RXGXXn$D8zTjE",
+      "role": "admin",
+      "address": [
+        {
+          "name": "emaz akhtar",
+          "email": "emazakhtar2019@gmail.com",
+          "phone": "08294568786",
+          "street": "khajapura bailey roas",
+          "city": "Patna",
+          "state": "shiv mandir",
+          "pincode": "800014"
+        }
+      ],
       "id": 4
     },
     {
-      "email": "emaz@gmail.com",
-      "password": "1234",
+      "email": "insha@gmail.com",
+      "password": "Wepg9VNq#RPx5uX",
+      "address": [
+        {
+          "name": "emaz akhtar",
+          "email": "emazakhtar2019@gmail.com",
+          "phone": "08294568786",
+          "street": "khajapura bailey roas",
+          "city": "Patna",
+          "state": "shiv mandir",
+          "pincode": "800014"
+        }
+      ],
+      "role": "user",
+      "id": 5
+    }
+  ],
+  "cart": [
+    {
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
+      "quantity": 1,
+      "user": 4,
+      "product_id": 3,
+      "id": 1
+    },
+    {
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/5/1.jpg",
+        "https://i.dummyjson.com/data/products/5/2.jpg",
+        "https://i.dummyjson.com/data/products/5/3.jpg"
+      ],
+      "quantity": 1,
+      "user": 4,
+      "product_id": 5,
+      "id": 2
+    },
+    {
+      "title": "Microsoft Surface Laptop 4",
+      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+      "price": 1499,
+      "discountPercentage": 10.23,
+      "rating": 4.43,
+      "stock": 68,
+      "brand": "Microsoft Surface",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/8/1.jpg",
+        "https://i.dummyjson.com/data/products/8/2.jpg",
+        "https://i.dummyjson.com/data/products/8/3.jpg",
+        "https://i.dummyjson.com/data/products/8/4.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 4,
+      "product_id": 8,
+      "id": 3
+    },
+    {
+      "title": "MacBook Pro",
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "price": 1749,
+      "discountPercentage": 11.02,
+      "rating": 4.57,
+      "stock": 83,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+      "images": [
+        "https://i.dummyjson.com/data/products/6/1.png",
+        "https://i.dummyjson.com/data/products/6/2.jpg",
+        "https://i.dummyjson.com/data/products/6/3.png",
+        "https://i.dummyjson.com/data/products/6/4.jpg"
+      ],
+      "quantity": 1,
+      "user": 4,
+      "product_id": 6,
+      "id": 4
+    },
+    {
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
+      "quantity": 1,
+      "user": 1,
+      "product_id": 3,
       "id": 5
     },
     {
-      "email": "hbbhb@gmail.com",
-      "password": "EmazAkhtar1@",
+      "title": "Samsung Galaxy Book",
+      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+      "price": 1499,
+      "discountPercentage": 4.15,
+      "rating": 4.25,
+      "stock": 50,
+      "brand": "Samsung",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/7/1.jpg",
+        "https://i.dummyjson.com/data/products/7/2.jpg",
+        "https://i.dummyjson.com/data/products/7/3.jpg",
+        "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 1,
+      "product_id": 7,
       "id": 6
+    }
+  ],
+  "orders": [
+    {
+      "cartItems": [
+        {
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
+          "quantity": 2,
+          "user": 5,
+          "id": 1
+        },
+        {
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+            "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphonex.png"
+          ],
+          "quantity": 1,
+          "user": 5,
+          "id": 2
+        },
+        {
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
+          "quantity": 1,
+          "user": 5,
+          "id": 3
+        },
+        {
+          "title": "OPPOF19",
+          "description": "OPPO F19 is officially announced on April 2021.",
+          "price": 280,
+          "discountPercentage": 17.91,
+          "rating": 4.3,
+          "stock": 123,
+          "brand": "OPPO",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/4/1.jpg",
+            "https://i.dummyjson.com/data/products/4/2.jpg",
+            "https://i.dummyjson.com/data/products/4/3.jpg",
+            "https://i.dummyjson.com/data/products/4/4.jpg",
+            "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 5,
+          "id": 4
+        },
+        {
+          "title": "Huawei P30",
+          "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+          "price": 499,
+          "discountPercentage": 10.58,
+          "rating": 4.09,
+          "stock": 32,
+          "brand": "Huawei",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/5/1.jpg",
+            "https://i.dummyjson.com/data/products/5/2.jpg",
+            "https://i.dummyjson.com/data/products/5/3.jpg"
+          ],
+          "quantity": 1,
+          "user": 5,
+          "id": 5
+        },
+        {
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
+          "brand": "Apple",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+          "images": [
+            "https://i.dummyjson.com/data/products/6/1.png",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.png",
+            "https://i.dummyjson.com/data/products/6/4.jpg"
+          ],
+          "quantity": 2,
+          "user": 5,
+          "id": 6
+        }
+      ],
+      "totalItems": 8,
+      "totalAmount": 7694,
+      "selectedAddress": {
+        "name": "emaz akhtar",
+        "email": "emazakhtar2019@gmail.com",
+        "phone": "08294568786",
+        "street": "khajapura bailey roas",
+        "city": "Patna",
+        "state": "shiv mandir",
+        "pincode": "800014"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "insha@gmail.com",
+        "password": "Wepg9VNq#RPx5uX",
+        "address": [
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "role": "user",
+        "id": 5
+      },
+      "status": "delivered",
+      "id": 1
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
+          "quantity": 1,
+          "user": 5,
+          "id": 3
+        },
+        {
+          "title": "OPPOF19",
+          "description": "OPPO F19 is officially announced on April 2021.",
+          "price": 280,
+          "discountPercentage": 17.91,
+          "rating": 4.3,
+          "stock": 123,
+          "brand": "OPPO",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/4/1.jpg",
+            "https://i.dummyjson.com/data/products/4/2.jpg",
+            "https://i.dummyjson.com/data/products/4/3.jpg",
+            "https://i.dummyjson.com/data/products/4/4.jpg",
+            "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 5,
+          "id": 4
+        },
+        {
+          "title": "Huawei P30",
+          "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+          "price": 499,
+          "discountPercentage": 10.58,
+          "rating": 4.09,
+          "stock": 32,
+          "brand": "Huawei",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/5/1.jpg",
+            "https://i.dummyjson.com/data/products/5/2.jpg",
+            "https://i.dummyjson.com/data/products/5/3.jpg"
+          ],
+          "quantity": 1,
+          "user": 5,
+          "id": 5
+        },
+        {
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
+          "brand": "Apple",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+          "images": [
+            "https://i.dummyjson.com/data/products/6/1.png",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.png",
+            "https://i.dummyjson.com/data/products/6/4.jpg"
+          ],
+          "quantity": 2,
+          "user": 5,
+          "id": 6
+        }
+      ],
+      "totalItems": 5,
+      "totalAmount": 4844,
+      "selectedAddress": {
+        "name": "emaz akhtar",
+        "email": "emazakhtar2019@gmail.com",
+        "phone": "08294568786",
+        "street": "khajapura bailey roas",
+        "city": "Patna",
+        "state": "shiv mandir",
+        "pincode": "800014"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "insha@gmail.com",
+        "password": "Wepg9VNq#RPx5uX",
+        "address": [
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "role": "user",
+        "id": 5
+      },
+      "status": "cancelled",
+      "id": 2
+    },
+    {
+      "cartItems": [
+        {
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+            "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphonex.png"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "id": 1
+        }
+      ],
+      "totalItems": 1,
+      "totalAmount": 738,
+      "selectedAddress": {
+        "name": "demo khan",
+        "email": "demo@gmail.com",
+        "phone": "0987654321",
+        "street": "11th main",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "987654"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "demo@gmail.com",
+        "password": "b#9DAq+nk52*RYR",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan",
+            "email": "demo@gmail.com",
+            "phone": "0987654321",
+            "street": "11th main",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "987654"
+          }
+        ],
+        "id": 3
+      },
+      "status": "dispatched",
+      "id": 3
+    },
+    {
+      "cartItems": [
+        {
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
+          "brand": "Apple",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+          "images": [
+            "https://i.dummyjson.com/data/products/6/1.png",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.png",
+            "https://i.dummyjson.com/data/products/6/4.jpg"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "id": 1
+        }
+      ],
+      "totalItems": 1,
+      "totalAmount": 1556,
+      "selectedAddress": {
+        "name": "demo khan",
+        "email": "demo@gmail.com",
+        "phone": "0987654321",
+        "street": "11th main",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "987654"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "demo@gmail.com",
+        "password": "b#9DAq+nk52*RYR",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan",
+            "email": "demo@gmail.com",
+            "phone": "0987654321",
+            "street": "11th main",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "987654"
+          }
+        ],
+        "id": 3
+      },
+      "status": "dispatched",
+      "id": 4
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Waterproof Leather Brand Watch",
+          "description": "Watch Crown With Environmental IPS Bronze Electroplating; Display system of 12 hours",
+          "price": 46,
+          "discountPercentage": 3.15,
+          "rating": 4.05,
+          "stock": 95,
+          "brand": "SKMEI 9117",
+          "category": "mens-watches",
+          "thumbnail": "https://i.dummyjson.com/data/products/62/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/62/1.jpg",
+            "https://i.dummyjson.com/data/products/62/2.jpg"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "id": 1
+        }
+      ],
+      "totalItems": 1,
+      "totalAmount": 45,
+      "selectedAddress": {
+        "name": "demo khan",
+        "email": "demo@gmail.com",
+        "phone": "0987654321",
+        "street": "11th main",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "987654"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "demo@gmail.com",
+        "password": "b#9DAq+nk52*RYR",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan",
+            "email": "demo@gmail.com",
+            "phone": "0987654321",
+            "street": "11th main",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "987654"
+          }
+        ],
+        "id": 3
+      },
+      "status": "dispatched",
+      "id": 5
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Round Silver Frame Sun Glasses",
+          "description": "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
+          "price": 19,
+          "discountPercentage": 10.1,
+          "rating": 4.94,
+          "stock": 78,
+          "brand": "Designer Sun Glasses",
+          "category": "sunglasses",
+          "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/81/1.jpg",
+            "https://i.dummyjson.com/data/products/81/2.jpg",
+            "https://i.dummyjson.com/data/products/81/3.jpg",
+            "https://i.dummyjson.com/data/products/81/4.webp",
+            "https://i.dummyjson.com/data/products/81/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 1
+        },
+        {
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+            "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphonex.png"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 2
+        },
+        {
+          "title": "appil ka phone",
+          "description": "bnbbb",
+          "discountPercentage": "123",
+          "rating": "6",
+          "stock": "6",
+          "brand": "appil",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+          ],
+          "price": "789",
+          "quantity": 1,
+          "user": 1,
+          "id": 3
+        },
+        {
+          "title": "Sneakers Joggers Shoes",
+          "description": "Gender: Men , Colors: Same as DisplayedCondition: 100% Brand New",
+          "price": 40,
+          "discountPercentage": 12.57,
+          "rating": 4.38,
+          "stock": 6,
+          "brand": "Sneakers",
+          "category": "mens-shoes",
+          "thumbnail": "https://i.dummyjson.com/data/products/56/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/56/1.jpg",
+            "https://i.dummyjson.com/data/products/56/2.jpg",
+            "https://i.dummyjson.com/data/products/56/3.jpg",
+            "https://i.dummyjson.com/data/products/56/4.jpg",
+            "https://i.dummyjson.com/data/products/56/5.jpg",
+            "https://i.dummyjson.com/data/products/56/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 4
+        },
+        {
+          "title": "Round Silver Frame Sun Glasses",
+          "description": "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
+          "price": 19,
+          "discountPercentage": 10.1,
+          "rating": 4.94,
+          "stock": 78,
+          "brand": "Designer Sun Glasses",
+          "category": "sunglasses",
+          "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/81/1.jpg",
+            "https://i.dummyjson.com/data/products/81/2.jpg",
+            "https://i.dummyjson.com/data/products/81/3.jpg",
+            "https://i.dummyjson.com/data/products/81/4.webp",
+            "https://i.dummyjson.com/data/products/81/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 5
+        },
+        {
+          "title": "t Temperature Controller Incubator Controller",
+          "description": "Both Heat and Cool Purpose, Temperature control range; -50 to +110, Temperature measurement accuracy; 0.1, Control accuracy; 0.1",
+          "price": 40,
+          "discountPercentage": 11.3,
+          "rating": 4.54,
+          "stock": 37,
+          "brand": "W1209 DC12V",
+          "category": "automotive",
+          "thumbnail": "https://i.dummyjson.com/data/products/87/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/87/1.jpg",
+            "https://i.dummyjson.com/data/products/87/2.jpg",
+            "https://i.dummyjson.com/data/products/87/3.jpg",
+            "https://i.dummyjson.com/data/products/87/4.jpg",
+            "https://i.dummyjson.com/data/products/87/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 6
+        },
+        {
+          "title": "half sleeves T shirts",
+          "description": "Many store is creating new designs and trend every month and every year. Daraz.pk have a beautiful range of men fashion brands",
+          "price": 23,
+          "discountPercentage": 12.76,
+          "rating": 4.26,
+          "stock": 132,
+          "brand": "Vintage Apparel",
+          "category": "mens-shirts",
+          "thumbnail": "https://i.dummyjson.com/data/products/51/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/51/1.png",
+            "https://i.dummyjson.com/data/products/51/2.jpg",
+            "https://i.dummyjson.com/data/products/51/3.jpg",
+            "https://i.dummyjson.com/data/products/51/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 7
+        },
+        {
+          "title": "Metal Ceramic Flower",
+          "description": "Metal Ceramic Flower Chandelier Home Lighting American Vintage Hanging Lighting Pendant Lamp",
+          "price": 35,
+          "discountPercentage": 10.94,
+          "rating": 4.93,
+          "stock": 146,
+          "brand": "Ifei Home",
+          "category": "lighting",
+          "thumbnail": "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/97/1.jpg",
+            "https://i.dummyjson.com/data/products/97/2.jpg",
+            "https://i.dummyjson.com/data/products/97/3.jpg",
+            "https://i.dummyjson.com/data/products/97/4.webp",
+            "https://i.dummyjson.com/data/products/97/thumbnail.jpg"
+          ],
+          "quantity": 3,
+          "user": 1,
+          "id": 8
+        }
+      ],
+      "totalItems": 10,
+      "totalAmount": 774,
+      "selectedAddress": {
+        "name": "chemo khan pagal",
+        "email": "chemo@gmail.com",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "800040",
+        "phone": "0987654321",
+        "street": "11th main"
+      },
+      "paymentMethod": "card",
+      "user": {
+        "email": "emaz@gmail.com",
+        "password": "K_G$-Q39C$rRaUg",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan ji CHI",
+            "email": "demokhan@gmail.com",
+            "city": "delhi",
+            "state": "up",
+            "pincode": "098765",
+            "phone": "123456789",
+            "street": "dil me rehta hun"
+          },
+          {
+            "name": "chemo khan pagal",
+            "email": "chemo@gmail.com",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "800040",
+            "phone": "0987654321",
+            "street": "11th main"
+          },
+          {
+            "name": "remo",
+            "email": "remo@gmail.com",
+            "phone": "098765432",
+            "street": "machli gali",
+            "city": "mumbai",
+            "state": "maharashtra",
+            "pincode": "987654"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "id": 1
+      },
+      "status": "pending",
+      "id": 6
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Round Silver Frame Sun Glasses",
+          "description": "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
+          "price": 19,
+          "discountPercentage": 10.1,
+          "rating": 4.94,
+          "stock": 78,
+          "brand": "Designer Sun Glasses",
+          "category": "sunglasses",
+          "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/81/1.jpg",
+            "https://i.dummyjson.com/data/products/81/2.jpg",
+            "https://i.dummyjson.com/data/products/81/3.jpg",
+            "https://i.dummyjson.com/data/products/81/4.webp",
+            "https://i.dummyjson.com/data/products/81/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 1
+        },
+        {
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+            "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP770/iphonex.png"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 2
+        },
+        {
+          "title": "appil ka phone",
+          "description": "bnbbb",
+          "discountPercentage": "123",
+          "rating": "6",
+          "stock": "6",
+          "brand": "appil",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+          ],
+          "price": "789",
+          "quantity": 1,
+          "user": 1,
+          "id": 3
+        },
+        {
+          "title": "Sneakers Joggers Shoes",
+          "description": "Gender: Men , Colors: Same as DisplayedCondition: 100% Brand New",
+          "price": 40,
+          "discountPercentage": 12.57,
+          "rating": 4.38,
+          "stock": 6,
+          "brand": "Sneakers",
+          "category": "mens-shoes",
+          "thumbnail": "https://i.dummyjson.com/data/products/56/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/56/1.jpg",
+            "https://i.dummyjson.com/data/products/56/2.jpg",
+            "https://i.dummyjson.com/data/products/56/3.jpg",
+            "https://i.dummyjson.com/data/products/56/4.jpg",
+            "https://i.dummyjson.com/data/products/56/5.jpg",
+            "https://i.dummyjson.com/data/products/56/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 4
+        },
+        {
+          "title": "Round Silver Frame Sun Glasses",
+          "description": "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
+          "price": 19,
+          "discountPercentage": 10.1,
+          "rating": 4.94,
+          "stock": 78,
+          "brand": "Designer Sun Glasses",
+          "category": "sunglasses",
+          "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/81/1.jpg",
+            "https://i.dummyjson.com/data/products/81/2.jpg",
+            "https://i.dummyjson.com/data/products/81/3.jpg",
+            "https://i.dummyjson.com/data/products/81/4.webp",
+            "https://i.dummyjson.com/data/products/81/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 5
+        },
+        {
+          "title": "t Temperature Controller Incubator Controller",
+          "description": "Both Heat and Cool Purpose, Temperature control range; -50 to +110, Temperature measurement accuracy; 0.1, Control accuracy; 0.1",
+          "price": 40,
+          "discountPercentage": 11.3,
+          "rating": 4.54,
+          "stock": 37,
+          "brand": "W1209 DC12V",
+          "category": "automotive",
+          "thumbnail": "https://i.dummyjson.com/data/products/87/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/87/1.jpg",
+            "https://i.dummyjson.com/data/products/87/2.jpg",
+            "https://i.dummyjson.com/data/products/87/3.jpg",
+            "https://i.dummyjson.com/data/products/87/4.jpg",
+            "https://i.dummyjson.com/data/products/87/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 6
+        },
+        {
+          "title": "half sleeves T shirts",
+          "description": "Many store is creating new designs and trend every month and every year. Daraz.pk have a beautiful range of men fashion brands",
+          "price": 23,
+          "discountPercentage": 12.76,
+          "rating": 4.26,
+          "stock": 132,
+          "brand": "Vintage Apparel",
+          "category": "mens-shirts",
+          "thumbnail": "https://i.dummyjson.com/data/products/51/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/51/1.png",
+            "https://i.dummyjson.com/data/products/51/2.jpg",
+            "https://i.dummyjson.com/data/products/51/3.jpg",
+            "https://i.dummyjson.com/data/products/51/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 7
+        },
+        {
+          "title": "Metal Ceramic Flower",
+          "description": "Metal Ceramic Flower Chandelier Home Lighting American Vintage Hanging Lighting Pendant Lamp",
+          "price": 35,
+          "discountPercentage": 10.94,
+          "rating": 4.93,
+          "stock": 146,
+          "brand": "Ifei Home",
+          "category": "lighting",
+          "thumbnail": "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/97/1.jpg",
+            "https://i.dummyjson.com/data/products/97/2.jpg",
+            "https://i.dummyjson.com/data/products/97/3.jpg",
+            "https://i.dummyjson.com/data/products/97/4.webp",
+            "https://i.dummyjson.com/data/products/97/thumbnail.jpg"
+          ],
+          "quantity": 3,
+          "user": 1,
+          "id": 8
+        }
+      ],
+      "totalItems": 10,
+      "totalAmount": 774,
+      "selectedAddress": {
+        "name": "chemo khan pagal",
+        "email": "chemo@gmail.com",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "800040",
+        "phone": "0987654321",
+        "street": "11th main"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "emaz@gmail.com",
+        "password": "K_G$-Q39C$rRaUg",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan ji CHI",
+            "email": "demokhan@gmail.com",
+            "city": "delhi",
+            "state": "up",
+            "pincode": "098765",
+            "phone": "123456789",
+            "street": "dil me rehta hun"
+          },
+          {
+            "name": "chemo khan pagal",
+            "email": "chemo@gmail.com",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "800040",
+            "phone": "0987654321",
+            "street": "11th main"
+          },
+          {
+            "name": "remo",
+            "email": "remo@gmail.com",
+            "phone": "098765432",
+            "street": "machli gali",
+            "city": "mumbai",
+            "state": "maharashtra",
+            "pincode": "987654"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "id": 1
+      },
+      "status": "pending",
+      "id": 7
+    },
+    {
+      "cartItems": [
+        {
+          "title": "t Temperature Controller Incubator Controller",
+          "description": "Both Heat and Cool Purpose, Temperature control range; -50 to +110, Temperature measurement accuracy; 0.1, Control accuracy; 0.1",
+          "price": 40,
+          "discountPercentage": 11.3,
+          "rating": 4.54,
+          "stock": 37,
+          "brand": "W1209 DC12V",
+          "category": "automotive",
+          "thumbnail": "https://i.dummyjson.com/data/products/87/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/87/1.jpg",
+            "https://i.dummyjson.com/data/products/87/2.jpg",
+            "https://i.dummyjson.com/data/products/87/3.jpg",
+            "https://i.dummyjson.com/data/products/87/4.jpg",
+            "https://i.dummyjson.com/data/products/87/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 6
+        },
+        {
+          "title": "half sleeves T shirts",
+          "description": "Many store is creating new designs and trend every month and every year. Daraz.pk have a beautiful range of men fashion brands",
+          "price": 23,
+          "discountPercentage": 12.76,
+          "rating": 4.26,
+          "stock": 132,
+          "brand": "Vintage Apparel",
+          "category": "mens-shirts",
+          "thumbnail": "https://i.dummyjson.com/data/products/51/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/51/1.png",
+            "https://i.dummyjson.com/data/products/51/2.jpg",
+            "https://i.dummyjson.com/data/products/51/3.jpg",
+            "https://i.dummyjson.com/data/products/51/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 7
+        },
+        {
+          "title": "Metal Ceramic Flower",
+          "description": "Metal Ceramic Flower Chandelier Home Lighting American Vintage Hanging Lighting Pendant Lamp",
+          "price": 35,
+          "discountPercentage": 10.94,
+          "rating": 4.93,
+          "stock": 146,
+          "brand": "Ifei Home",
+          "category": "lighting",
+          "thumbnail": "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/97/1.jpg",
+            "https://i.dummyjson.com/data/products/97/2.jpg",
+            "https://i.dummyjson.com/data/products/97/3.jpg",
+            "https://i.dummyjson.com/data/products/97/4.webp",
+            "https://i.dummyjson.com/data/products/97/thumbnail.jpg"
+          ],
+          "quantity": 3,
+          "user": 1,
+          "id": 8
+        }
+      ],
+      "totalItems": 5,
+      "totalAmount": 148,
+      "selectedAddress": {
+        "name": "chemo khan pagal",
+        "email": "chemo@gmail.com",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "800040",
+        "phone": "0987654321",
+        "street": "11th main"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "emaz@gmail.com",
+        "password": "K_G$-Q39C$rRaUg",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan ji CHI",
+            "email": "demokhan@gmail.com",
+            "city": "delhi",
+            "state": "up",
+            "pincode": "098765",
+            "phone": "123456789",
+            "street": "dil me rehta hun"
+          },
+          {
+            "name": "chemo khan pagal",
+            "email": "chemo@gmail.com",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "800040",
+            "phone": "0987654321",
+            "street": "11th main"
+          },
+          {
+            "name": "remo",
+            "email": "remo@gmail.com",
+            "phone": "098765432",
+            "street": "machli gali",
+            "city": "mumbai",
+            "state": "maharashtra",
+            "pincode": "987654"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          },
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "id": 1
+      },
+      "status": "pending",
+      "id": 8
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Silver Ring Set Women",
+          "description": "Jewelry Type:RingsCertificate Type:NonePlating:Silver PlatedShapeattern:noneStyle:CLASSICReligious",
+          "price": 70,
+          "discountPercentage": 13.57,
+          "rating": 4.61,
+          "stock": 51,
+          "brand": "Darojay",
+          "category": "womens-jewellery",
+          "thumbnail": "https://i.dummyjson.com/data/products/76/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/76/1.jpg",
+            "https://i.dummyjson.com/data/products/76/2.jpg",
+            "https://i.dummyjson.com/data/products/76/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 2,
+          "id": 1
+        }
+      ],
+      "totalItems": 1,
+      "totalAmount": 61,
+      "selectedAddress": {
+        "name": "chemo khan",
+        "email": "chemo@gmail.com",
+        "phone": "987654321",
+        "street": "11th main",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "800040"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "chemo@gmail.com",
+        "password": "8Fhr8T4hX$5+Zmy",
+        "role": "user",
+        "address": [
+          {
+            "name": "chemo khan",
+            "email": "chemo@gmail.com",
+            "phone": "987654321",
+            "street": "11th main",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "800040"
+          }
+        ],
+        "id": 2
+      },
+      "status": "pending",
+      "id": 9
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/8/1.jpg",
+            "https://i.dummyjson.com/data/products/8/2.jpg",
+            "https://i.dummyjson.com/data/products/8/3.jpg",
+            "https://i.dummyjson.com/data/products/8/4.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "quantity": 3,
+          "user": 3,
+          "id": 1
+        }
+      ],
+      "totalItems": 3,
+      "totalAmount": 4038,
+      "selectedAddress": {
+        "name": "demo khan",
+        "email": "demo@gmail.com",
+        "phone": "0987654321",
+        "street": "11th main",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "987654"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "demo@gmail.com",
+        "password": "b#9DAq+nk52*RYR",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan",
+            "email": "demo@gmail.com",
+            "phone": "0987654321",
+            "street": "11th main",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "987654"
+          }
+        ],
+        "id": 3
+      },
+      "status": "pending",
+      "id": 10
+    },
+    {
+      "cartItems": [
+        {
+          "title": "Steel Analog Couple Watches",
+          "description": "Elegant design, Stylish ,Unique & Trendy,Comfortable wear",
+          "price": 35,
+          "discountPercentage": 3.23,
+          "rating": 4.79,
+          "stock": 24,
+          "brand": "Eastern Watches",
+          "category": "womens-watches",
+          "thumbnail": "https://i.dummyjson.com/data/products/66/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/66/1.jpg",
+            "https://i.dummyjson.com/data/products/66/2.jpg",
+            "https://i.dummyjson.com/data/products/66/3.jpg",
+            "https://i.dummyjson.com/data/products/66/4.JPG",
+            "https://i.dummyjson.com/data/products/66/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "id": 1
+        },
+        {
+          "title": "Pubg Printed Graphic T-Shirt",
+          "description": "Product Description Features: 100% Ultra soft Polyester Jersey. Vibrant & colorful printing on front. Feels soft as cotton without ever cracking",
+          "price": 46,
+          "discountPercentage": 16.44,
+          "rating": 4.62,
+          "stock": 136,
+          "brand": "The Warehouse",
+          "category": "mens-shirts",
+          "thumbnail": "https://i.dummyjson.com/data/products/54/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/54/1.jpg",
+            "https://i.dummyjson.com/data/products/54/2.jpg",
+            "https://i.dummyjson.com/data/products/54/3.jpg",
+            "https://i.dummyjson.com/data/products/54/4.jpg",
+            "https://i.dummyjson.com/data/products/54/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "id": 2
+        }
+      ],
+      "totalItems": 2,
+      "totalAmount": 72,
+      "selectedAddress": {
+        "name": "demo khan",
+        "email": "demo@gmail.com",
+        "phone": "0987654321",
+        "street": "11th main",
+        "city": "patna",
+        "state": "bihar",
+        "pincode": "987654"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "demo@gmail.com",
+        "password": "b#9DAq+nk52*RYR",
+        "role": "user",
+        "address": [
+          {
+            "name": "demo khan",
+            "email": "demo@gmail.com",
+            "phone": "0987654321",
+            "street": "11th main",
+            "city": "patna",
+            "state": "bihar",
+            "pincode": "987654"
+          }
+        ],
+        "id": 3
+      },
+      "status": "dispatched",
+      "id": 11
+    },
+    {
+      "cartItems": [
+        {
+          "title": "iPhone 9  updated Again AGAIN",
+          "description": "An apple mobile which is nothing like apple",
+          "price": 549,
+          "discountPercentage": 12.96,
+          "rating": 4.69,
+          "stock": 94,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/1/1.jpg",
+            "https://i.dummyjson.com/data/products/1/2.jpg",
+            "https://i.dummyjson.com/data/products/1/3.jpg",
+            "https://i.dummyjson.com/data/products/1/4.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+          ],
+          "deleted": "true",
+          "quantity": 3,
+          "user": 4,
+          "id": 1
+        }
+      ],
+      "totalItems": 3,
+      "totalAmount": 1434,
+      "selectedAddress": {
+        "name": "emaz akhtar",
+        "email": "emazakhtar2019@gmail.com",
+        "phone": "08294568786",
+        "street": "khajapura bailey roas",
+        "city": "Patna",
+        "state": "shiv mandir",
+        "pincode": "800014"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "admin@gmail.com",
+        "password": "S5RXGXXn$D8zTjE",
+        "role": "admin",
+        "address": [
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "id": 4
+      },
+      "status": "delivered",
+      "id": 12
+    },
+    {
+      "cartItems": [
+        {
+          "title": "3 lights lndenpant kitchen islang",
+          "description": "3 lights lndenpant kitchen islang dining room pendant rice paper chandelier contemporary led pendant light modern chandelier",
+          "price": 34,
+          "discountPercentage": 5.92,
+          "rating": 4.99,
+          "stock": 44,
+          "brand": "DADAWU",
+          "category": "lighting",
+          "thumbnail": "https://i.dummyjson.com/data/products/98/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/98/1.jpg",
+            "https://i.dummyjson.com/data/products/98/2.jpg",
+            "https://i.dummyjson.com/data/products/98/3.jpg",
+            "https://i.dummyjson.com/data/products/98/4.jpg",
+            "https://i.dummyjson.com/data/products/98/thumbnail.jpg"
+          ],
+          "quantity": 3,
+          "user": 4,
+          "product_id": 98,
+          "id": 1
+        },
+        {
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
+          "quantity": 1,
+          "user": 4,
+          "product_id": 3,
+          "id": 2
+        }
+      ],
+      "totalItems": 4,
+      "totalAmount": 1152,
+      "selectedAddress": {
+        "name": "emaz akhtar",
+        "email": "emazakhtar2019@gmail.com",
+        "phone": "08294568786",
+        "street": "khajapura bailey roas",
+        "city": "Patna",
+        "state": "shiv mandir",
+        "pincode": "800014"
+      },
+      "paymentMethod": "cash",
+      "user": {
+        "email": "admin@gmail.com",
+        "password": "S5RXGXXn$D8zTjE",
+        "role": "admin",
+        "address": [
+          {
+            "name": "emaz akhtar",
+            "email": "emazakhtar2019@gmail.com",
+            "phone": "08294568786",
+            "street": "khajapura bailey roas",
+            "city": "Patna",
+            "state": "shiv mandir",
+            "pincode": "800014"
+          }
+        ],
+        "id": 4
+      },
+      "status": "pending",
+      "id": 13
     }
   ]
 }

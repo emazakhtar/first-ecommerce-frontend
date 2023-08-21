@@ -15,7 +15,14 @@ function Signup() {
   } = useForm();
 
   const onSubmit = (data) => {
-    dispatch(createUserAsync({ email: data.email, password: data.password }));
+    dispatch(
+      createUserAsync({
+        email: data.email,
+        password: data.password,
+        address: [],
+        role: "user",
+      })
+    );
   };
   return (
     <>

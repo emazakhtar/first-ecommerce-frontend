@@ -60,7 +60,7 @@ export function fetchProductById(id) {
 export function fetchBrand() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/brand");
+    const response = await fetch("http://localhost:8080/brands");
     const data = await response.json();
     resolve({ data });
   });
@@ -69,6 +69,35 @@ export function fetchCategory() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
     const response = await fetch("http://localhost:8080/category");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function updateProductById(updatedProduct) {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch(
+      "http://localhost:8080/products/" + updatedProduct.id,
+      {
+        method: "PATCH",
+        body: JSON.stringify(updatedProduct),
+        headers: { "content-type": "application/json" },
+      }
+    );
+
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function addProduct(product) {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch("http://localhost:8080/products", {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: { "content-type": "application/json" },
+    });
+
     const data = await response.json();
     resolve({ data });
   });
