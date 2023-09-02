@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { loadUsersInfo, updateUser } from "./usersAPI";
+import { fetchAllUsersOrders, loadUsersInfo, updateUser } from "./usersAPI";
 
 const initialState = {
   LoggedInUserInfo: null,
@@ -16,12 +16,18 @@ export const updateUserAsync = createAsyncThunk(
 );
 export const loadUsersInfoAsync = createAsyncThunk(
   "user/loadUsersInfo",
-  async (id) => {
-    const response = await loadUsersInfo(id);
+  async () => {
+    const response = await loadUsersInfo();
     return response.data;
   }
 );
-
+export const fetchAllUsersOrdersAsync = createAsyncThunk(
+  "order/fetchAllUsersOrders",
+  async () => {
+    const response = await fetchAllUsersOrders();
+    return response.data;
+  }
+);
 export const usersSlice = createSlice({
   name: "user",
   initialState,
@@ -46,7 +52,14 @@ export const usersSlice = createSlice({
       })
       .addCase(loadUsersInfoAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.LoggedInUserInfo = action.payload[0];
+        state.LoggedInUserInfo = action.payload;
+      })
+      .addCase(fetchAllUsersOrdersAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchAllUsersOrdersAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.LoggedInUserInfo.orders = action.payload;
       });
   },
 });
@@ -54,5 +67,6 @@ export const usersSlice = createSlice({
 export const { resetUserInfo } = usersSlice.actions;
 
 export const selectLoggedInUserInfo = (state) => state.user.LoggedInUserInfo;
+export const selectUserOrders = (state) => state.user.LoggedInUserInfo.orders;
 
 export default usersSlice.reducer;

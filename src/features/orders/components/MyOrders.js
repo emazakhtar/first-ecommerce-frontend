@@ -2,24 +2,24 @@ import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { selectOrderStatus } from "../ordersSlice";
+import { Grid } from "react-loader-spinner";
 import {
   fetchAllUsersOrdersAsync,
-  selectOrderStatus,
+  selectLoggedInUserInfo,
   selectUserOrders,
-} from "../ordersSlice";
-import { selectLoggedInUser } from "../../auth/authSlice";
-import { Grid } from "react-loader-spinner";
+} from "../../users/usersSlice";
 
 function MyOrders() {
   const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
   const orders = useSelector(selectUserOrders);
-  const user = useSelector(selectLoggedInUser);
+  const userInfo = useSelector(selectLoggedInUserInfo);
   console.log(orders);
   const status = useSelector(selectOrderStatus);
   useEffect(() => {
-    dispatch(fetchAllUsersOrdersAsync(user.id));
-  }, [dispatch, user]);
+    dispatch(fetchAllUsersOrdersAsync());
+  }, [dispatch, userInfo]);
 
   return (
     <>
@@ -46,7 +46,7 @@ function MyOrders() {
                 {orders.map((order, index) => (
                   <div>
                     <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
-                      Order No #{index + 1}
+                      Order No #{order.id}
                     </h1>
                     <li key={index} className="flex py-6">
                       <div className="ml-4 flex flex-1 flex-col">
@@ -56,13 +56,13 @@ function MyOrders() {
                               <>
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                   <img
-                                    src={item.thumbnail}
-                                    alt={item.title}
+                                    src={item.product.thumbnail}
+                                    alt={item.product.title}
                                     className="h-full w-full object-cover object-center"
                                   />
                                 </div>
                                 <h3>
-                                  <div>{item.title}...</div>
+                                  <div>{item.product.title}...</div>
                                 </h3>
                                 <div>
                                   {" "}
@@ -73,7 +73,7 @@ function MyOrders() {
                             ))}
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            {order.cartItems.color && order.cartItems.color}
+                            {order.color && order.color}
                           </p>
                         </div>
                         <div className="flex flex-1 items-end justify-between text-sm">

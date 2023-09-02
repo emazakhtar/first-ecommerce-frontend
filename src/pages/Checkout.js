@@ -27,15 +27,16 @@ function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const orderSuccess = useSelector(selectOrderSuccess);
+
   const totalAmount = cartItems.reduce(
-    (amount, product) =>
-      discountedPrice(product.price, product.discountPercentage) *
-        product.quantity +
+    (amount, item) =>
+      discountedPrice(item.product.price, item.product.discountPercentage) *
+        item.quantity +
       amount,
     0
   );
   const totalItems = cartItems.reduce(
-    (total, product) => product.quantity + total,
+    (total, item) => item.quantity + total,
     0
   );
   const {
@@ -48,8 +49,13 @@ function Checkout() {
 
   console.log(errors);
 
-  const handleQuantity = (e, product) => {
-    dispatch(updateCartAsync({ ...product, quantity: +e.target.value }));
+  const handleQuantity = (e, item) => {
+    dispatch(
+      updateCartAsync({
+        id: item.id,
+        quantity: +e.target.value,
+      })
+    );
   };
 
   const handleRemoveFromCart = (e, product) => {
@@ -71,7 +77,6 @@ function Checkout() {
         totalAmount,
         selectedAddress,
         paymentMethod,
-        user,
         status: "pending",
       })
     );
@@ -376,12 +381,12 @@ function Checkout() {
                 </h1>
                 <div className="flow-root">
                   <ul role="list" className="-my-6 divide-y divide-gray-200">
-                    {cartItems.map((product) => (
-                      <li key={product.id} className="flex py-6">
+                    {cartItems.map((item) => (
+                      <li key={item.id} className="flex py-6">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                           <img
-                            src={product.thumbnail}
-                            alt={product.title}
+                            src={item.product.thumbnail}
+                            alt={item.product.title}
                             className="h-full w-full object-cover object-center"
                           />
                         </div>
@@ -390,18 +395,18 @@ function Checkout() {
                           <div>
                             <div className="flex justify-between text-base font-medium text-gray-900">
                               <h3>
-                                <div>{product.title}</div>
+                                <div>{item.product.title}</div>
                               </h3>
                               <p className="ml-4">
                                 $
                                 {discountedPrice(
-                                  product.price,
-                                  product.discountPercentage
+                                  item.product.price,
+                                  item.product.discountPercentage
                                 )}
                               </p>
                             </div>
                             <p className="mt-1 text-sm text-gray-500">
-                              {product.color && product.color}
+                              {item.product.color && item.color}
                             </p>
                           </div>
                           <div className="flex flex-1 items-end justify-between text-sm">
@@ -413,8 +418,8 @@ function Checkout() {
                                 Qty
                               </label>
                               <select
-                                onChange={(e) => handleQuantity(e, product)}
-                                value={product.quantity}
+                                onChange={(e) => handleQuantity(e, item)}
+                                value={item.quantity}
                               >
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -424,9 +429,7 @@ function Checkout() {
 
                             <div className="flex">
                               <button
-                                onClick={(e) =>
-                                  handleRemoveFromCart(e, product)
-                                }
+                                onClick={(e) => handleRemoveFromCart(e, item)}
                                 type="button"
                                 className="font-medium text-indigo-600 hover:text-indigo-500"
                               >

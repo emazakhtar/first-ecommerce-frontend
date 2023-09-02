@@ -10,7 +10,11 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import Protected from "./features/auth/components/Protected";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllCartAsync } from "./features/cart/cartSlice";
-import { selectLoggedInUser } from "./features/auth/authSlice";
+import {
+  checkUserAsync,
+  selectCheckedUser,
+  selectLoggedInUserToken,
+} from "./features/auth/authSlice";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import PageNotFound from "./pages/404";
 import MyOrdersPage from "./pages/MyOrdersPage";
@@ -47,7 +51,7 @@ const router = createBrowserRouter([
     element: <SignUpPage />,
   },
   {
-    path: "/cart",
+    path: "/my-cart",
     element: (
       <Protected>
         <CartPage />
@@ -155,19 +159,26 @@ const router = createBrowserRouter([
 
 function App() {
   const dispatch = useDispatch();
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectLoggedInUserToken);
+  const checkedUser = useSelector(selectCheckedUser);
+  useEffect(() => {
+    if (!user) {
+      dispatch(checkUserAsync());
+    }
+  }, [dispatch, user]);
 
   useEffect(() => {
     if (user) {
-      dispatch(loadUsersInfoAsync(user.id));
-      dispatch(fetchAllCartAsync(user.id));
+      dispatch(loadUsersInfoAsync());
+      dispatch(fetchAllCartAsync());
       dispatch(fetchBrandAsync());
       dispatch(fetchCategoryAsync());
     }
   }, [dispatch, user]);
+
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      {checkedUser && <RouterProvider router={router} />}
     </div>
   );
 }

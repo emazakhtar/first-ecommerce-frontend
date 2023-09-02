@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { selectLoggedInUser } from "../authSlice";
+import { selectLoggedInUserToken } from "../authSlice";
 
 function Login() {
   const {
@@ -12,7 +12,7 @@ function Login() {
     formState: { errors },
   } = useForm();
 
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectLoggedInUserToken);
 
   const onSubmit = (data) => {
     console.log(data);

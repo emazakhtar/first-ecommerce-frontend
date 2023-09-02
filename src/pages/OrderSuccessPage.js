@@ -2,16 +2,16 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { resetOrderSuccess } from "../features/orders/ordersSlice";
-import { selectLoggedInUser } from "../features/auth/authSlice";
 import { removeAllFromCartAsync } from "../features/cart/cartSlice";
+import { selectLoggedInUserInfo } from "../features/users/usersSlice";
 
 function OrderSuccessPage() {
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectLoggedInUserInfo);
   const dispatch = useDispatch();
   const params = useParams();
 
   useEffect(() => {
-    dispatch(removeAllFromCartAsync(user.id));
+    dispatch(removeAllFromCartAsync());
     dispatch(resetOrderSuccess());
   }, [dispatch, user]);
 

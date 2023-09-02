@@ -4,20 +4,14 @@ export function createOrder(orderData) {
     const response = await fetch("http://localhost:8080/orders", {
       method: "POST",
       body: JSON.stringify(orderData),
+      credentials: "include",
       headers: { "content-type": "application/json" },
     });
     const data = await response.json();
     resolve({ data });
   });
 }
-export function fetchAllUsersOrders(id) {
-  return new Promise(async (resolve) => {
-    // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/orders?user.id=" + id);
-    const data = await response.json();
-    resolve({ data });
-  });
-}
+
 export function fetchAllOrders({ pagination, sort }) {
   let queryString = "";
   for (let key in pagination) {
@@ -27,7 +21,12 @@ export function fetchAllOrders({ pagination, sort }) {
     queryString += `${key}=${sort[key]}&`;
   }
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/orders?" + queryString);
+    const response = await fetch(
+      "http://localhost:8080/orders?" + queryString,
+      {
+        credentials: "include",
+      }
+    );
     const data = await response.json();
 
     const totalOrders = await response.headers.get("X-Total-Count");
@@ -41,6 +40,7 @@ export function updateOrderById(updatedOrder) {
       "http://localhost:8080/orders/" + updatedOrder.id,
       {
         method: "PATCH",
+        credentials: "include",
         body: JSON.stringify(updatedOrder),
         headers: { "content-type": "application/json" },
       }
@@ -52,7 +52,9 @@ export function updateOrderById(updatedOrder) {
 export function fetchOrderById(id) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/orders/" + id);
+    const response = await fetch("http://localhost:8080/orders/" + id, {
+      credentials: "include",
+    });
     const data = await response.json();
     resolve({ data });
   });

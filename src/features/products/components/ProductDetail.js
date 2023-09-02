@@ -9,11 +9,11 @@ import {
   selectProduct,
   selectProductListStatus,
 } from "../productSlice";
-import { selectLoggedInUser } from "../../auth/authSlice";
 import { addToCartAsync, selectCart } from "../../cart/cartSlice";
 import { discountedPrice } from "../../../app/constants";
 import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
+import { selectLoggedInUserInfo } from "../../users/usersSlice";
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
   { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
@@ -40,7 +40,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 function ProductDetail() {
-  const user = useSelector(selectLoggedInUser);
+  const userInfo = useSelector(selectLoggedInUserInfo);
   const dispatch = useDispatch();
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
@@ -58,12 +58,9 @@ function ProductDetail() {
     e.preventDefault();
     if (cartItems.findIndex((item) => item.product_id === product.id) < 0) {
       const newCartItem = {
-        ...product,
         quantity: 1,
-        user: user.id,
-        product_id: product.id,
+        product: product.id,
       };
-      delete newCartItem["id"];
       dispatch(addToCartAsync(newCartItem));
       // it will be based on server response of backend
       alert.success("item added to cart");

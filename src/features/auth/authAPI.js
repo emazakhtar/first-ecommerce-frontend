@@ -1,40 +1,77 @@
-export function createUser({ email, password, address, role }) {
-  return new Promise(async (resolve) => {
-    // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/user", {
-      method: "POST",
-      body: JSON.stringify({
-        email: email,
-        password: password,
-        address: address,
-        role: role,
-      }),
-      headers: { "content-type": "application/json" },
-    });
-    const data = await response.json();
-    resolve({ data });
-  });
-}
-export function checkUser(userData) {
+export function createUser({ email, password, name, address, order, role }) {
   return new Promise(async (resolve, reject) => {
-    const email = userData.email;
-    const password = userData.password;
-
-    const response = await fetch("http://localhost:8080/user?email=" + email);
-    const data = await response.json();
-
-    if (data.length > 0) {
-      if (password === data[0].password) {
-        console.log("logged in successfully");
-        resolve({ data: data[0] });
+    // TODO: we will not hardcode server url here
+    try {
+      const response = await fetch("http://localhost:8080/auth/signup", {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          password: password,
+          name: name,
+          address: address,
+          order: order,
+          role: role,
+        }),
+        headers: { "content-type": "application/json" },
+        credentials: "include", // This here
+      });
+      if (response.ok) {
+        const data = await response.json();
+        resolve({ data });
       } else {
-        reject({ message: "invalid credential" });
+        const error = await response.text();
+        reject(error);
       }
-    } else {
-      reject({ message: "no user exists" });
+    } catch (error) {
+      reject(error);
     }
   });
 }
+
+export function loginUser(userData) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch("http://localhost:8080/auth/login", {
+        method: "POST",
+        body: JSON.stringify(userData),
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+export function checkUser() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch("http://localhost:8080/auth/check", {
+        method: "GET",
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
 export function signOut(userId) {
   return new Promise(async (resolve) => {
     // on server we will remove user session info

@@ -72,7 +72,7 @@ function AdminOrders() {
         <div className="bg-gray-100 flex items-center justify-center  font-sans overflow-hidden">
           <div className="w-full">
             <div className="bg-white shadow-md rounded my-6">
-              <table className="min-w-max w-full table-auto">
+              <table className="w-full table-auto">
                 <thead>
                   <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                     <th
@@ -130,15 +130,16 @@ function AdminOrders() {
                             <div className="mr-2">
                               <img
                                 className="w-6 h-6 rounded-full"
-                                src={item.thumbnail}
+                                src={item.product.thumbnail}
                                 alt={item.title}
                               />
                             </div>
                             <span className="">
-                              {item.title} - Qty-{item.quantity} - Price-$
+                              {item.product.title} - Qty-{item.quantity} -
+                              Price-$
                               {discountedPrice(
-                                item.price,
-                                item.discountPercentage
+                                item.product.price,
+                                item.product.discountPercentage
                               )}
                             </span>
                           </div>

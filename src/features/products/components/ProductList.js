@@ -10,7 +10,6 @@ import {
   Squares2X2Icon,
   StarIcon,
 } from "@heroicons/react/20/solid";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -420,53 +419,59 @@ function ProductGrid({ products, status }) {
                 visible={true}
               />
             ) : null}
-            {products.map((product, index) => (
-              <Link to={`/product-detail/${product.id}`}>
-                <div
-                  key={index}
-                  className="group relative border-solid border-2 border-gray-200 p-2"
-                >
-                  <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
-                    <img
-                      src={product.thumbnail}
-                      alt={product.title}
-                      className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                    />
-                  </div>
-                  <div className="mt-4 flex justify-between">
-                    <div>
-                      <h3 className="text-sm text-gray-700">
-                        <div href={product.thumbnail}>
-                          <span
-                            aria-hidden="true"
-                            className="absolute inset-0"
-                          />
-                          {product.title}
+            {products.map(
+              (product, index) =>
+                !product.deleted && (
+                  <Link to={`/product-detail/${product.id}`}>
+                    <div
+                      key={index}
+                      className="group relative border-solid border-2 border-gray-200 p-2"
+                    >
+                      <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+                        <img
+                          src={product.thumbnail}
+                          alt={product.title}
+                          className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        />
+                      </div>
+                      <div className="mt-4 flex justify-between">
+                        <div>
+                          <h3 className="text-sm text-gray-700">
+                            <div href={product.thumbnail}>
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0"
+                              />
+                              {product.title}
+                            </div>
+                          </h3>
+                          <p className="mt-1 text-sm text-gray-500">
+                            <StarIcon className="w-6 h-6 inline "></StarIcon>
+                            <span className="align-bottom">
+                              {product.rating}
+                            </span>
+                          </p>
                         </div>
-                      </h3>
-                      <p className="mt-1 text-sm text-gray-500">
-                        <StarIcon className="w-6 h-6 inline "></StarIcon>
-                        <span className="align-bottom">{product.rating}</span>
-                      </p>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">
+                            $
+                            {Math.round(
+                              product.price *
+                                (1 - product.discountPercentage / 100)
+                            )}
+                          </p>
+                          <p className="line-through text-sm font-medium text-gray-400">
+                            ${product.price}
+                          </p>
+                        </div>
+                      </div>
+                      {product.stock <= 0 && (
+                        <p className="text-red-500">Out Of Stock</p>
+                      )}
                     </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">
-                        $
-                        {Math.round(
-                          product.price * (1 - product.discountPercentage / 100)
-                        )}
-                      </p>
-                      <p className="line-through text-sm font-medium text-gray-400">
-                        ${product.price}
-                      </p>
-                    </div>
-                  </div>
-                  {product.stock <= 0 && (
-                    <p className="text-red-500">Out Of Stock</p>
-                  )}
-                </div>
-              </Link>
-            ))}
+                  </Link>
+                )
+            )}
           </div>
         </div>
       </div>

@@ -2,26 +2,33 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { checkUserAsync, selectError, selectLoggedInUser } from "../authSlice";
+import {
+  loginUserAsync,
+  selectError,
+  selectLoggedInUserToken,
+} from "../authSlice";
 
 function Login() {
   const dispatch = useDispatch();
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectLoggedInUserToken);
   const error = useSelector(selectError);
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
-    dispatch(checkUserAsync(data));
+    dispatch(loginUserAsync(data));
   };
   return (
     <>
-      {user && <Navigate to="/"></Navigate>}
+      {user && (
+        <div>
+          return <Navigate to="/"></Navigate>
+        </div>
+      )}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img

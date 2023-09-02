@@ -14,15 +14,19 @@ const initialState = {
 
 export const addToCartAsync = createAsyncThunk(
   "cart/addToCart",
-  async (data) => {
-    const response = await addToCart(data);
-    return response.data;
+  async (data, { rejectWithValue }) => {
+    try {
+      const response = await addToCart(data);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
   }
 );
 export const fetchAllCartAsync = createAsyncThunk(
   "cart/fetchAllCart",
-  async (id) => {
-    const response = await fetchAllCart(id);
+  async () => {
+    const response = await fetchAllCart();
     return response.data;
   }
 );
@@ -42,8 +46,8 @@ export const removeItemsFromCartAsync = createAsyncThunk(
 );
 export const removeAllFromCartAsync = createAsyncThunk(
   "cart/removeAllFromCart",
-  async (id) => {
-    const response = await removeAllFromCart(id);
+  async () => {
+    const response = await removeAllFromCart();
     return response.data;
   }
 );
@@ -73,6 +77,10 @@ export const cartSlice = createSlice({
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.items.push(action.payload);
+      })
+      .addCase(addToCartAsync.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
       })
       .addCase(fetchAllCartAsync.pending, (state) => {
         state.status = "loading";
