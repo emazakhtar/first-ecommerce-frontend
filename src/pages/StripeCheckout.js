@@ -25,8 +25,8 @@ export default function StripeCheckout() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        totalAmount: orderSuccess.totalAmount,
-        orderId: orderSuccess.id,
+        totalAmount: orderSuccess && orderSuccess.totalAmount,
+        orderId: orderSuccess && orderSuccess.id,
       }),
     })
       .then((res) => res.json())
