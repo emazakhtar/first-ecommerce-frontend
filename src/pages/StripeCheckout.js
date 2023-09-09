@@ -6,6 +6,7 @@ import CheckoutForm from "./CheckoutForm";
 import "../Stripe.css";
 import { useSelector } from "react-redux";
 import { selectOrderSuccess } from "../features/orders/ordersSlice";
+import { Navigate } from "react-router-dom";
 
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
@@ -21,16 +22,18 @@ export default function StripeCheckout() {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        totalAmount: orderSuccess && orderSuccess.totalAmount,
-        orderId: orderSuccess && orderSuccess.id,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret));
+
+    orderSuccess &&
+      fetch("/create-payment-intent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          totalAmount: orderSuccess.totalAmount,
+          orderId: orderSuccess.id,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => setClientSecret(data.clientSecret));
   }, [orderSuccess]);
 
   const appearance = {
@@ -43,6 +46,7 @@ export default function StripeCheckout() {
 
   return (
     <div className="Stripe">
+      {!orderSuccess && <Navigate to="/checkout" replace={true}></Navigate>}
       {clientSecret && (
         <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />

@@ -32,9 +32,14 @@ function AdminOrders() {
     setOrderStatusFormOpen(order.id);
   };
 
-  const handleStatus = (e, order) => {
+  const handleOrderStatus = (e, order) => {
     console.log(e.target.value);
     dispatch(updateOrderByIdAsync({ ...order, status: e.target.value }));
+    setOrderStatusFormOpen(-1);
+  };
+  const handlePaymentStatus = (e, order) => {
+    console.log(e.target.value);
+    dispatch(updateOrderByIdAsync({ ...order, paymentStatus: e.target.value }));
     setOrderStatusFormOpen(-1);
   };
 
@@ -48,6 +53,8 @@ function AdminOrders() {
         return "bg-red-200 text-red-600";
       case "pending":
         return "bg-purple-200 text-purple-600";
+      case "received":
+        return "bg-purple-200 text-green-600";
       default:
         return "bg-purple-200 text-blue-600";
     }
@@ -111,7 +118,9 @@ function AdminOrders() {
                       )}
                     </th>
                     <th className="py-3 px-6 text-center">Shipping Address</th>
+                    <th className="py-3 px-6 text-center">Payment Method</th>
                     <th className="py-3 px-6 text-center">Status</th>
+                    <th className="py-3 px-6 text-center">Payment Status</th>
                     <th className="py-3 px-6 text-center">Actions</th>
                   </tr>
                 </thead>
@@ -163,8 +172,13 @@ function AdminOrders() {
                         </div>
                       </td>
                       <td className="py-3 px-6 text-center">
+                        <div className="flex items-center justify-center">
+                          {order.paymentMethod}
+                        </div>
+                      </td>
+                      <td className="py-3 px-6 text-center">
                         {order.id === orderStatusFormOpen ? (
-                          <select onChange={(e) => handleStatus(e, order)}>
+                          <select onChange={(e) => handleOrderStatus(e, order)}>
                             <option value="status">Status</option>
                             <option value="pending">Pending</option>
                             <option value="dispatched">Dispatched</option>
@@ -178,6 +192,25 @@ function AdminOrders() {
                             )} py-1 px-3 rounded-full text-xs`}
                           >
                             {order.status}
+                          </span>
+                        )}
+                      </td>
+                      <td className="py-3 px-6 text-center">
+                        {order.id === orderStatusFormOpen ? (
+                          <select
+                            onChange={(e) => handlePaymentStatus(e, order)}
+                          >
+                            <option value="status">Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="received">Received</option>
+                          </select>
+                        ) : (
+                          <span
+                            className={`${chooseColor(
+                              order.paymentStatus
+                            )} py-1 px-3 rounded-full text-xs`}
+                          >
+                            {order.paymentStatus}
                           </span>
                         )}
                       </td>
