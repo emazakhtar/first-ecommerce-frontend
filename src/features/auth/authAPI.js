@@ -2,7 +2,7 @@ export function createUser({ email, password, name, address, order, role }) {
   return new Promise(async (resolve, reject) => {
     // TODO: we will not hardcode server url here
     try {
-      const response = await fetch("http://localhost:8080/auth/signup", {
+      const response = await fetch("/auth/signup", {
         method: "POST",
         body: JSON.stringify({
           email: email,
@@ -31,7 +31,7 @@ export function createUser({ email, password, name, address, order, role }) {
 export function loginUser(userData) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("/auth/login", {
         method: "POST",
         body: JSON.stringify(userData),
         credentials: "include",
@@ -53,7 +53,7 @@ export function loginUser(userData) {
 export function checkUser() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:8080/auth/check", {
+      const response = await fetch("/auth/check", {
         method: "GET",
         credentials: "include",
         headers: { "content-type": "application/json" },
@@ -75,6 +75,7 @@ export function checkUser() {
 export function signOut(userId) {
   return new Promise(async (resolve) => {
     // on server we will remove user session info
+
     resolve({ data: "success" });
   });
 }

@@ -1,7 +1,7 @@
 export function updateUser(userData) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/user/", {
+    const response = await fetch("/user/", {
       method: "PATCH",
       credentials: "include",
       body: JSON.stringify(userData),
@@ -14,7 +14,7 @@ export function updateUser(userData) {
 export function fetchAllUsersOrders() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/orders/own", {
+    const response = await fetch("/orders/own", {
       credentials: "include",
     });
 
@@ -26,7 +26,7 @@ export function fetchAllUsersOrders() {
 export function loadUsersInfo() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/user/", {
+    const response = await fetch("/user/", {
       method: "GET",
       credentials: "include",
     });

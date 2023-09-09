@@ -1,7 +1,7 @@
 export function fetchAllProducts() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/products");
+    const response = await fetch("/products");
     const data = await response.json();
     resolve({ data });
   });
@@ -41,13 +41,10 @@ export function fetchProductByFilter(filter, sort, pagination) {
 
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch(
-      "http://localhost:8080/products?" + queryString,
-      {
-        method: "GET",
-        credentials: "include",
-      }
-    );
+    const response = await fetch("/products?" + queryString, {
+      method: "GET",
+      credentials: "include",
+    });
     const data = await response.json();
     const totalItems = await response.headers.get("X-Total-Count");
     resolve({ data: { products: data, totalItems: totalItems } });
@@ -56,7 +53,7 @@ export function fetchProductByFilter(filter, sort, pagination) {
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/products/" + id, {
+    const response = await fetch("/products/" + id, {
       credentials: "include",
     });
     const data = await response.json();
@@ -66,7 +63,7 @@ export function fetchProductById(id) {
 export function fetchBrand() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/brands", {
+    const response = await fetch("/brands", {
       method: "GET",
       credentials: "include",
     });
@@ -77,7 +74,7 @@ export function fetchBrand() {
 export function fetchCategory() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/category", {
+    const response = await fetch("/category", {
       method: "GET",
       credentials: "include",
     });
@@ -88,15 +85,12 @@ export function fetchCategory() {
 export function updateProductById(updatedProduct) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch(
-      "http://localhost:8080/products/" + updatedProduct.id,
-      {
-        method: "PATCH",
-        credentials: "include",
-        body: JSON.stringify(updatedProduct),
-        headers: { "content-type": "application/json" },
-      }
-    );
+    const response = await fetch("/products/" + updatedProduct.id, {
+      method: "PATCH",
+      credentials: "include",
+      body: JSON.stringify(updatedProduct),
+      headers: { "content-type": "application/json" },
+    });
 
     const data = await response.json();
     resolve({ data });
@@ -105,7 +99,7 @@ export function updateProductById(updatedProduct) {
 export function addProduct(product) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/products", {
+    const response = await fetch("/products", {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(product),

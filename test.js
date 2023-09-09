@@ -1944,3 +1944,94 @@ const finalBrand = uniqueBrand.map((b) => {
   };
 });
 console.log(finalBrand);
+
+// {
+//   "builds": [
+//     {
+//       "src": "index.js",
+//       "use": "@vercel/node"
+//     },
+//     {
+//       "src": "build/**",
+//       "use": "@vercel/static"
+//     }
+//   ],
+//   "routes": [
+//     {
+//       "src": "/products",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/products/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/brands",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/brands/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/category",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/category/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/user",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/user/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/auth",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/auth/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/cart",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/cart/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/orders",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/orders/(.*)",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/webhook",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/create-payment-intent",
+//       "dest": "index.js"
+//     },
+//     {
+//       "src": "/",
+//       "dest": "build/index.html"
+//     },
+//     {
+//       "src": "/(.+)",
+//       "dest": "build/$1"
+//     },
+//     {
+//       "src": "/(.*)",
+//       "dest": "build/index.html"
+//     }
+//   ]
+// }

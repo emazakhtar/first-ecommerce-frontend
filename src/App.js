@@ -31,6 +31,7 @@ import {
   fetchBrandAsync,
   fetchCategoryAsync,
 } from "./features/products/productSlice";
+import StripeCheckout from "./pages/StripeCheckout";
 
 const router = createBrowserRouter([
   {
@@ -152,6 +153,14 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/stripe-checkout",
+    element: (
+      <Protected>
+        <StripeCheckout></StripeCheckout>
+      </Protected>
+    ),
+  },
+  {
     path: "*",
     element: <PageNotFound></PageNotFound>,
   },
@@ -161,6 +170,7 @@ function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUserToken);
   const checkedUser = useSelector(selectCheckedUser);
+
   useEffect(() => {
     if (!user) {
       dispatch(checkUserAsync());

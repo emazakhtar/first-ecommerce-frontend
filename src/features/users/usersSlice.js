@@ -22,7 +22,7 @@ export const loadUsersInfoAsync = createAsyncThunk(
   }
 );
 export const fetchAllUsersOrdersAsync = createAsyncThunk(
-  "order/fetchAllUsersOrders",
+  "user/fetchAllUsersOrders",
   async () => {
     const response = await fetchAllUsersOrders();
     return response.data;

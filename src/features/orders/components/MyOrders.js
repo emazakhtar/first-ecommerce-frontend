@@ -6,7 +6,6 @@ import { selectOrderStatus } from "../ordersSlice";
 import { Grid } from "react-loader-spinner";
 import {
   fetchAllUsersOrdersAsync,
-  selectLoggedInUserInfo,
   selectUserOrders,
 } from "../../users/usersSlice";
 
@@ -14,12 +13,12 @@ function MyOrders() {
   const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
   const orders = useSelector(selectUserOrders);
-  const userInfo = useSelector(selectLoggedInUserInfo);
+
   console.log(orders);
   const status = useSelector(selectOrderStatus);
   useEffect(() => {
     dispatch(fetchAllUsersOrdersAsync());
-  }, [dispatch, userInfo]);
+  }, [dispatch]);
 
   return (
     <>

@@ -2,7 +2,7 @@ export function addToCart(userData) {
   return new Promise(async (resolve, reject) => {
     // TODO: we will not hardcode server url here
     try {
-      const response = await fetch("http://localhost:8080/cart/", {
+      const response = await fetch("/cart/", {
         method: "POST",
         body: JSON.stringify(userData),
         credentials: "include",
@@ -24,15 +24,12 @@ export function addToCart(userData) {
 export function updateCart(updateData) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch(
-      "http://localhost:8080/cart/" + updateData.id,
-      {
-        method: "PATCH",
-        credentials: "include",
-        body: JSON.stringify(updateData),
-        headers: { "content-type": "application/json" },
-      }
-    );
+    const response = await fetch("/cart/" + updateData.id, {
+      method: "PATCH",
+      credentials: "include",
+      body: JSON.stringify(updateData),
+      headers: { "content-type": "application/json" },
+    });
     const data = await response.json();
     resolve({ data });
   });
@@ -40,7 +37,7 @@ export function updateCart(updateData) {
 export function removeItemsFromCart(item) {
   return new Promise(async (resolve, reject) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/cart/" + item.id, {
+    const response = await fetch("/cart/" + item.id, {
       method: "DELETE",
       credentials: "include",
     });
@@ -56,7 +53,7 @@ export function removeItemsFromCart(item) {
 export function fetchAllCart() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("http://localhost:8080/cart/", {
+    const response = await fetch("/cart/", {
       credentials: "include",
     });
     const data = await response.json();

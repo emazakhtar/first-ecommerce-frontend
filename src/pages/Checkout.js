@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import {
   createOrderAsync,
   selectOrderSuccess,
+  selectSelectedOrder,
 } from "../features/orders/ordersSlice";
 import {
   selectLoggedInUserInfo,
@@ -27,6 +28,7 @@ function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const orderSuccess = useSelector(selectOrderSuccess);
+  // const currentOrder = useSelector(selectSelectedOrder);
 
   const totalAmount = cartItems.reduce(
     (amount, item) =>
@@ -84,11 +86,14 @@ function Checkout() {
 
   return (
     <>
-      {orderSuccess && (
+      {orderSuccess && orderSuccess.paymentMethod === "cash" && (
         <Navigate
           to={`/order-success/${orderSuccess.id}`}
           replace={true}
         ></Navigate>
+      )}
+      {orderSuccess && orderSuccess.paymentMethod === "card" && (
+        <Navigate to={`/stripe-checkout`} replace={true}></Navigate>
       )}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
