@@ -289,45 +289,46 @@ function Checkout() {
                   Choose from existing addresses
                 </p>
                 <ul role="list">
-                  {user.address.map((address, index) => (
-                    <li
-                      key={index}
-                      className="flex justify-between gap-x-6 py-5 px-5 border-solid border-2 border-gray-200"
-                    >
-                      <div className="flex gap-x-4">
-                        <input
-                          onChange={handleSelectedAddress}
-                          value={index}
-                          name="address"
-                          type="radio"
-                          className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
+                  {user &&
+                    user.address.map((address, index) => (
+                      <li
+                        key={index}
+                        className="flex justify-between gap-x-6 py-5 px-5 border-solid border-2 border-gray-200"
+                      >
+                        <div className="flex gap-x-4">
+                          <input
+                            onChange={handleSelectedAddress}
+                            value={index}
+                            name="address"
+                            type="radio"
+                            className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                          />
 
-                        <div className="min-w-0 flex-auto">
-                          <p className="text-sm font-semibold leading-6 text-gray-900">
-                            {address.name}
+                          <div className="min-w-0 flex-auto">
+                            <p className="text-sm font-semibold leading-6 text-gray-900">
+                              {address.name}
+                            </p>
+                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                              {address.email}
+                            </p>
+                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                              {address.street}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="hidden sm:flex sm:flex-col sm:items-end">
+                          <p className="text-sm leading-6 text-gray-900">
+                            {address.city}
                           </p>
-                          <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                            {address.email}
+                          <p className="text-sm leading-6 text-gray-900">
+                            {address.state}
                           </p>
-                          <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                            {address.street}
+                          <p className="mt-1 text-xs leading-5 text-gray-500">
+                            Phone: {address.phone}
                           </p>
                         </div>
-                      </div>
-                      <div className="hidden sm:flex sm:flex-col sm:items-end">
-                        <p className="text-sm leading-6 text-gray-900">
-                          {address.city}
-                        </p>
-                        <p className="text-sm leading-6 text-gray-900">
-                          {address.state}
-                        </p>
-                        <p className="mt-1 text-xs leading-5 text-gray-500">
-                          Phone: {address.phone}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
+                      </li>
+                    ))}
                 </ul>
                 <div className="mt-10 space-y-10">
                   <fieldset>
