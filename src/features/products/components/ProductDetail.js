@@ -56,7 +56,7 @@ function ProductDetail() {
 
   const handleCart = (e) => {
     e.preventDefault();
-    if (cartItems.findIndex((item) => item.product_id === product.id) < 0) {
+    if (cartItems.findIndex((item) => item.product.id === product.id) < 0) {
       const newCartItem = {
         quantity: 1,
         product: product.id,
