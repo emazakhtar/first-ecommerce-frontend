@@ -28,9 +28,10 @@ export function fetchProductByFilter(filter, sort, pagination) {
   for (let key in filter) {
     let filterBySomethingArray = filter[key];
     if (filterBySomethingArray.length > 0) {
-      let lastValue = filterBySomethingArray[filterBySomethingArray.length - 1];
-      queryString += `${key}=${lastValue}&`;
+      queryString += `${key}=${filterBySomethingArray}&`;
     }
+    console.log(queryString);
+    // let lastValue = filterBySomethingArray[filterBySomethingArray.length - 1];
   }
   for (let key in sort) {
     queryString += `${key}=${sort[key]}&`;
