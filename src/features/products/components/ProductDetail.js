@@ -10,7 +10,6 @@ import {
   selectProductListStatus,
 } from "../productSlice";
 import { addToCartAsync, selectCart } from "../../cart/cartSlice";
-import { discountedPrice } from "../../../app/constants";
 import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
 import { selectLoggedInUserInfo } from "../../users/usersSlice";
@@ -170,8 +169,11 @@ function ProductDetail() {
             {/* Options */}
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
-              <p className="text-3xl tracking-tight text-gray-900">
-                ${discountedPrice(product.price, product.discountPercentage)}
+              <p
+                className="text-3xl tracking-tight text-gray-900"
+                discountedPrice
+              >
+                ${product.discountedPrice}
               </p>
               <p className="line-through text-2xl tracking-tight text-gray-500">
                 ${product.price}

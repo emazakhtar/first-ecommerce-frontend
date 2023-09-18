@@ -1,11 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { checkUser, createUser, loginUser, signOut } from "./authAPI";
+import {
+  checkUser,
+  createUser,
+  loginUser,
+  resetPassword,
+  resetPasswordRequest,
+  signOut,
+} from "./authAPI";
 
 const initialState = {
   LoggedInUserToken: null,
   status: "idle",
   error: null,
   checkedUser: false,
+  emailSent: null,
+  resetPasswordStatus: null,
 };
 
 export const createUserAsync = createAsyncThunk(
@@ -44,7 +53,6 @@ export const loginUserAsync = createAsyncThunk(
 export const checkUserAsync = createAsyncThunk(
   "auth/checkUser",
   async (rejectWithValue) => {
-    console.log("yhhhbhbb");
     try {
       const response = await checkUser();
       return response.data;
@@ -54,11 +62,51 @@ export const checkUserAsync = createAsyncThunk(
   }
 );
 
-export const signOutAsync = createAsyncThunk("auth/signOut", async (userId) => {
-  const response = await signOut(userId);
-  return response.data;
-});
+export const signOutAsync = createAsyncThunk(
+  "auth/signOut",
+  async (rejectWithValue) => {
+    try {
+      const response = await signOut();
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
 
+export const resetPasswordRequestAsync = createAsyncThunk(
+  "auth/resetPasswordRequest",
+  async (data, { rejectWithValue }) => {
+    try {
+      const response = await resetPasswordRequest(data);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+export const resetPasswordAsync = createAsyncThunk(
+  "auth/resetPassword",
+  async (data, { rejectWithValue }) => {
+    try {
+      const response = await resetPassword(data);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+// export const verifyTokenAsync = createAsyncThunk(
+//   "auth/verifyToken",
+//   async (token, { rejectWithValue }) => {
+//     try {
+//       const response = await verifyToken(token);
+//       return response.data;
+//     } catch (error) {
+//       return rejectWithValue(error);
+//     }
+//   }
+// );
 export const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -112,6 +160,35 @@ export const authSlice = createSlice({
       .addCase(signOutAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.LoggedInUserToken = null;
+      })
+      .addCase(signOutAsync.rejected, (state, action) => {
+        state.status = "idle";
+        state.error = action.payload;
+      })
+      .addCase(resetPasswordRequestAsync.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
+      })
+      .addCase(resetPasswordRequestAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(resetPasswordRequestAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.error = null;
+        state.emailSent = action.payload;
+      })
+      .addCase(resetPasswordAsync.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
+      })
+      .addCase(resetPasswordAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(resetPasswordAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.error = null;
+        state.emailSent = null;
+        state.resetPasswordStatus = action.payload;
       });
   },
 });
@@ -121,5 +198,8 @@ export const { logOutUser } = authSlice.actions;
 export const selectLoggedInUserToken = (state) => state.auth.LoggedInUserToken;
 export const selectError = (state) => state.auth.error;
 export const selectCheckedUser = (state) => state.auth.checkedUser;
+export const selectEmailSent = (state) => state.auth.emailSent;
+export const selectResetPasswordStatus = (state) =>
+  state.auth.resetPasswordStatus;
 
 export default authSlice.reducer;

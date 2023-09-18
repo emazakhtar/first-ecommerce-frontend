@@ -32,6 +32,7 @@ import {
   fetchCategoryAsync,
 } from "./features/products/productSlice";
 import StripeCheckout from "./pages/StripeCheckout";
+import ResetPassword from "./features/auth/components/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
   {
     path: "/forgot-password",
     element: <ForgotPasswordPage></ForgotPasswordPage>,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword></ResetPassword>,
   },
   {
     path: "/admin/orders",

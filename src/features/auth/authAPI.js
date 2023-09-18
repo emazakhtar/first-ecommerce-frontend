@@ -71,11 +71,96 @@ export function checkUser() {
     }
   });
 }
+export function resetPasswordRequest(data) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch("/auth/reset-password-request", {
+        method: "POST",
+        body: JSON.stringify({ email: data.email }),
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
 
-export function signOut(userId) {
-  return new Promise(async (resolve) => {
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+export function resetPassword(data) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch("/auth/reset-password", {
+        method: "POST",
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+          token: data.token,
+        }),
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+export function verifyToken(token) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(`/auth/verify-token?token=${token}`, {
+        method: "GET",
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+export function signOut() {
+  return new Promise(async (resolve, reject) => {
     // on server we will remove user session info
+    try {
+      const response = await fetch("/auth/logout", {
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
 
-    resolve({ data: "success" });
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
   });
 }

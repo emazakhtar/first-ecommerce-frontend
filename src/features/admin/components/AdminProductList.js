@@ -21,8 +21,8 @@ import {
   fetchBrandAsync,
   fetchCategoryAsync,
 } from "../../products/productSlice";
-import { ITEMS_PER_PAGE, discountedPrice } from "../../../app/constants";
 import Pagination from "../../common/Pagination";
+import { ITEMS_PER_PAGE } from "../../../app/constants";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -449,11 +449,7 @@ function ProductGrid({ products }) {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-gray-900">
-                          $
-                          {discountedPrice(
-                            product.price,
-                            product.discountPercentage
-                          )}
+                          ${product.discountedPrice}
                         </p>
                         <p className="line-through text-sm font-medium text-gray-400">
                           ${product.price}

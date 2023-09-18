@@ -22,20 +22,20 @@ function MyOrders() {
 
   return (
     <>
+      {status === "loading" && (
+        <Grid
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      )}
       {orders.length > 0 ? (
         <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
-          {status === "loading" && (
-            <Grid
-              height="80"
-              width="80"
-              color="#4fa94d"
-              ariaLabel="grid-loading"
-              radius="12.5"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-            />
-          )}
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
             <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
               My Orders

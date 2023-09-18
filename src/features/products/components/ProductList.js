@@ -26,10 +26,15 @@ import { Grid } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
-  { name: "Price: Low to High", sort: "price", order: "asc", current: false },
+  {
+    name: "Price: Low to High",
+    sort: "discountedPrice",
+    order: "asc",
+    current: false,
+  },
   {
     name: "Price: High to Low",
-    sort: "price",
+    sort: "discountedPrice",
     order: "desc",
     current: false,
   },
@@ -454,11 +459,7 @@ function ProductGrid({ products, status }) {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-900">
-                            $
-                            {Math.round(
-                              product.price *
-                                (1 - product.discountPercentage / 100)
-                            )}
+                            ${product.discountedPrice}
                           </p>
                           <p className="line-through text-sm font-medium text-gray-400">
                             ${product.price}

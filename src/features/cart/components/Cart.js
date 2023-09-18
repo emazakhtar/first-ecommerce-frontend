@@ -7,7 +7,6 @@ import {
   selectCart,
   updateCartAsync,
 } from "../cartSlice";
-import { discountedPrice } from "../../../app/constants";
 
 function Cart() {
   const [open, setOpen] = useState(true);
@@ -27,10 +26,7 @@ function Cart() {
     dispatch(removeItemsFromCartAsync(product));
   };
   const totalAmount = cartItems.reduce(
-    (amount, item) =>
-      discountedPrice(item.product.price, item.product.discountPercentage) *
-        item.quantity +
-      amount,
+    (amount, item) => item.product.discountedPrice + amount,
     0
   );
   const totalItems = cartItems.reduce(
@@ -63,13 +59,7 @@ function Cart() {
                         <h3>
                           <div>{item.title}</div>
                         </h3>
-                        <p className="ml-4">
-                          $
-                          {discountedPrice(
-                            item.product.price,
-                            item.product.discountPercentage
-                          )}
-                        </p>
+                        <p className="ml-4">${item.product.discountedPrice}</p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
                         {item.product.color && item.color}

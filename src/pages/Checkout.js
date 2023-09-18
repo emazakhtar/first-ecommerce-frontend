@@ -18,7 +18,6 @@ import {
   selectLoggedInUserInfo,
   updateUserAsync,
 } from "../features/users/usersSlice";
-import { discountedPrice } from "../app/constants";
 
 function Checkout() {
   const [open, setOpen] = useState(true);
@@ -31,10 +30,7 @@ function Checkout() {
   // const currentOrder = useSelector(selectSelectedOrder);
 
   const totalAmount = cartItems.reduce(
-    (amount, item) =>
-      discountedPrice(item.product.price, item.product.discountPercentage) *
-        item.quantity +
-      amount,
+    (amount, item) => item.product.discountedPrice + amount,
     0
   );
   const totalItems = cartItems.reduce(
@@ -404,11 +400,7 @@ function Checkout() {
                                 <div>{item.product.title}</div>
                               </h3>
                               <p className="ml-4">
-                                $
-                                {discountedPrice(
-                                  item.product.price,
-                                  item.product.discountPercentage
-                                )}
+                                ${item.product.discountedPrice}
                               </p>
                             </div>
                             <p className="mt-1 text-sm text-gray-500">

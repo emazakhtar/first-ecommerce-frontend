@@ -1,0 +1,30 @@
+/* Apply styles to the container div */
+.scroll-container {
+  width: 1200px; /* Set a fixed width for the container */
+  /* white-space: nowrap; Prevent text from wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  border: 1px solid #ccc; /* Add a border for visual clarity */
+}
+
+/* Apply styles to the content inside the container */
+.scroll-content {
+  width: 1400px; /* Set a width wider than the container */
+  padding: 10px; /* Add some padding for spacing */
+}
+
+/* Optional: Style the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
