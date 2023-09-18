@@ -9,7 +9,11 @@ import {
   selectProduct,
   selectProductListStatus,
 } from "../productSlice";
-import { addToCartAsync, selectCart } from "../../cart/cartSlice";
+import {
+  addToCartAsync,
+  selectCart,
+  selectCartStatus,
+} from "../../cart/cartSlice";
 import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
 import { selectLoggedInUserInfo } from "../../users/usersSlice";
@@ -48,6 +52,7 @@ function ProductDetail() {
   const cartItems = useSelector(selectCart);
   const alert = useAlert();
   const status = useSelector(selectProductListStatus);
+  const cartStatus = useSelector(selectCartStatus);
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
@@ -62,7 +67,6 @@ function ProductDetail() {
       };
       dispatch(addToCartAsync(newCartItem));
       // it will be based on server response of backend
-      alert.success("item added to cart");
     } else {
       alert.error("item already added to cart");
     }
@@ -338,6 +342,18 @@ function ProductDetail() {
                   </div>
                 )}
               </form>
+              {cartStatus === "loading" && (
+                <Grid
+                  height="80"
+                  width="80"
+                  color="#4fa94d"
+                  ariaLabel="grid-loading"
+                  radius="12.5"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              )}
             </div>
 
             <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">

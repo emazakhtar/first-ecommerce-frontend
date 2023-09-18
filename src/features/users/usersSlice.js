@@ -68,5 +68,6 @@ export const { resetUserInfo } = usersSlice.actions;
 
 export const selectLoggedInUserInfo = (state) => state.user.LoggedInUserInfo;
 export const selectUserOrders = (state) => state.user.LoggedInUserInfo.orders;
+export const selectUserStatus = (state) => state.user.status;
 
 export default usersSlice.reducer;

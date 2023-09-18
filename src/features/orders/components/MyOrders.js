@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { selectOrderStatus } from "../ordersSlice";
 import { Grid } from "react-loader-spinner";
 import {
   fetchAllUsersOrdersAsync,
   selectUserOrders,
+  selectUserStatus,
 } from "../../users/usersSlice";
 
 function MyOrders() {
@@ -15,7 +15,7 @@ function MyOrders() {
   const orders = useSelector(selectUserOrders);
 
   console.log(orders);
-  const status = useSelector(selectOrderStatus);
+  const status = useSelector(selectUserStatus);
   useEffect(() => {
     dispatch(fetchAllUsersOrdersAsync());
   }, [dispatch]);
@@ -148,11 +148,7 @@ function MyOrders() {
             </div>
           </div>
         </div>
-      ) : (
-        <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
-          No Orders yet
-        </h1>
-      )}
+      ) : null}
     </>
   );
 }

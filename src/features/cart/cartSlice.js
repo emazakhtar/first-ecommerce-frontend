@@ -1,4 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { useAlert } from "react-alert";
+
 import {
   addToCart,
   fetchAllCart,
@@ -17,6 +19,7 @@ export const addToCartAsync = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const response = await addToCart(data);
+
       return response.data;
     } catch (error) {
       return rejectWithValue(error);
@@ -122,5 +125,6 @@ export const cartSlice = createSlice({
 export const { increment, decrement, incrementByAmount } = cartSlice.actions;
 
 export const selectCart = (state) => state.cart.items;
+export const selectCartStatus = (state) => state.cart.status;
 
 export default cartSlice.reducer;

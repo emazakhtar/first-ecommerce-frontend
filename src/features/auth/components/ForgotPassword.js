@@ -4,10 +4,12 @@ import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import {
   resetPasswordRequestAsync,
+  selectAuthStatus,
   selectEmailSent,
   selectError,
   selectLoggedInUserToken,
 } from "../authSlice";
+import { Grid } from "react-loader-spinner";
 
 function Login() {
   const {
@@ -19,7 +21,7 @@ function Login() {
   const user = useSelector(selectLoggedInUserToken);
   const emailSent = useSelector(selectEmailSent);
   const error = useSelector(selectError);
-
+  const status = useSelector(selectAuthStatus);
   const onSubmit = (data) => {
     console.log(data);
     dispatch(resetPasswordRequestAsync(data));
@@ -85,7 +87,18 @@ function Login() {
                 </button>
               </div>
             </form>
-
+            {status === "loading" && (
+              <Grid
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="grid-loading"
+                radius="12.5"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+              />
+            )}
             <p className="mt-10 text-center text-sm text-gray-500">
               Already have an account
               <Link

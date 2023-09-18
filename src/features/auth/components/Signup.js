@@ -2,11 +2,17 @@ import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { createUserAsync, selectLoggedInUserToken } from "../authSlice";
+import {
+  createUserAsync,
+  selectAuthStatus,
+  selectLoggedInUserToken,
+} from "../authSlice";
+import { Grid } from "react-loader-spinner";
 
 function Signup() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUserToken);
+  const status = useSelector(selectAuthStatus);
   const {
     register,
     handleSubmit,
@@ -151,7 +157,18 @@ function Signup() {
               </button>
             </div>
           </form>
-
+          {status === "loading" && (
+            <Grid
+              height="80"
+              width="80"
+              color="#4fa94d"
+              ariaLabel="grid-loading"
+              radius="12.5"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
+          )}
           <p className="mt-10 text-center text-sm text-gray-500">
             Already a Member?{" "}
             <Link

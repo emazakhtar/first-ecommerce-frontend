@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { selectLoggedInUserInfo, updateUserAsync } from "../usersSlice";
+import {
+  selectLoggedInUserInfo,
+  selectUserStatus,
+  updateUserAsync,
+} from "../usersSlice";
+import { Grid } from "react-loader-spinner";
 
 function UserProfile() {
   const [selectedEditIndex, setSelectedEditIndex] = useState(-1);
   const [openAddForm, setOpenAddForm] = useState(false);
   const [openProfileForm, setOpenProfileForm] = useState(false);
   const dispatch = useDispatch();
+  const status = useSelector(selectUserStatus);
 
   const {
     register,
     reset,
     handleSubmit,
     setValue,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -55,9 +60,11 @@ function UserProfile() {
     dispatch(updateUserAsync(newUser));
     setOpenAddForm(false);
   };
+
   const handleEditProfileForm = () => {
     setOpenProfileForm(true);
   };
+
   const handleUpdateProfile = (data) => {
     let updatedUser = { ...user, email: data.email, name: data.name };
     dispatch(updateUserAsync(updatedUser));

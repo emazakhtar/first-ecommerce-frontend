@@ -5,14 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   removeItemsFromCartAsync,
   selectCart,
+  selectCartStatus,
   updateCartAsync,
 } from "../cartSlice";
+import { Grid } from "react-loader-spinner";
 
 function Cart() {
   const [open, setOpen] = useState(true);
   const cartItems = useSelector(selectCart);
   const dispatch = useDispatch();
-
+  const status = useSelector(selectCartStatus);
   const handleQuantity = (e, item) => {
     dispatch(
       updateCartAsync({
@@ -96,6 +98,18 @@ function Cart() {
                   </div>
                 </li>
               ))}
+              {status === "loading" && (
+                <Grid
+                  height="80"
+                  width="80"
+                  color="#4fa94d"
+                  ariaLabel="grid-loading"
+                  radius="12.5"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              )}
             </ul>
           </div>
         </div>

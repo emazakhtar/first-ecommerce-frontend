@@ -11,13 +11,14 @@ import {
 import { useForm } from "react-hook-form";
 import {
   createOrderAsync,
+  selectOrderStatus,
   selectOrderSuccess,
-  selectSelectedOrder,
 } from "../features/orders/ordersSlice";
 import {
   selectLoggedInUserInfo,
   updateUserAsync,
 } from "../features/users/usersSlice";
+import { Grid } from "react-loader-spinner";
 
 function Checkout() {
   const [open, setOpen] = useState(true);
@@ -27,6 +28,7 @@ function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const orderSuccess = useSelector(selectOrderSuccess);
+  const status = useSelector(selectOrderStatus);
   // const currentOrder = useSelector(selectSelectedOrder);
 
   const totalAmount = cartItems.reduce(
@@ -461,6 +463,18 @@ function Checkout() {
                   >
                     Pay And Order
                   </div>
+                  {status === "loading" && (
+                    <Grid
+                      height="80"
+                      width="80"
+                      color="#4fa94d"
+                      ariaLabel="grid-loading"
+                      radius="12.5"
+                      wrapperStyle={{}}
+                      wrapperClass=""
+                      visible={true}
+                    />
+                  )}
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>

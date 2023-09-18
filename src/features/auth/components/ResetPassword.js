@@ -2,11 +2,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import {
   resetPasswordAsync,
+  selectAuthStatus,
   selectError,
   selectLoggedInUserToken,
   selectResetPasswordStatus,
 } from "../authSlice";
 import { Link, Navigate } from "react-router-dom";
+import { Grid } from "react-loader-spinner";
 
 function ResetPassword() {
   // using using url parameters...
@@ -22,7 +24,7 @@ function ResetPassword() {
 
   const dispatch = useDispatch();
   const error = useSelector(selectError);
-
+  const status = useSelector(selectAuthStatus);
   // useEffect(() => {
   //   dispatch(verifyTokenAsync(token));
   // }, [dispatch, token]);
@@ -35,7 +37,6 @@ function ResetPassword() {
 
   const user = useSelector(selectLoggedInUserToken);
   const resetPasswordStatus = useSelector(selectResetPasswordStatus);
-
   const onSubmit = (data) => {
     console.log(data);
     dispatch(
@@ -51,6 +52,18 @@ function ResetPassword() {
       {user && <Navigate to="/"></Navigate>}
       {resetPasswordStatus && (
         <p className="text-green-500">{resetPasswordStatus.message}</p>
+      )}
+      {resetPasswordStatus && (
+        <p className="mt-10 text-center text-sm text-gray-500">
+          Go to Login Page
+          <Link
+            to="/login"
+            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+          >
+            {" "}
+            Go to login page
+          </Link>
+        </p>
       )}
       {token && email && !resetPasswordStatus && (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -148,7 +161,18 @@ function ResetPassword() {
                 </button>
               </div>
             </form>
-
+            {status === "loading" && (
+              <Grid
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="grid-loading"
+                radius="12.5"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+              />
+            )}
             <p className="mt-10 text-center text-sm text-gray-500">
               Already have an account
               <Link
