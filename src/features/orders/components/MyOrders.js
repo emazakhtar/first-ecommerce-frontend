@@ -34,6 +34,23 @@ function MyOrders() {
           visible={true}
         />
       )}
+      {status !== "loading" && orders.length === 0 && (
+        <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+          <p>
+            Currently you have no orders...
+            <Link to="/">
+              <button
+                type="button"
+                className="font-medium text-indigo-600 hover:text-indigo-500"
+                onClick={() => setOpen(false)}
+              >
+                Continue Shopping
+                <span aria-hidden="true"> &rarr;</span>
+              </button>
+            </Link>
+          </p>
+        </div>
+      )}
       {orders.length > 0 ? (
         <div className="mx-auto mt-12 bg-white max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
