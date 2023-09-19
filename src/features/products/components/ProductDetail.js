@@ -16,7 +16,7 @@ import {
 } from "../../cart/cartSlice";
 import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
-import { selectLoggedInUserInfo } from "../../users/usersSlice";
+
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
   { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
@@ -43,7 +43,6 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 function ProductDetail() {
-  const userInfo = useSelector(selectLoggedInUserInfo);
   const dispatch = useDispatch();
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
@@ -65,7 +64,7 @@ function ProductDetail() {
         quantity: 1,
         product: product.id,
       };
-      dispatch(addToCartAsync(newCartItem));
+      dispatch(addToCartAsync({ item: newCartItem, alert }));
       // it will be based on server response of backend
     } else {
       alert.error("item already added to cart");
@@ -89,10 +88,7 @@ function ProductDetail() {
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
-            <ol
-              role="list"
-              className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
-            >
+            <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
               {product.breadcrumbs &&
                 product.breadcrumbs.map((breadcrumb) => (
                   <li key={breadcrumb.id}>
@@ -252,12 +248,9 @@ function ProductDetail() {
                 <div className="mt-10">
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                    <a
-                      href="#"
-                      className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
-                    >
+                    <div className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                       Size guide
-                    </a>
+                    </div>
                   </div>
 
                   <RadioGroup
@@ -374,7 +367,7 @@ function ProductDetail() {
                 </h3>
 
                 <div className="mt-4">
-                  <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                  <ul className="list-disc space-y-2 pl-4 text-sm">
                     {highlights.map((highlight) => (
                       <li key={highlight} className="text-gray-400">
                         <span className="text-gray-600">{highlight}</span>

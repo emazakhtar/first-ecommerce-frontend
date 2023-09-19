@@ -93,10 +93,7 @@ function ResetPassword() {
                     Enter New Password
                   </label>
                   <div className="text-sm">
-                    <a
-                      href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
-                    ></a>
+                    <div className="font-semibold text-indigo-600 hover:text-indigo-500"></div>
                   </div>
                 </div>
                 <div className="mt-2">
@@ -127,10 +124,7 @@ function ResetPassword() {
                     Confirm Password
                   </label>
                   <div className="text-sm">
-                    <a
-                      href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
-                    ></a>
+                    <div className="font-semibold text-indigo-600 hover:text-indigo-500"></div>
                   </div>
                 </div>
                 <div className="mt-2">

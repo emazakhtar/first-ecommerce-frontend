@@ -41,7 +41,7 @@ function MyOrders() {
               My Orders
             </h1>
             <div className="flow-root">
-              <ul role="list" className="-my-6 divide-y divide-gray-200">
+              <ul className="-my-6 divide-y divide-gray-200">
                 {orders.map((order, index) => (
                   <div>
                     <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">

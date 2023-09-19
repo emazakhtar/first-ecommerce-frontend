@@ -16,7 +16,7 @@ function Signup() {
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm();
 
@@ -89,10 +89,7 @@ function Signup() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  ></a>
+                  <div className="font-semibold text-indigo-600 hover:text-indigo-500"></div>
                 </div>
               </div>
               <div className="mt-2">
@@ -123,10 +120,7 @@ function Signup() {
                   Confirm Password
                 </label>
                 <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  ></a>
+                  <div className="font-semibold text-indigo-600 hover:text-indigo-500"></div>
                 </div>
               </div>
               <div className="mt-2">

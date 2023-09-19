@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useAlert } from "react-alert";
 
 import {
   addToCart,
@@ -16,10 +15,10 @@ const initialState = {
 
 export const addToCartAsync = createAsyncThunk(
   "cart/addToCart",
-  async (data, { rejectWithValue }) => {
+  async ({ item, alert }, { rejectWithValue }) => {
     try {
-      const response = await addToCart(data);
-
+      const response = await addToCart(item);
+      alert.success("item added to cart");
       return response.data;
     } catch (error) {
       return rejectWithValue(error);

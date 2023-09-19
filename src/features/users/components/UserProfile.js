@@ -2,19 +2,13 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import {
-  selectLoggedInUserInfo,
-  selectUserStatus,
-  updateUserAsync,
-} from "../usersSlice";
-import { Grid } from "react-loader-spinner";
+import { selectLoggedInUserInfo, updateUserAsync } from "../usersSlice";
 
 function UserProfile() {
   const [selectedEditIndex, setSelectedEditIndex] = useState(-1);
   const [openAddForm, setOpenAddForm] = useState(false);
   const [openProfileForm, setOpenProfileForm] = useState(false);
   const dispatch = useDispatch();
-  const status = useSelector(selectUserStatus);
 
   const {
     register,
