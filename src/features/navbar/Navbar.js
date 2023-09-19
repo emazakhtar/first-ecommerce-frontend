@@ -11,17 +11,14 @@ import { selectCart } from "../cart/cartSlice";
 import { selectLoggedInUserInfo } from "../users/usersSlice";
 
 const navigation = [
-  { name: "E-Commerce", link: "#", user: true },
-  { name: "Products", link: "/", user: true },
-  { name: "Orders", link: "/my-orders", user: true },
-  { name: "Profile", link: "/profile", user: true },
+  // { name: "Products", link: "/", user: true },
   { name: "Admin Products", link: "/admin/home", admin: true },
   { name: "Admin Orders", link: "/admin/orders", admin: true },
 ];
 const userNavigation = [
-  { name: "Your Profile", link: "/profile", href: "#" },
-  { name: "Log out", link: "auth/logout", href: "#" },
+  { name: "My Profile", link: "/profile", href: "#" },
   { name: "My Orders", link: "/my-orders", href: "#" },
+  { name: "Log out", link: "auth/logout", href: "#" },
 ];
 
 function classNames(...classes) {

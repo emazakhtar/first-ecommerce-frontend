@@ -61,16 +61,17 @@ function MyOrders() {
               <ul className="-my-6 divide-y divide-gray-200">
                 {orders.map((order, index) => (
                   <div>
-                    <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">
-                      Order No #{order.id}
-                    </h1>
+                    <h3 className="inline-block text-2xl my-5 font-bold tracking-tight text-gray-900">
+                      Order No
+                    </h3>
+                    <p className="inline-block">#{order.id}</p>
                     <li key={index} className="flex py-6">
                       <div className="ml-4 flex flex-1 flex-col">
                         <div>
-                          <div className="flex text-base font-medium text-gray-900">
+                          <div className="flex flex-col text-base font-medium text-gray-900">
                             {order.cartItems.map((item) => (
                               <>
-                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 ">
                                   <img
                                     src={item.product.thumbnail}
                                     alt={item.product.title}
@@ -78,12 +79,14 @@ function MyOrders() {
                                   />
                                 </div>
                                 <h3>
-                                  <div>{item.product.title}...</div>
+                                  <div>{item.product.title}.</div>
                                 </h3>
                                 <div>
                                   {" "}
-                                  <label>Qty</label>
-                                  <p>{item.quantity}</p>
+                                  <label className="inline-block">Qty-</label>
+                                  <p className="inline-block">
+                                    {item.quantity}
+                                  </p>
                                 </div>
                               </>
                             ))}
@@ -98,19 +101,23 @@ function MyOrders() {
                       </div>
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>Subtotal </p>
+                          <p>Subtotal: </p>
                           <p>${order.totalAmount}</p>
                         </div>
                         <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>Status</p>
+                          <p>Status:</p>
                           <p>{order.status} </p>
                         </div>
                         <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>Payment Method: </p>
+                          <p>Payment Method:</p>
                           <p>{order.paymentMethod} </p>
                         </div>
                         <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>Total Items</p>
+                          <p>Payment Status:</p>
+                          <p>{order.paymentStatus} </p>
+                        </div>
+                        <div className="flex justify-between text-base font-medium text-gray-900">
+                          <p>Total Items:</p>
                           <p>{order.totalItems} </p>
                         </div>
                       </div>
