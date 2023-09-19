@@ -406,7 +406,7 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
 }
 function ProductGrid({ products, status }) {
   return (
-    <div className="lg:col-span-3">
+    <div className="lg:col-span-3 sm:col-span-6">
       {/* this is our products list  */}
 
       <div className="bg-white">
