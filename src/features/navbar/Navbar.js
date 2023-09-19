@@ -21,7 +21,7 @@ const navigation = [
 const userNavigation = [
   { name: "Your Profile", link: "/profile", href: "#" },
   { name: "Settings", link: "/", href: "#" },
-  { name: "Log out", link: "/logout", href: "#" },
+  { name: "Log out", link: "auth/logout", href: "#" },
   { name: "My Orders", link: "/my-orders", href: "#" },
 ];
 
@@ -165,7 +165,7 @@ function Navbar({ children }) {
                       <Disclosure.Button
                         key={item.name}
                         as="a"
-                        href={item.href}
+                        href={item.link}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -195,7 +195,7 @@ function Navbar({ children }) {
                           {userInfo.email}
                         </div>
                       </div>
-                      <Link to="/cart">
+                      <Link to="/my-cart">
                         <button
                           cursor-pointer
                           type="button"
@@ -220,7 +220,7 @@ function Navbar({ children }) {
                         <Disclosure.Button
                           key={item.name}
                           as="a"
-                          href={item.href}
+                          href={item.link}
                           className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                         >
                           {item.name}
