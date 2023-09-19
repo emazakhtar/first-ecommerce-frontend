@@ -285,14 +285,28 @@ function Checkout() {
             )}
 
             <div className="border-b border-gray-900/10 pb-12">
-              <h2 className="py-2 text-base font-semibold leading-7 text-gray-900">
-                Your Addressess
-              </h2>
-              <p className="mt-1 text-sm leading-6 text-gray-600">
-                Choose from existing addresses
-              </p>
+              {user && user.address.length > 0 && (
+                <div>
+                  {" "}
+                  <h2 className="py-2 text-base font-semibold leading-7 text-gray-900">
+                    Your Addressess
+                  </h2>
+                  <p className="mt-1 text-sm leading-6 text-gray-600">
+                    Choose from existing addresses
+                  </p>
+                </div>
+              )}
+
               <ul>
                 {user &&
+                  user.address.length === 0 &&
+                  addNewAddressFormOpen === false && (
+                    <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                      <p>Please add an address to proceed ahead.</p>
+                    </div>
+                  )}
+                {user &&
+                  user.address &&
                   user.address.map((address, index) => (
                     <li
                       key={index}
