@@ -18,18 +18,23 @@ import {
   selectTotalItems,
   selectBrand,
   selectCategory,
-  fetchBrandAsync,
-  fetchCategoryAsync,
+  selectProductListStatus,
 } from "../../products/productSlice";
-import Pagination from "../../common/Pagination";
 import { ITEMS_PER_PAGE } from "../../../app/constants";
+import Pagination from "../../common/Pagination";
+import { Grid } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
-  { name: "Price: Low to High", sort: "price", order: "asc", current: false },
+  {
+    name: "Price: Low to High",
+    sort: "discountedPrice",
+    order: "asc",
+    current: false,
+  },
   {
     name: "Price: High to Low",
-    sort: "price",
+    sort: "discountedPrice",
     order: "desc",
     current: false,
   },
@@ -49,7 +54,7 @@ function AdminProductList() {
   const [filter, setFilter] = useState({});
   const [sort, setSort] = useState({});
   const [page, setPage] = useState(1);
-
+  const status = useSelector(selectProductListStatus);
   const filters = [
     {
       id: "brand",
@@ -75,11 +80,6 @@ function AdminProductList() {
     // why here why not after click of brand or category
     setPage(1);
   }, [totalItems]);
-
-  useEffect(() => {
-    dispatch(fetchBrandAsync());
-    dispatch(fetchCategoryAsync());
-  }, [dispatch]);
 
   const handleFilter = (e, option, section) => {
     console.log(section.id, option.value, e.target.checked);
@@ -128,8 +128,8 @@ function AdminProductList() {
           ></MobileFilter>
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-                All Products
+              <h1 className="text-3xl font-bold tracking-tight text-gray-500">
+                Shop
               </h1>
 
               <div className="flex items-center">
@@ -210,7 +210,7 @@ function AdminProductList() {
                   filters={filters}
                 ></DesktopFilter>
                 {/* Product grid */}
-                <ProductGrid products={products}></ProductGrid>
+                <ProductGrid products={products} status={status}></ProductGrid>
                 {/* Product grid end  */}
               </div>
             </section>
@@ -404,9 +404,9 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
     </form>
   );
 }
-function ProductGrid({ products }) {
+function ProductGrid({ products, status }) {
   return (
-    <div className="lg:col-span-3">
+    <div className="lg:col-span-3 sm:col-span-6 md:col-span-4">
       {/* this is our products list  */}
       <Link
         to={`/admin/product-add-form`}
@@ -415,70 +415,90 @@ function ProductGrid({ products }) {
         Add Product
       </Link>
       <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {products.map((product, index) => (
-              <div>
-                <Link to={`/product-detail/${product.id}`}>
-                  <div
-                    key={index}
-                    className="group relative border-solid border-2 border-gray-200 p-2"
-                  >
-                    <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
-                      <img
-                        src={product.thumbnail}
-                        alt={product.title}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                      />
-                    </div>
-                    <div className="mt-4 flex justify-between">
-                      <div>
-                        <h3 className="text-sm text-gray-700">
-                          <div href={product.thumbnail}>
-                            <span
-                              aria-hidden="true"
-                              className="absolute inset-0"
-                            />
-                            {product.title}
-                          </div>
-                        </h3>
-                        <p className="mt-1 text-sm text-gray-500">
-                          <StarIcon className="w-6 h-6 inline "></StarIcon>
-                          <span className="align-bottom">{product.rating}</span>
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">
-                          ${product.discountedPrice}
-                        </p>
-                        <p className="line-through text-sm font-medium text-gray-400">
-                          ${product.price}
-                        </p>
-                      </div>
-                    </div>
-                    {product.stock <= 0 && (
-                      <div>
-                        <p className="text-red-500">Out Of Stock</p>
-                      </div>
-                    )}
-
-                    {product.deleted && (
-                      <div>
-                        <p className="text-red-500">Product Deleted</p>
-                      </div>
-                    )}
-                  </div>
-                </Link>
-                <div className="my-5">
-                  <Link
-                    to={`/admin/product-edit-form/${product.id}`}
-                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Edit Product
-                  </Link>
-                </div>
+        <div className="mx-auto max-w-2xl px-0 py-0 sm:px-0 sm:py-0 lg:max-w-7xl lg:px-0">
+          <div className="mt-6 grid grid-cols-2 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            {status === "loading" ? (
+              <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                {/* Loader component */}
+                <Grid
+                  className="loader"
+                  height="80"
+                  width="80"
+                  color="#4fa94d"
+                  ariaLabel="grid-loading"
+                  radius="12.5"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
               </div>
-            ))}
+            ) : null}
+            {products.map(
+              (product, index) =>
+                !product.deleted && (
+                  <div>
+                    <Link to={`/product-detail/${product.id}`}>
+                      <div
+                        key={index}
+                        className={`group relative border-solid border-2 border-gray-200 p-2 w-full ${
+                          status === "loading" ? "blur" : ""
+                        }`}
+                      >
+                        <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+                          <img
+                            src={product.thumbnail}
+                            alt={product.title}
+                            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                          />
+                        </div>
+                        <div className="mt-4 flex justify-between">
+                          <div>
+                            <h3 className="text-sm text-gray-700">
+                              <div href={product.thumbnail}>
+                                <span
+                                  aria-hidden="true"
+                                  className="absolute inset-0"
+                                />
+                                {product.title}
+                              </div>
+                            </h3>
+                            <p className="mt-1 text-sm text-gray-500">
+                              <StarIcon className="w-6 h-6 inline "></StarIcon>
+                              <span className="align-bottom">
+                                {product.rating}
+                              </span>
+                            </p>
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">
+                              ${product.discountedPrice}
+                            </p>
+                            <p className="line-through text-sm font-medium text-gray-400">
+                              ${product.price}
+                            </p>
+                          </div>
+                        </div>
+                        {product.stock <= 0 && (
+                          <p className="text-red-500">Out Of Stock</p>
+                        )}
+                        {product.deleted && (
+                          <div>
+                            <p className="text-red-500">Product Deleted</p>
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                    <div className="my-5">
+                      <Link
+                        to={`/admin/product-edit-form/${product.id}`}
+                        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      >
+                        Edit Product
+                      </Link>
+                    </div>
+                  </div>
+                )
+            )}
           </div>
         </div>
       </div>

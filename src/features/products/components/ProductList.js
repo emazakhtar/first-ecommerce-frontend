@@ -128,8 +128,8 @@ function ProductList() {
           ></MobileFilter>
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-                All Products
+              <h1 className="text-3xl font-bold tracking-tight text-gray-500">
+                Shop
               </h1>
 
               <div className="flex items-center">
@@ -413,16 +413,20 @@ function ProductGrid({ products, status }) {
         <div className="mx-auto max-w-2xl px-0 py-0 sm:px-0 sm:py-0 lg:max-w-7xl lg:px-0">
           <div className="mt-6 grid grid-cols-2 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {status === "loading" ? (
-              <Grid
-                height="80"
-                width="80"
-                color="#4fa94d"
-                ariaLabel="grid-loading"
-                radius="12.5"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-              />
+              <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                {/* Loader component */}
+                <Grid
+                  className="loader"
+                  height="80"
+                  width="80"
+                  color="#4fa94d"
+                  ariaLabel="grid-loading"
+                  radius="12.5"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              </div>
             ) : null}
             {products.map(
               (product, index) =>
@@ -430,7 +434,9 @@ function ProductGrid({ products, status }) {
                   <Link to={`/product-detail/${product.id}`}>
                     <div
                       key={index}
-                      className="group relative border-solid border-2 border-gray-200 p-2 w-full"
+                      className={`group relative border-solid border-2 border-gray-200 p-2 w-full ${
+                        status === "loading" ? "blur" : ""
+                      }`}
                     >
                       <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
                         <img

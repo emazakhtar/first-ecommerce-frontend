@@ -65,8 +65,28 @@ function ResetPassword() {
           </Link>
         </p>
       )}
+      {status === "loading" && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+          {/* Loader component */}
+          <Grid
+            className="loader"
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="grid-loading"
+            radius="12.5"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
+      )}
       {token && email && !resetPasswordStatus && (
-        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <div
+          className={`flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 ${
+            status === "loading" ? "blur" : ""
+          }`}
+        >
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <img
               className="mx-auto h-10 w-auto"
@@ -155,18 +175,7 @@ function ResetPassword() {
                 </button>
               </div>
             </form>
-            {status === "loading" && (
-              <Grid
-                height="80"
-                width="80"
-                color="#4fa94d"
-                ariaLabel="grid-loading"
-                radius="12.5"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-              />
-            )}
+
             <p className="mt-10 text-center text-sm text-gray-500">
               Already have an account
               <Link

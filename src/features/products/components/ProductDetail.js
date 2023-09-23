@@ -16,6 +16,8 @@ import {
 } from "../../cart/cartSlice";
 import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -73,20 +75,28 @@ function ProductDetail() {
 
   return (
     <div className="bg-white">
-      {status === "loading" && (
-        <Grid
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="grid-loading"
-          radius="12.5"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
+      {(status === "loading" || cartStatus === "loading") && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+          {/* Loader component */}
+          <Grid
+            className="loader"
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="grid-loading"
+            radius="12.5"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
       )}
       {product && (
-        <div className="pt-6">
+        <div
+          className={`pt-6 ${
+            status === "loading" || cartStatus === "loading" ? "blur" : ""
+          }`}
+        >
           <nav aria-label="Breadcrumb">
             <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
               {product.breadcrumbs &&
@@ -124,39 +134,14 @@ function ProductDetail() {
             </ol>
           </nav>
 
-          {/* Image gallery */}
-          <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-            <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-              <img
-                src={product.images[0]}
-                alt={product.title}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-            <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-              <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                <img
-                  src={product.images[1]}
-                  alt={product.title}
-                  className="h-full w-full object-cover object-center"
-                />
+          {/* Image carousel */}
+          <Carousel>
+            {product.images.map((image, index) => (
+              <div key={index}>
+                <img src={image} alt={product.title} />
               </div>
-              <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                <img
-                  src={product.images[2]}
-                  alt={product.title}
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
-            </div>
-            <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-              <img
-                src={product.images[3]}
-                alt={product.title}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
+            ))}
+          </Carousel>
 
           {/* Product info */}
           <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
@@ -169,13 +154,7 @@ function ProductDetail() {
             {/* Options */}
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
-              <p
-                className="text-3xl tracking-tight text-gray-900"
-                discountedPrice
-              >
-                ${product.discountedPrice}
-              </p>
-              <p className="line-through text-2xl tracking-tight text-gray-500">
+              <p className="text-3xl tracking-tight text-gray-900">
                 ${product.price}
               </p>
 
@@ -335,18 +314,6 @@ function ProductDetail() {
                   </div>
                 )}
               </form>
-              {cartStatus === "loading" && (
-                <Grid
-                  height="80"
-                  width="80"
-                  color="#4fa94d"
-                  ariaLabel="grid-loading"
-                  radius="12.5"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                  visible={true}
-                />
-              )}
             </div>
 
             <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -381,7 +348,7 @@ function ProductDetail() {
                 <h2 className="text-sm font-medium text-gray-900">Details</h2>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-sm text-gray-600">{product.description}</p>
+                  <p className="text-sm text-gray-600">{product.details}</p>
                 </div>
               </div>
             </div>

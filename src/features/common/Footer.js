@@ -7,7 +7,7 @@ function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <img
-              src="https://www.gblogodesign.co.uk/wp-content/uploads/2021/05/Rolex.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTua6Q8zR59D-pIKJto0P06RpL3ValgUVyEuw&usqp=CAU"
               className="mr-5 h-6 sm:h-9"
               alt="logo"
             />

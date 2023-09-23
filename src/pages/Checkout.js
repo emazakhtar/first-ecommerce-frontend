@@ -93,7 +93,27 @@ function Checkout() {
       {orderSuccess && orderSuccess.paymentMethod === "card" && (
         <Navigate to={`/stripe-checkout`} replace={true}></Navigate>
       )}
-      <div className="mx-auto max-w-7xl px-10 sm:px-10 lg:px-8">
+      {status === "loading" && (
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+          {/* Loader component */}
+          <Grid
+            className="loader"
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="grid-loading"
+            radius="12.5"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </div>
+      )}
+      <div
+        className={`mx-auto max-w-7xl px-10 sm:px-10 lg:px-8 ${
+          status === "loading" ? "blur" : ""
+        }`}
+      >
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
             {addNewAddressFormOpen && (
@@ -495,18 +515,6 @@ function Checkout() {
                   >
                     Pay And Order
                   </div>
-                  {status === "loading" && (
-                    <Grid
-                      height="80"
-                      width="80"
-                      color="#4fa94d"
-                      ariaLabel="grid-loading"
-                      radius="12.5"
-                      wrapperStyle={{}}
-                      wrapperClass=""
-                      visible={true}
-                    />
-                  )}
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>
