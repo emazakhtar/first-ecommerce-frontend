@@ -10,11 +10,16 @@ import {
 } from "../cartSlice";
 import { Grid } from "react-loader-spinner";
 
+// Import FontAwesome icons here
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 function Cart() {
   const [open, setOpen] = useState(true);
   const cartItems = useSelector(selectCart);
   const dispatch = useDispatch();
   const status = useSelector(selectCartStatus);
+
   const handleQuantity = (e, item) => {
     dispatch(
       updateCartAsync({
@@ -27,10 +32,12 @@ function Cart() {
   const handleRemoveFromCart = (e, product) => {
     dispatch(removeItemsFromCartAsync(product));
   };
+
   const totalAmount = cartItems.reduce(
     (amount, item) => item.product.discountedPrice + amount,
     0
   );
+
   const totalItems = cartItems.reduce(
     (total, item) => item.quantity + total,
     0
@@ -97,9 +104,11 @@ function Cart() {
                           onChange={(e) => handleQuantity(e, item)}
                           value={item.quantity}
                         >
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
+                          {[1, 2, 3].map((quantity) => (
+                            <option key={quantity} value={quantity}>
+                              {quantity}
+                            </option>
+                          ))}
                         </select>
                       </div>
 
@@ -107,9 +116,9 @@ function Cart() {
                         <button
                           onClick={(e) => handleRemoveFromCart(e, item)}
                           type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                          className="font-medium text-red-600 hover:text-red-500"
                         >
-                          Remove
+                          <FontAwesomeIcon icon={faTrash} /> {/* Bin icon */}
                         </button>
                       </div>
                     </div>

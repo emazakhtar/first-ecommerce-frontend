@@ -23,6 +23,8 @@ import {
 import { ITEMS_PER_PAGE } from "../../../app/constants";
 import Pagination from "../../common/Pagination";
 import { Grid } from "react-loader-spinner";
+import { addToCartAsync, selectCart } from "../../cart/cartSlice";
+import { useAlert } from "react-alert";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -55,6 +57,9 @@ function ProductList() {
   const [sort, setSort] = useState({});
   const [page, setPage] = useState(1);
   const status = useSelector(selectProductListStatus);
+  const cartItems = useSelector(selectCart);
+  const alert = useAlert();
+
   const filters = [
     {
       id: "brand",
@@ -113,6 +118,19 @@ function ProductList() {
 
   const handlePage = (page) => {
     setPage(page);
+  };
+
+  const handleCart = (id) => {
+    if (cartItems.findIndex((item) => item.product.id === id) < 0) {
+      const newCartItem = {
+        quantity: 1,
+        product: id,
+      };
+      dispatch(addToCartAsync({ item: newCartItem, alert }));
+      // it will be based on server response of backend
+    } else {
+      alert.error("item already added to cart");
+    }
   };
   return (
     <>
@@ -210,7 +228,11 @@ function ProductList() {
                   filters={filters}
                 ></DesktopFilter>
                 {/* Product grid */}
-                <ProductGrid products={products} status={status}></ProductGrid>
+                <ProductGrid
+                  products={products}
+                  status={status}
+                  handleCart={handleCart}
+                ></ProductGrid>
                 {/* Product grid end  */}
               </div>
             </section>
@@ -404,7 +426,7 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
     </form>
   );
 }
-function ProductGrid({ products, status }) {
+function ProductGrid({ products, status, handleCart }) {
   return (
     <div className="lg:col-span-3 sm:col-span-6 md:col-span-4">
       {/* this is our products list  */}
@@ -431,52 +453,71 @@ function ProductGrid({ products, status }) {
             {products.map(
               (product, index) =>
                 !product.deleted && (
-                  <Link to={`/product-detail/${product.id}`}>
-                    <div
-                      key={index}
-                      className={`group relative border-solid border-2 border-gray-200 p-2 w-full ${
-                        status === "loading" ? "blur" : ""
-                      }`}
-                    >
-                      <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
-                        <img
-                          src={product.thumbnail}
-                          alt={product.title}
-                          className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                        />
-                      </div>
-                      <div className="mt-4 flex justify-between">
-                        <div>
-                          <h3 className="text-sm text-gray-700">
-                            <div href={product.thumbnail}>
-                              <span
-                                aria-hidden="true"
-                                className="absolute inset-0"
-                              />
-                              {product.title}
-                            </div>
-                          </h3>
-                          <p className="mt-1 text-sm text-gray-500">
-                            <StarIcon className="w-6 h-6 inline "></StarIcon>
-                            <span className="align-bottom">
-                              {product.rating}
-                            </span>
-                          </p>
+                  <div key={index}>
+                    <Link to={`/product-detail/${product.id}`}>
+                      <div
+                        key={index}
+                        className={`group relative border-solid border-2 border-gray-200 p-2 w-full ${
+                          status === "loading" ? "blur" : ""
+                        }`}
+                      >
+                        <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+                          <img
+                            src={product.thumbnail}
+                            alt={product.title}
+                            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                          />
                         </div>
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">
-                            ${product.discountedPrice}
-                          </p>
-                          <p className="line-through text-sm font-medium text-gray-400">
-                            ${product.price}
-                          </p>
+                        <div className="mt-4 flex justify-between">
+                          <div>
+                            <h3 className="text-sm text-gray-700">
+                              <div href={product.thumbnail}>
+                                <span
+                                  aria-hidden="true"
+                                  className="absolute inset-0"
+                                />
+                                {product.title}
+                              </div>
+                            </h3>
+                            <p className="mt-1 text-sm text-gray-500">
+                              <StarIcon className="w-6 h-6 inline "></StarIcon>
+                              <span className="align-bottom">
+                                {product.rating}
+                              </span>
+                            </p>
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-gray-900">
+                              ${product.discountedPrice}
+                            </p>
+                            <p className="line-through text-sm font-medium text-gray-400">
+                              ${product.price}
+                            </p>
+                          </div>
                         </div>
+                        {/* {product.stock <= 0 && (
+                          <p className="text-red-500">Out Of Stock</p>
+                        )} */}
                       </div>
-                      {product.stock <= 0 && (
-                        <p className="text-red-500">Out Of Stock</p>
-                      )}
-                    </div>
-                  </Link>
+                    </Link>
+
+                    {product.stock <= 0 ? (
+                      <div className="flex justify-center">
+                        <p className="w-4/5 mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600 transition duration-300">
+                          Out of Stock
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="flex justify-center mb-4">
+                        <button
+                          onClick={() => handleCart(product.id)}
+                          className="w-4/5 mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+                        >
+                          Add to Cart
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 )
             )}
           </div>

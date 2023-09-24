@@ -1,23 +1,23 @@
-import React from "react";
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import {
   removeItemsFromCartAsync,
   selectCart,
+  selectCartStatus,
   updateCartAsync,
 } from "../features/cart/cartSlice";
 import { useForm } from "react-hook-form";
 import {
   createOrderAsync,
-  selectOrderStatus,
   selectOrderSuccess,
+  selectOrderStatus,
 } from "../features/orders/ordersSlice";
 import {
   selectLoggedInUserInfo,
+  selectUserStatus,
   updateUserAsync,
 } from "../features/users/usersSlice";
+import { Link, Navigate } from "react-router-dom";
 import { Grid } from "react-loader-spinner";
 
 function Checkout() {
@@ -28,8 +28,10 @@ function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const orderSuccess = useSelector(selectOrderSuccess);
-  const status = useSelector(selectOrderStatus);
-  // const currentOrder = useSelector(selectSelectedOrder);
+  const orderStatus = useSelector(selectOrderStatus);
+  const cartStatus = useSelector(selectCartStatus);
+  const userStatus = useSelector(selectUserStatus);
+
   const [addNewAddressFormOpen, setAddNewAddressFormOpen] = useState(false);
   const totalAmount = cartItems.reduce(
     (amount, item) => item.product.discountedPrice + amount,
@@ -39,15 +41,13 @@ function Checkout() {
     (total, item) => item.quantity + total,
     0
   );
+
   const {
     register,
     reset,
     handleSubmit,
-
     formState: { errors },
   } = useForm();
-
-  console.log(errors);
 
   const handleQuantity = (e, item) => {
     dispatch(
@@ -61,15 +61,16 @@ function Checkout() {
   const handleRemoveFromCart = (e, product) => {
     dispatch(removeItemsFromCartAsync(product));
   };
+
   const handleSelectedAddress = (e) => {
-    console.log(user.address[e.target.value]);
     setSelectedAddress(user.address[e.target.value]);
   };
+
   const handlePayment = (e) => {
     setPaymentMethod(e.target.value);
   };
+
   const handleOrders = (e) => {
-    console.log(paymentMethod, selectedAddress);
     dispatch(
       createOrderAsync({
         cartItems,
@@ -85,17 +86,15 @@ function Checkout() {
   return (
     <>
       {orderSuccess && orderSuccess.paymentMethod === "cash" && (
-        <Navigate
-          to={`/order-success/${orderSuccess.id}`}
-          replace={true}
-        ></Navigate>
+        <Navigate to={`/order-success/${orderSuccess.id}`} replace={true} />
       )}
       {orderSuccess && orderSuccess.paymentMethod === "card" && (
-        <Navigate to={`/stripe-checkout`} replace={true}></Navigate>
+        <Navigate to={`/stripe-checkout`} replace={true} />
       )}
-      {status === "loading" && (
+      {(orderStatus === "loading" ||
+        cartStatus === "loading" ||
+        userStatus === "loading") && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-          {/* Loader component */}
           <Grid
             className="loader"
             height="80"
@@ -110,17 +109,20 @@ function Checkout() {
         </div>
       )}
       <div
-        className={`mx-auto max-w-7xl px-10 sm:px-10 lg:px-8 ${
-          status === "loading" ? "blur" : ""
+        className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${
+          orderStatus === "loading" ||
+          cartStatus === "loading" ||
+          userStatus === "loading"
+            ? "blur"
+            : ""
         }`}
       >
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
             {addNewAddressFormOpen && (
               <form
                 noValidate
                 onSubmit={handleSubmit((data) => {
-                  console.log(data);
                   dispatch(
                     updateUserAsync({
                       ...user,
@@ -139,11 +141,10 @@ function Checkout() {
                   <p className="mt-1 text-sm leading-6 text-gray-600">
                     Use a permanent address where you can receive mail.
                   </p>
-
                   <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <div className="sm:col-span-3">
                       <label
-                        htmlFor="first-name"
+                        htmlFor="name"
                         className="block text-sm font-medium leading-6 text-gray-900"
                       >
                         Full name
@@ -152,7 +153,7 @@ function Checkout() {
                         <input
                           type="text"
                           {...register("name", {
-                            required: "name is required",
+                            required: "Name is required",
                           })}
                           id="name"
                           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -171,11 +172,11 @@ function Checkout() {
                         <input
                           id="email"
                           {...register("email", {
-                            required: "email is required",
+                            required: "Email is required",
                             pattern: {
                               value:
                                 /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,
-                              message: "email not valid",
+                              message: "Invalid email format",
                             },
                           })}
                           type="email"
@@ -188,7 +189,7 @@ function Checkout() {
                     </div>
                     <div className="sm:col-span-4">
                       <label
-                        htmlFor="email"
+                        htmlFor="phone"
                         className="block text-sm font-medium leading-6 text-gray-900"
                       >
                         Phone Number
@@ -198,7 +199,7 @@ function Checkout() {
                           type="tel"
                           id="phone"
                           {...register("phone", {
-                            required: "phone is required",
+                            required: "Phone is required",
                           })}
                           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
@@ -216,7 +217,7 @@ function Checkout() {
                         <input
                           type="text"
                           {...register("street", {
-                            required: "street is required",
+                            required: "Street is required",
                           })}
                           id="street"
                           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -235,7 +236,7 @@ function Checkout() {
                         <input
                           type="text"
                           {...register("city", {
-                            required: "city is required",
+                            required: "City is required",
                           })}
                           id="city"
                           autoComplete="address-level2"
@@ -255,7 +256,7 @@ function Checkout() {
                         <input
                           type="text"
                           {...register("state", {
-                            required: "state is required",
+                            required: "State is required",
                           })}
                           id="state"
                           autoComplete="address-level1"
@@ -275,7 +276,7 @@ function Checkout() {
                         <input
                           type="text"
                           {...register("pincode", {
-                            required: "pincode is required",
+                            required: "Pincode is required",
                           })}
                           id="pincode"
                           autoComplete="postal-code"
@@ -307,9 +308,8 @@ function Checkout() {
             <div className="border-b border-gray-900/10 pb-12">
               {user && user.address.length > 0 && (
                 <div>
-                  {" "}
                   <h2 className="py-2 text-base font-semibold leading-7 text-gray-900">
-                    Your Addressess
+                    Your Addresses
                   </h2>
                   <p className="mt-1 text-sm leading-6 text-gray-600">
                     Choose from existing addresses
@@ -322,7 +322,7 @@ function Checkout() {
                   user.address.length === 0 &&
                   addNewAddressFormOpen === false && (
                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                      <p>Please add an address to proceed ahead.</p>
+                      <p>Please add an address to proceed.</p>
                     </div>
                   )}
                 {user &&
