@@ -71,6 +71,16 @@ function ProductList() {
       name: "Category",
       options: category,
     },
+    {
+      id: "color",
+      name: "Color",
+      options: [],
+    },
+    {
+      id: "size",
+      name: "Size",
+      options: [],
+    },
   ];
 
   useEffect(() => {
@@ -503,7 +513,7 @@ function ProductGrid({ products, status, handleCart }) {
 
                     {product.stock <= 0 ? (
                       <div className="flex justify-center">
-                        <p className="w-4/5 mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600 transition duration-300">
+                        <p className="w-4/5 mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-600 transition duration-300">
                           Out of Stock
                         </p>
                       </div>
@@ -511,7 +521,7 @@ function ProductGrid({ products, status, handleCart }) {
                       <div className="flex justify-center mb-4">
                         <button
                           onClick={() => handleCart(product.id)}
-                          className="w-4/5 mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+                          className="w-4/5 mt-4 bg-blue-400 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-300 transition duration-300"
                         >
                           Add to Cart
                         </button>

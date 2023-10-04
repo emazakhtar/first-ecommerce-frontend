@@ -33,6 +33,7 @@ import {
 } from "./features/products/productSlice";
 import StripeCheckout from "./pages/StripeCheckout";
 import ResetPassword from "./features/auth/components/ResetPassword";
+import Navbar from "./features/navbar/Navbar";
 
 const router = createBrowserRouter([
   {
@@ -145,7 +146,9 @@ const router = createBrowserRouter([
     path: "/admin/order-update-form/:id",
     element: (
       <ProtectedAdmin>
-        <AdminOrderUpdateForm></AdminOrderUpdateForm>
+        <Navbar>
+          <AdminOrderUpdateForm></AdminOrderUpdateForm>
+        </Navbar>
       </ProtectedAdmin>
     ),
   },
@@ -153,7 +156,9 @@ const router = createBrowserRouter([
     path: "/admin/product-add-form",
     element: (
       <ProtectedAdmin>
-        <AdminProductEditForm></AdminProductEditForm>
+        <Navbar>
+          <AdminProductEditForm></AdminProductEditForm>
+        </Navbar>
       </ProtectedAdmin>
     ),
   },

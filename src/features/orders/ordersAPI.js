@@ -1,14 +1,24 @@
 export function createOrder(orderData) {
-  return new Promise(async (resolve) => {
+  return new Promise(async (resolve, reject) => {
     // TODO: we will not hardcode server url here
-    const response = await fetch("/orders", {
-      method: "POST",
-      body: JSON.stringify(orderData),
-      credentials: "include",
-      headers: { "content-type": "application/json" },
-    });
-    const data = await response.json();
-    resolve({ data });
+    try {
+      const response = await fetch("/orders", {
+        method: "POST",
+        body: JSON.stringify(orderData),
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        console.log(error);
+        reject({ error });
+      }
+    } catch (err) {
+      reject(err);
+    }
   });
 }
 

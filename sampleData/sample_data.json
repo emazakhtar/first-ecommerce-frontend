@@ -1,0 +1,4002 @@
+[
+    {
+        "id": 1,
+        "title": "Random Men Topwear - Printed T-shirt 1",
+        "description": "Description for Random Men Topwear - Printed T-shirt 1",
+        "price": "142.79",
+        "discountPercentage": "45.47",
+        "rating": "4.59",
+        "stock": 75,
+        "brand": "Brand 1",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/1/1.jpg",
+            "https://i.dummyjson.com/data/products/1/2.jpg",
+            "https://i.dummyjson.com/data/products/1/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 2,
+        "title": "Random Women Bottomwear - Cargos 2",
+        "description": "Description for Random Women Bottomwear - Cargos 2",
+        "price": "124.60",
+        "discountPercentage": "12.33",
+        "rating": "4.76",
+        "stock": 32,
+        "brand": "Brand 2",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 3,
+        "title": "Random Unisex Bottomwear - Shorts 3",
+        "description": "Description for Random Unisex Bottomwear - Shorts 3",
+        "price": "142.35",
+        "discountPercentage": "2.46",
+        "rating": "4.93",
+        "stock": 50,
+        "brand": "Brand 3",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/3/1.jpg",
+            "https://i.dummyjson.com/data/products/3/2.jpg",
+            "https://i.dummyjson.com/data/products/3/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 4,
+        "title": "Random Men Bottomwear - Cargos 4",
+        "description": "Description for Random Men Bottomwear - Cargos 4",
+        "price": "97.79",
+        "discountPercentage": "44.60",
+        "rating": "1.41",
+        "stock": 91,
+        "brand": "Brand 4",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/4/1.jpg",
+            "https://i.dummyjson.com/data/products/4/2.jpg",
+            "https://i.dummyjson.com/data/products/4/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 5,
+        "title": "Random Unisex Winterwear - Jackets 5",
+        "description": "Description for Random Unisex Winterwear - Jackets 5",
+        "price": "72.70",
+        "discountPercentage": "7.98",
+        "rating": "4.56",
+        "stock": 43,
+        "brand": "Brand 5",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/5/1.jpg",
+            "https://i.dummyjson.com/data/products/5/2.jpg",
+            "https://i.dummyjson.com/data/products/5/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 6,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 6",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 6",
+        "price": "36.49",
+        "discountPercentage": "23.18",
+        "rating": "3.31",
+        "stock": 15,
+        "brand": "Brand 6",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/6/1.jpg",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 7,
+        "title": "Random Women Bottomwear - Jeans 7",
+        "description": "Description for Random Women Bottomwear - Jeans 7",
+        "price": "181.30",
+        "discountPercentage": "37.20",
+        "rating": "1.14",
+        "stock": 79,
+        "brand": "Brand 7",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/7/1.jpg",
+            "https://i.dummyjson.com/data/products/7/2.jpg",
+            "https://i.dummyjson.com/data/products/7/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 8,
+        "title": "Random Unisex Bottomwear - Pyajamas 8",
+        "description": "Description for Random Unisex Bottomwear - Pyajamas 8",
+        "price": "142.70",
+        "discountPercentage": "26.21",
+        "rating": "2.97",
+        "stock": 34,
+        "brand": "Brand 8",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/8/1.jpg",
+            "https://i.dummyjson.com/data/products/8/2.jpg",
+            "https://i.dummyjson.com/data/products/8/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 9,
+        "title": "Random Women Topwear - Printed T-shirt 9",
+        "description": "Description for Random Women Topwear - Printed T-shirt 9",
+        "price": "51.29",
+        "discountPercentage": "25.89",
+        "rating": "4.85",
+        "stock": 48,
+        "brand": "Brand 9",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/9/1.jpg",
+            "https://i.dummyjson.com/data/products/9/2.jpg",
+            "https://i.dummyjson.com/data/products/9/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 10,
+        "title": "Random Men Bottomwear - Cargos 10",
+        "description": "Description for Random Men Bottomwear - Cargos 10",
+        "price": "15.25",
+        "discountPercentage": "26.16",
+        "rating": "3.37",
+        "stock": 99,
+        "brand": "Brand 10",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/10/1.jpg",
+            "https://i.dummyjson.com/data/products/10/2.jpg",
+            "https://i.dummyjson.com/data/products/10/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 11,
+        "title": "Random Unisex Topwear - Shirt 11",
+        "description": "Description for Random Unisex Topwear - Shirt 11",
+        "price": "58.71",
+        "discountPercentage": "44.30",
+        "rating": "1.85",
+        "stock": 53,
+        "brand": "Brand 11",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/11/1.jpg",
+            "https://i.dummyjson.com/data/products/11/2.jpg",
+            "https://i.dummyjson.com/data/products/11/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 12,
+        "title": "Random Unisex Bottomwear - Cargos 12",
+        "description": "Description for Random Unisex Bottomwear - Cargos 12",
+        "price": "146.90",
+        "discountPercentage": "36.83",
+        "rating": "2.35",
+        "stock": 96,
+        "brand": "Brand 12",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/12/1.jpg",
+            "https://i.dummyjson.com/data/products/12/2.jpg",
+            "https://i.dummyjson.com/data/products/12/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 13,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 13",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 13",
+        "price": "148.84",
+        "discountPercentage": "5.87",
+        "rating": "1.32",
+        "stock": 91,
+        "brand": "Brand 13",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/13/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/13/1.jpg",
+            "https://i.dummyjson.com/data/products/13/2.jpg",
+            "https://i.dummyjson.com/data/products/13/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 14,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 14",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 14",
+        "price": "134.79",
+        "discountPercentage": "27.10",
+        "rating": "2.59",
+        "stock": 69,
+        "brand": "Brand 14",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/14/1.jpg",
+            "https://i.dummyjson.com/data/products/14/2.jpg",
+            "https://i.dummyjson.com/data/products/14/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 15,
+        "title": "Random Men Bottomwear - Pyajamas 15",
+        "description": "Description for Random Men Bottomwear - Pyajamas 15",
+        "price": "99.20",
+        "discountPercentage": "13.91",
+        "rating": "3.28",
+        "stock": 96,
+        "brand": "Brand 15",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/15/1.jpg",
+            "https://i.dummyjson.com/data/products/15/2.jpg",
+            "https://i.dummyjson.com/data/products/15/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 16,
+        "title": "Random Women Bottomwear - Jeans 16",
+        "description": "Description for Random Women Bottomwear - Jeans 16",
+        "price": "18.14",
+        "discountPercentage": "30.94",
+        "rating": "1.96",
+        "stock": 64,
+        "brand": "Brand 16",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/16/1.jpg",
+            "https://i.dummyjson.com/data/products/16/2.jpg",
+            "https://i.dummyjson.com/data/products/16/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 17,
+        "title": "Random Unisex Bottomwear - Shorts 17",
+        "description": "Description for Random Unisex Bottomwear - Shorts 17",
+        "price": "165.50",
+        "discountPercentage": "2.06",
+        "rating": "1.09",
+        "stock": 39,
+        "brand": "Brand 17",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/17/1.jpg",
+            "https://i.dummyjson.com/data/products/17/2.jpg",
+            "https://i.dummyjson.com/data/products/17/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 18,
+        "title": "Random Men Topwear - Shirt 18",
+        "description": "Description for Random Men Topwear - Shirt 18",
+        "price": "123.46",
+        "discountPercentage": "16.57",
+        "rating": "2.90",
+        "stock": 13,
+        "brand": "Brand 18",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/18/1.jpg",
+            "https://i.dummyjson.com/data/products/18/2.jpg",
+            "https://i.dummyjson.com/data/products/18/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 19,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 19",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 19",
+        "price": "115.31",
+        "discountPercentage": "16.46",
+        "rating": "4.92",
+        "stock": 28,
+        "brand": "Brand 19",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/19/1.jpg",
+            "https://i.dummyjson.com/data/products/19/2.jpg",
+            "https://i.dummyjson.com/data/products/19/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 20,
+        "title": "Random Men Topwear - Printed T-shirt 20",
+        "description": "Description for Random Men Topwear - Printed T-shirt 20",
+        "price": "117.57",
+        "discountPercentage": "25.67",
+        "rating": "2.93",
+        "stock": 39,
+        "brand": "Brand 20",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/20/1.jpg",
+            "https://i.dummyjson.com/data/products/20/2.jpg",
+            "https://i.dummyjson.com/data/products/20/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 21,
+        "title": "Random Men Winterwear - Jackets 21",
+        "description": "Description for Random Men Winterwear - Jackets 21",
+        "price": "119.07",
+        "discountPercentage": "3.58",
+        "rating": "2.78",
+        "stock": 23,
+        "brand": "Brand 21",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/21/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/21/1.jpg",
+            "https://i.dummyjson.com/data/products/21/2.jpg",
+            "https://i.dummyjson.com/data/products/21/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 22,
+        "title": "Random Women Bottomwear - Joggers 22",
+        "description": "Description for Random Women Bottomwear - Joggers 22",
+        "price": "92.98",
+        "discountPercentage": "1.78",
+        "rating": "2.06",
+        "stock": 79,
+        "brand": "Brand 22",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/22/1.jpg",
+            "https://i.dummyjson.com/data/products/22/2.jpg",
+            "https://i.dummyjson.com/data/products/22/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 23,
+        "title": "Random Women Bottomwear - Jeans 23",
+        "description": "Description for Random Women Bottomwear - Jeans 23",
+        "price": "63.50",
+        "discountPercentage": "31.53",
+        "rating": "2.29",
+        "stock": 52,
+        "brand": "Brand 23",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/23/1.jpg",
+            "https://i.dummyjson.com/data/products/23/2.jpg",
+            "https://i.dummyjson.com/data/products/23/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 24,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 24",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 24",
+        "price": "112.31",
+        "discountPercentage": "32.13",
+        "rating": "1.59",
+        "stock": 53,
+        "brand": "Brand 24",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/24/1.jpg",
+            "https://i.dummyjson.com/data/products/24/2.jpg",
+            "https://i.dummyjson.com/data/products/24/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 25,
+        "title": "Random Men Topwear - Shirt 25",
+        "description": "Description for Random Men Topwear - Shirt 25",
+        "price": "76.96",
+        "discountPercentage": "0.31",
+        "rating": "4.81",
+        "stock": 5,
+        "brand": "Brand 25",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/25/1.jpg",
+            "https://i.dummyjson.com/data/products/25/2.jpg",
+            "https://i.dummyjson.com/data/products/25/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 26,
+        "title": "Random Men Topwear - Printed T-shirt 26",
+        "description": "Description for Random Men Topwear - Printed T-shirt 26",
+        "price": "111.61",
+        "discountPercentage": "46.20",
+        "rating": "1.34",
+        "stock": 81,
+        "brand": "Brand 26",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/26/1.jpg",
+            "https://i.dummyjson.com/data/products/26/2.jpg",
+            "https://i.dummyjson.com/data/products/26/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 27,
+        "title": "Random Men Topwear - Shirt 27",
+        "description": "Description for Random Men Topwear - Shirt 27",
+        "price": "84.19",
+        "discountPercentage": "7.33",
+        "rating": "4.88",
+        "stock": 51,
+        "brand": "Brand 27",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/27/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/27/1.jpg",
+            "https://i.dummyjson.com/data/products/27/2.jpg",
+            "https://i.dummyjson.com/data/products/27/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 28,
+        "title": "Random Women Winterwear - Sweaters 28",
+        "description": "Description for Random Women Winterwear - Sweaters 28",
+        "price": "59.04",
+        "discountPercentage": "27.53",
+        "rating": "3.41",
+        "stock": 44,
+        "brand": "Brand 28",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/28/1.jpg",
+            "https://i.dummyjson.com/data/products/28/2.jpg",
+            "https://i.dummyjson.com/data/products/28/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 29,
+        "title": "Random Men Winterwear - Jackets 29",
+        "description": "Description for Random Men Winterwear - Jackets 29",
+        "price": "46.11",
+        "discountPercentage": "6.45",
+        "rating": "4.16",
+        "stock": 23,
+        "brand": "Brand 29",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/29/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/29/1.jpg",
+            "https://i.dummyjson.com/data/products/29/2.jpg",
+            "https://i.dummyjson.com/data/products/29/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 30,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 30",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 30",
+        "price": "114.37",
+        "discountPercentage": "48.25",
+        "rating": "2.34",
+        "stock": 34,
+        "brand": "Brand 30",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/30/1.jpg",
+            "https://i.dummyjson.com/data/products/30/2.jpg",
+            "https://i.dummyjson.com/data/products/30/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 31,
+        "title": "Random Men Bottomwear - Pyajamas 31",
+        "description": "Description for Random Men Bottomwear - Pyajamas 31",
+        "price": "83.29",
+        "discountPercentage": "1.47",
+        "rating": "1.97",
+        "stock": 13,
+        "brand": "Brand 31",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/31/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/31/1.jpg",
+            "https://i.dummyjson.com/data/products/31/2.jpg",
+            "https://i.dummyjson.com/data/products/31/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 32,
+        "title": "Random Women Bottomwear - Shorts 32",
+        "description": "Description for Random Women Bottomwear - Shorts 32",
+        "price": "134.61",
+        "discountPercentage": "34.82",
+        "rating": "4.65",
+        "stock": 40,
+        "brand": "Brand 32",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/32/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/32/1.jpg",
+            "https://i.dummyjson.com/data/products/32/2.jpg",
+            "https://i.dummyjson.com/data/products/32/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 33,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 33",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 33",
+        "price": "99.13",
+        "discountPercentage": "44.45",
+        "rating": "1.71",
+        "stock": 98,
+        "brand": "Brand 33",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/33/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/33/1.jpg",
+            "https://i.dummyjson.com/data/products/33/2.jpg",
+            "https://i.dummyjson.com/data/products/33/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 34,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 34",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 34",
+        "price": "131.12",
+        "discountPercentage": "28.76",
+        "rating": "1.65",
+        "stock": 57,
+        "brand": "Brand 34",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/34/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/34/1.jpg",
+            "https://i.dummyjson.com/data/products/34/2.jpg",
+            "https://i.dummyjson.com/data/products/34/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 35,
+        "title": "Random Men Bottomwear - Cargos 35",
+        "description": "Description for Random Men Bottomwear - Cargos 35",
+        "price": "91.71",
+        "discountPercentage": "24.15",
+        "rating": "3.23",
+        "stock": 64,
+        "brand": "Brand 35",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/35/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/35/1.jpg",
+            "https://i.dummyjson.com/data/products/35/2.jpg",
+            "https://i.dummyjson.com/data/products/35/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 36,
+        "title": "Random Unisex Winterwear - Jackets 36",
+        "description": "Description for Random Unisex Winterwear - Jackets 36",
+        "price": "146.82",
+        "discountPercentage": "0.56",
+        "rating": "3.25",
+        "stock": 92,
+        "brand": "Brand 36",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/36/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/36/1.jpg",
+            "https://i.dummyjson.com/data/products/36/2.jpg",
+            "https://i.dummyjson.com/data/products/36/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 37,
+        "title": "Random Unisex Bottomwear - Jeans 37",
+        "description": "Description for Random Unisex Bottomwear - Jeans 37",
+        "price": "128.82",
+        "discountPercentage": "40.48",
+        "rating": "4.72",
+        "stock": 4,
+        "brand": "Brand 37",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/37/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/37/1.jpg",
+            "https://i.dummyjson.com/data/products/37/2.jpg",
+            "https://i.dummyjson.com/data/products/37/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 38,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 38",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 38",
+        "price": "13.28",
+        "discountPercentage": "29.97",
+        "rating": "4.27",
+        "stock": 23,
+        "brand": "Brand 38",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/38/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/38/1.jpg",
+            "https://i.dummyjson.com/data/products/38/2.jpg",
+            "https://i.dummyjson.com/data/products/38/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 39,
+        "title": "Random Unisex Topwear - Shirt 39",
+        "description": "Description for Random Unisex Topwear - Shirt 39",
+        "price": "171.09",
+        "discountPercentage": "31.53",
+        "rating": "3.04",
+        "stock": 74,
+        "brand": "Brand 39",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/39/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/39/1.jpg",
+            "https://i.dummyjson.com/data/products/39/2.jpg",
+            "https://i.dummyjson.com/data/products/39/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 40,
+        "title": "Random Unisex Winterwear - Jackets 40",
+        "description": "Description for Random Unisex Winterwear - Jackets 40",
+        "price": "137.95",
+        "discountPercentage": "39.06",
+        "rating": "1.87",
+        "stock": 48,
+        "brand": "Brand 40",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/40/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/40/1.jpg",
+            "https://i.dummyjson.com/data/products/40/2.jpg",
+            "https://i.dummyjson.com/data/products/40/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 41,
+        "title": "Random Men Topwear - T-shirt 41",
+        "description": "Description for Random Men Topwear - T-shirt 41",
+        "price": "88.60",
+        "discountPercentage": "16.22",
+        "rating": "4.58",
+        "stock": 65,
+        "brand": "Brand 41",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/41/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/41/1.jpg",
+            "https://i.dummyjson.com/data/products/41/2.jpg",
+            "https://i.dummyjson.com/data/products/41/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 42,
+        "title": "Random Women Topwear - Printed T-shirt 42",
+        "description": "Description for Random Women Topwear - Printed T-shirt 42",
+        "price": "88.72",
+        "discountPercentage": "35.09",
+        "rating": "4.69",
+        "stock": 37,
+        "brand": "Brand 42",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/42/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/42/1.jpg",
+            "https://i.dummyjson.com/data/products/42/2.jpg",
+            "https://i.dummyjson.com/data/products/42/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 43,
+        "title": "Random Men Bottomwear - Shorts 43",
+        "description": "Description for Random Men Bottomwear - Shorts 43",
+        "price": "107.66",
+        "discountPercentage": "21.97",
+        "rating": "2.11",
+        "stock": 6,
+        "brand": "Brand 43",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/43/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/43/1.jpg",
+            "https://i.dummyjson.com/data/products/43/2.jpg",
+            "https://i.dummyjson.com/data/products/43/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 44,
+        "title": "Random Women Winterwear - Sweaters 44",
+        "description": "Description for Random Women Winterwear - Sweaters 44",
+        "price": "160.24",
+        "discountPercentage": "10.58",
+        "rating": "3.36",
+        "stock": 98,
+        "brand": "Brand 44",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/44/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/44/1.jpg",
+            "https://i.dummyjson.com/data/products/44/2.jpg",
+            "https://i.dummyjson.com/data/products/44/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 45,
+        "title": "Random Men Topwear - Printed T-shirt 45",
+        "description": "Description for Random Men Topwear - Printed T-shirt 45",
+        "price": "128.60",
+        "discountPercentage": "45.65",
+        "rating": "3.83",
+        "stock": 40,
+        "brand": "Brand 45",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/45/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/45/1.jpg",
+            "https://i.dummyjson.com/data/products/45/2.jpg",
+            "https://i.dummyjson.com/data/products/45/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 46,
+        "title": "Random Unisex Topwear - T-shirt 46",
+        "description": "Description for Random Unisex Topwear - T-shirt 46",
+        "price": "187.80",
+        "discountPercentage": "4.28",
+        "rating": "3.31",
+        "stock": 54,
+        "brand": "Brand 46",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/46/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/46/1.jpg",
+            "https://i.dummyjson.com/data/products/46/2.jpg",
+            "https://i.dummyjson.com/data/products/46/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 47,
+        "title": "Random Women Bottomwear - Shorts 47",
+        "description": "Description for Random Women Bottomwear - Shorts 47",
+        "price": "11.29",
+        "discountPercentage": "30.09",
+        "rating": "3.27",
+        "stock": 96,
+        "brand": "Brand 47",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/47/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/47/1.jpg",
+            "https://i.dummyjson.com/data/products/47/2.jpg",
+            "https://i.dummyjson.com/data/products/47/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 48,
+        "title": "Random Women Bottomwear - Jeans 48",
+        "description": "Description for Random Women Bottomwear - Jeans 48",
+        "price": "47.77",
+        "discountPercentage": "19.27",
+        "rating": "2.26",
+        "stock": 59,
+        "brand": "Brand 48",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/48/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/48/1.jpg",
+            "https://i.dummyjson.com/data/products/48/2.jpg",
+            "https://i.dummyjson.com/data/products/48/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 49,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 49",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 49",
+        "price": "188.32",
+        "discountPercentage": "9.59",
+        "rating": "1.42",
+        "stock": 57,
+        "brand": "Brand 49",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/49/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/49/1.jpg",
+            "https://i.dummyjson.com/data/products/49/2.jpg",
+            "https://i.dummyjson.com/data/products/49/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 50,
+        "title": "Random Women Bottomwear - Joggers 50",
+        "description": "Description for Random Women Bottomwear - Joggers 50",
+        "price": "35.13",
+        "discountPercentage": "4.41",
+        "rating": "3.83",
+        "stock": 88,
+        "brand": "Brand 50",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/50/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/50/1.jpg",
+            "https://i.dummyjson.com/data/products/50/2.jpg",
+            "https://i.dummyjson.com/data/products/50/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 51,
+        "title": "Random Women Topwear - Printed T-shirt 51",
+        "description": "Description for Random Women Topwear - Printed T-shirt 51",
+        "price": "97.74",
+        "discountPercentage": "15.21",
+        "rating": "2.10",
+        "stock": 68,
+        "brand": "Brand 51",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/51/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/51/1.jpg",
+            "https://i.dummyjson.com/data/products/51/2.jpg",
+            "https://i.dummyjson.com/data/products/51/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 52,
+        "title": "Random Men Topwear - T-shirt 52",
+        "description": "Description for Random Men Topwear - T-shirt 52",
+        "price": "134.78",
+        "discountPercentage": "24.95",
+        "rating": "2.92",
+        "stock": 11,
+        "brand": "Brand 52",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/52/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/52/1.jpg",
+            "https://i.dummyjson.com/data/products/52/2.jpg",
+            "https://i.dummyjson.com/data/products/52/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 53,
+        "title": "Random Unisex Topwear - Shirt 53",
+        "description": "Description for Random Unisex Topwear - Shirt 53",
+        "price": "127.35",
+        "discountPercentage": "36.23",
+        "rating": "4.45",
+        "stock": 82,
+        "brand": "Brand 53",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/53/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/53/1.jpg",
+            "https://i.dummyjson.com/data/products/53/2.jpg",
+            "https://i.dummyjson.com/data/products/53/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 54,
+        "title": "Random Women Winterwear - Sweaters 54",
+        "description": "Description for Random Women Winterwear - Sweaters 54",
+        "price": "123.85",
+        "discountPercentage": "35.44",
+        "rating": "4.79",
+        "stock": 88,
+        "brand": "Brand 54",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/54/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/54/1.jpg",
+            "https://i.dummyjson.com/data/products/54/2.jpg",
+            "https://i.dummyjson.com/data/products/54/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 55,
+        "title": "Random Men Winterwear - Jackets 55",
+        "description": "Description for Random Men Winterwear - Jackets 55",
+        "price": "145.65",
+        "discountPercentage": "45.77",
+        "rating": "2.26",
+        "stock": 51,
+        "brand": "Brand 55",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/55/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/55/1.jpg",
+            "https://i.dummyjson.com/data/products/55/2.jpg",
+            "https://i.dummyjson.com/data/products/55/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 56,
+        "title": "Random Men Bottomwear - Joggers 56",
+        "description": "Description for Random Men Bottomwear - Joggers 56",
+        "price": "107.69",
+        "discountPercentage": "39.75",
+        "rating": "3.06",
+        "stock": 17,
+        "brand": "Brand 56",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/56/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/56/1.jpg",
+            "https://i.dummyjson.com/data/products/56/2.jpg",
+            "https://i.dummyjson.com/data/products/56/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 57,
+        "title": "Random Unisex Winterwear - Sweaters 57",
+        "description": "Description for Random Unisex Winterwear - Sweaters 57",
+        "price": "126.14",
+        "discountPercentage": "9.51",
+        "rating": "1.10",
+        "stock": 3,
+        "brand": "Brand 57",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/57/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/57/1.jpg",
+            "https://i.dummyjson.com/data/products/57/2.jpg",
+            "https://i.dummyjson.com/data/products/57/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 58,
+        "title": "Random Men Topwear - T-shirt 58",
+        "description": "Description for Random Men Topwear - T-shirt 58",
+        "price": "110.86",
+        "discountPercentage": "7.44",
+        "rating": "4.17",
+        "stock": 38,
+        "brand": "Brand 58",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/58/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/58/1.jpg",
+            "https://i.dummyjson.com/data/products/58/2.jpg",
+            "https://i.dummyjson.com/data/products/58/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 59,
+        "title": "Random Women Topwear - Shirt 59",
+        "description": "Description for Random Women Topwear - Shirt 59",
+        "price": "80.59",
+        "discountPercentage": "8.50",
+        "rating": "2.58",
+        "stock": 6,
+        "brand": "Brand 59",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/59/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/59/1.jpg",
+            "https://i.dummyjson.com/data/products/59/2.jpg",
+            "https://i.dummyjson.com/data/products/59/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 60,
+        "title": "Random Unisex Winterwear - Sweaters 60",
+        "description": "Description for Random Unisex Winterwear - Sweaters 60",
+        "price": "158.66",
+        "discountPercentage": "4.14",
+        "rating": "1.85",
+        "stock": 94,
+        "brand": "Brand 60",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/60/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/60/1.jpg",
+            "https://i.dummyjson.com/data/products/60/2.jpg",
+            "https://i.dummyjson.com/data/products/60/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 61,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 61",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 61",
+        "price": "32.37",
+        "discountPercentage": "29.20",
+        "rating": "4.48",
+        "stock": 9,
+        "brand": "Brand 61",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/61/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/61/1.jpg",
+            "https://i.dummyjson.com/data/products/61/2.jpg",
+            "https://i.dummyjson.com/data/products/61/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 62,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 62",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 62",
+        "price": "158.01",
+        "discountPercentage": "12.12",
+        "rating": "3.58",
+        "stock": 49,
+        "brand": "Brand 62",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/62/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/62/1.jpg",
+            "https://i.dummyjson.com/data/products/62/2.jpg",
+            "https://i.dummyjson.com/data/products/62/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 63,
+        "title": "Random Unisex Bottomwear - Pyajamas 63",
+        "description": "Description for Random Unisex Bottomwear - Pyajamas 63",
+        "price": "190.08",
+        "discountPercentage": "4.77",
+        "rating": "2.57",
+        "stock": 83,
+        "brand": "Brand 63",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/63/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/63/1.jpg",
+            "https://i.dummyjson.com/data/products/63/2.jpg",
+            "https://i.dummyjson.com/data/products/63/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 64,
+        "title": "Random Men Topwear - T-shirt 64",
+        "description": "Description for Random Men Topwear - T-shirt 64",
+        "price": "123.23",
+        "discountPercentage": "47.42",
+        "rating": "1.55",
+        "stock": 69,
+        "brand": "Brand 64",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/64/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/64/1.jpg",
+            "https://i.dummyjson.com/data/products/64/2.jpg",
+            "https://i.dummyjson.com/data/products/64/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 65,
+        "title": "Random Unisex Winterwear - Sweaters 65",
+        "description": "Description for Random Unisex Winterwear - Sweaters 65",
+        "price": "141.74",
+        "discountPercentage": "4.53",
+        "rating": "1.39",
+        "stock": 38,
+        "brand": "Brand 65",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/65/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/65/1.jpg",
+            "https://i.dummyjson.com/data/products/65/2.jpg",
+            "https://i.dummyjson.com/data/products/65/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 66,
+        "title": "Random Unisex Topwear - T-shirt 66",
+        "description": "Description for Random Unisex Topwear - T-shirt 66",
+        "price": "122.93",
+        "discountPercentage": "42.92",
+        "rating": "4.06",
+        "stock": 56,
+        "brand": "Brand 66",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/66/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/66/1.jpg",
+            "https://i.dummyjson.com/data/products/66/2.jpg",
+            "https://i.dummyjson.com/data/products/66/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 67,
+        "title": "Random Women Bottomwear - Jeans 67",
+        "description": "Description for Random Women Bottomwear - Jeans 67",
+        "price": "64.74",
+        "discountPercentage": "27.69",
+        "rating": "2.65",
+        "stock": 61,
+        "brand": "Brand 67",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/67/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/67/1.jpg",
+            "https://i.dummyjson.com/data/products/67/2.jpg",
+            "https://i.dummyjson.com/data/products/67/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 68,
+        "title": "Random Women Topwear - T-shirt 68",
+        "description": "Description for Random Women Topwear - T-shirt 68",
+        "price": "135.50",
+        "discountPercentage": "47.63",
+        "rating": "1.68",
+        "stock": 64,
+        "brand": "Brand 68",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/68/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/68/1.jpg",
+            "https://i.dummyjson.com/data/products/68/2.jpg",
+            "https://i.dummyjson.com/data/products/68/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 69,
+        "title": "Random Women Bottomwear - Pyajamas 69",
+        "description": "Description for Random Women Bottomwear - Pyajamas 69",
+        "price": "61.27",
+        "discountPercentage": "15.09",
+        "rating": "4.65",
+        "stock": 52,
+        "brand": "Brand 69",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/69/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/69/1.jpg",
+            "https://i.dummyjson.com/data/products/69/2.jpg",
+            "https://i.dummyjson.com/data/products/69/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 70,
+        "title": "Random Men Topwear - Printed T-shirt 70",
+        "description": "Description for Random Men Topwear - Printed T-shirt 70",
+        "price": "111.34",
+        "discountPercentage": "32.42",
+        "rating": "1.36",
+        "stock": 30,
+        "brand": "Brand 70",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/70/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/70/1.jpg",
+            "https://i.dummyjson.com/data/products/70/2.jpg",
+            "https://i.dummyjson.com/data/products/70/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 71,
+        "title": "Random Unisex Bottomwear - Pyajamas 71",
+        "description": "Description for Random Unisex Bottomwear - Pyajamas 71",
+        "price": "49.06",
+        "discountPercentage": "4.64",
+        "rating": "4.56",
+        "stock": 73,
+        "brand": "Brand 71",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/71/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/71/1.jpg",
+            "https://i.dummyjson.com/data/products/71/2.jpg",
+            "https://i.dummyjson.com/data/products/71/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 72,
+        "title": "Random Women Bottomwear - Cargos 72",
+        "description": "Description for Random Women Bottomwear - Cargos 72",
+        "price": "81.08",
+        "discountPercentage": "31.96",
+        "rating": "3.51",
+        "stock": 32,
+        "brand": "Brand 72",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/72/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/72/1.jpg",
+            "https://i.dummyjson.com/data/products/72/2.jpg",
+            "https://i.dummyjson.com/data/products/72/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 73,
+        "title": "Random Women Winterwear - Jackets 73",
+        "description": "Description for Random Women Winterwear - Jackets 73",
+        "price": "53.84",
+        "discountPercentage": "41.76",
+        "rating": "3.65",
+        "stock": 61,
+        "brand": "Brand 73",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/73/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/73/1.jpg",
+            "https://i.dummyjson.com/data/products/73/2.jpg",
+            "https://i.dummyjson.com/data/products/73/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 74,
+        "title": "Random Women Topwear - T-shirt 74",
+        "description": "Description for Random Women Topwear - T-shirt 74",
+        "price": "29.53",
+        "discountPercentage": "45.24",
+        "rating": "1.11",
+        "stock": 32,
+        "brand": "Brand 74",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/74/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/74/1.jpg",
+            "https://i.dummyjson.com/data/products/74/2.jpg",
+            "https://i.dummyjson.com/data/products/74/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 75,
+        "title": "Random Unisex Topwear - Shirt 75",
+        "description": "Description for Random Unisex Topwear - Shirt 75",
+        "price": "181.96",
+        "discountPercentage": "13.92",
+        "rating": "2.74",
+        "stock": 74,
+        "brand": "Brand 75",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/75/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/75/1.jpg",
+            "https://i.dummyjson.com/data/products/75/2.jpg",
+            "https://i.dummyjson.com/data/products/75/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 76,
+        "title": "Random Men Bottomwear - Jeans 76",
+        "description": "Description for Random Men Bottomwear - Jeans 76",
+        "price": "196.14",
+        "discountPercentage": "46.70",
+        "rating": "1.38",
+        "stock": 16,
+        "brand": "Brand 76",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/76/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/76/1.jpg",
+            "https://i.dummyjson.com/data/products/76/2.jpg",
+            "https://i.dummyjson.com/data/products/76/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 77,
+        "title": "Random Women Bottomwear - Pyajamas 77",
+        "description": "Description for Random Women Bottomwear - Pyajamas 77",
+        "price": "179.89",
+        "discountPercentage": "25.13",
+        "rating": "1.88",
+        "stock": 65,
+        "brand": "Brand 77",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/77/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/77/1.jpg",
+            "https://i.dummyjson.com/data/products/77/2.jpg",
+            "https://i.dummyjson.com/data/products/77/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 78,
+        "title": "Random Women Bottomwear - Pyajamas 78",
+        "description": "Description for Random Women Bottomwear - Pyajamas 78",
+        "price": "34.33",
+        "discountPercentage": "9.26",
+        "rating": "1.51",
+        "stock": 12,
+        "brand": "Brand 78",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/78/1.jpg",
+            "https://i.dummyjson.com/data/products/78/2.jpg",
+            "https://i.dummyjson.com/data/products/78/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 79,
+        "title": "Random Men Winterwear - Jackets 79",
+        "description": "Description for Random Men Winterwear - Jackets 79",
+        "price": "179.93",
+        "discountPercentage": "33.30",
+        "rating": "2.80",
+        "stock": 51,
+        "brand": "Brand 79",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/79/1.jpg",
+            "https://i.dummyjson.com/data/products/79/2.jpg",
+            "https://i.dummyjson.com/data/products/79/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 80,
+        "title": "Random Unisex Winterwear - Sweaters 80",
+        "description": "Description for Random Unisex Winterwear - Sweaters 80",
+        "price": "155.02",
+        "discountPercentage": "15.80",
+        "rating": "3.80",
+        "stock": 29,
+        "brand": "Brand 80",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/80/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/80/1.jpg",
+            "https://i.dummyjson.com/data/products/80/2.jpg",
+            "https://i.dummyjson.com/data/products/80/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 81,
+        "title": "Random Women Bottomwear - Shorts 81",
+        "description": "Description for Random Women Bottomwear - Shorts 81",
+        "price": "183.75",
+        "discountPercentage": "30.40",
+        "rating": "4.07",
+        "stock": 18,
+        "brand": "Brand 81",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/81/1.jpg",
+            "https://i.dummyjson.com/data/products/81/2.jpg",
+            "https://i.dummyjson.com/data/products/81/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 82,
+        "title": "Random Unisex Topwear - Shirt 82",
+        "description": "Description for Random Unisex Topwear - Shirt 82",
+        "price": "64.36",
+        "discountPercentage": "16.52",
+        "rating": "4.79",
+        "stock": 60,
+        "brand": "Brand 82",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/82/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/82/1.jpg",
+            "https://i.dummyjson.com/data/products/82/2.jpg",
+            "https://i.dummyjson.com/data/products/82/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 83,
+        "title": "Random Men Bottomwear - Jeans 83",
+        "description": "Description for Random Men Bottomwear - Jeans 83",
+        "price": "146.66",
+        "discountPercentage": "0.44",
+        "rating": "3.47",
+        "stock": 25,
+        "brand": "Brand 83",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/83/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/83/1.jpg",
+            "https://i.dummyjson.com/data/products/83/2.jpg",
+            "https://i.dummyjson.com/data/products/83/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 84,
+        "title": "Random Unisex Winterwear - Jackets 84",
+        "description": "Description for Random Unisex Winterwear - Jackets 84",
+        "price": "145.46",
+        "discountPercentage": "33.57",
+        "rating": "1.01",
+        "stock": 95,
+        "brand": "Brand 84",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/84/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/84/1.jpg",
+            "https://i.dummyjson.com/data/products/84/2.jpg",
+            "https://i.dummyjson.com/data/products/84/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 85,
+        "title": "Random Women Bottomwear - Pyajamas 85",
+        "description": "Description for Random Women Bottomwear - Pyajamas 85",
+        "price": "104.93",
+        "discountPercentage": "29.59",
+        "rating": "3.25",
+        "stock": 61,
+        "brand": "Brand 85",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/85/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/85/1.jpg",
+            "https://i.dummyjson.com/data/products/85/2.jpg",
+            "https://i.dummyjson.com/data/products/85/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 86,
+        "title": "Random Women Topwear - T-shirt 86",
+        "description": "Description for Random Women Topwear - T-shirt 86",
+        "price": "120.52",
+        "discountPercentage": "12.49",
+        "rating": "3.35",
+        "stock": 57,
+        "brand": "Brand 86",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/86/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/86/1.jpg",
+            "https://i.dummyjson.com/data/products/86/2.jpg",
+            "https://i.dummyjson.com/data/products/86/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 87,
+        "title": "Random Unisex Winterwear - Sweaters 87",
+        "description": "Description for Random Unisex Winterwear - Sweaters 87",
+        "price": "180.24",
+        "discountPercentage": "25.42",
+        "rating": "1.64",
+        "stock": 76,
+        "brand": "Brand 87",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/87/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/87/1.jpg",
+            "https://i.dummyjson.com/data/products/87/2.jpg",
+            "https://i.dummyjson.com/data/products/87/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 88,
+        "title": "Random Women Bottomwear - Jeans 88",
+        "description": "Description for Random Women Bottomwear - Jeans 88",
+        "price": "104.04",
+        "discountPercentage": "15.40",
+        "rating": "4.62",
+        "stock": 69,
+        "brand": "Brand 88",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/88/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/88/1.jpg",
+            "https://i.dummyjson.com/data/products/88/2.jpg",
+            "https://i.dummyjson.com/data/products/88/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 89,
+        "title": "Random Unisex Bottomwear - Joggers 89",
+        "description": "Description for Random Unisex Bottomwear - Joggers 89",
+        "price": "68.77",
+        "discountPercentage": "46.21",
+        "rating": "3.05",
+        "stock": 79,
+        "brand": "Brand 89",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/89/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/89/1.jpg",
+            "https://i.dummyjson.com/data/products/89/2.jpg",
+            "https://i.dummyjson.com/data/products/89/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 90,
+        "title": "Random Women Topwear - Shirt 90",
+        "description": "Description for Random Women Topwear - Shirt 90",
+        "price": "139.08",
+        "discountPercentage": "28.25",
+        "rating": "3.64",
+        "stock": 62,
+        "brand": "Brand 90",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/90/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/90/1.jpg",
+            "https://i.dummyjson.com/data/products/90/2.jpg",
+            "https://i.dummyjson.com/data/products/90/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 91,
+        "title": "Random Unisex Topwear - T-shirt 91",
+        "description": "Description for Random Unisex Topwear - T-shirt 91",
+        "price": "187.31",
+        "discountPercentage": "31.81",
+        "rating": "3.08",
+        "stock": 18,
+        "brand": "Brand 91",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/91/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/91/1.jpg",
+            "https://i.dummyjson.com/data/products/91/2.jpg",
+            "https://i.dummyjson.com/data/products/91/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 92,
+        "title": "Random Unisex Bottomwear - Shorts 92",
+        "description": "Description for Random Unisex Bottomwear - Shorts 92",
+        "price": "116.34",
+        "discountPercentage": "0.56",
+        "rating": "1.73",
+        "stock": 31,
+        "brand": "Brand 92",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/92/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/92/1.jpg",
+            "https://i.dummyjson.com/data/products/92/2.jpg",
+            "https://i.dummyjson.com/data/products/92/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 93,
+        "title": "Random Women Bottomwear - Shorts 93",
+        "description": "Description for Random Women Bottomwear - Shorts 93",
+        "price": "78.20",
+        "discountPercentage": "28.63",
+        "rating": "2.60",
+        "stock": 66,
+        "brand": "Brand 93",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/93/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/93/1.jpg",
+            "https://i.dummyjson.com/data/products/93/2.jpg",
+            "https://i.dummyjson.com/data/products/93/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 94,
+        "title": "Random Unisex Topwear - Shirt 94",
+        "description": "Description for Random Unisex Topwear - Shirt 94",
+        "price": "165.63",
+        "discountPercentage": "40.24",
+        "rating": "3.09",
+        "stock": 15,
+        "brand": "Brand 94",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/94/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/94/1.jpg",
+            "https://i.dummyjson.com/data/products/94/2.jpg",
+            "https://i.dummyjson.com/data/products/94/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 95,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 95",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 95",
+        "price": "13.37",
+        "discountPercentage": "32.48",
+        "rating": "1.12",
+        "stock": 58,
+        "brand": "Brand 95",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/95/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/95/1.jpg",
+            "https://i.dummyjson.com/data/products/95/2.jpg",
+            "https://i.dummyjson.com/data/products/95/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 96,
+        "title": "Random Women Bottomwear - Pyajamas 96",
+        "description": "Description for Random Women Bottomwear - Pyajamas 96",
+        "price": "43.81",
+        "discountPercentage": "38.20",
+        "rating": "4.85",
+        "stock": 57,
+        "brand": "Brand 96",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/96/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/96/1.jpg",
+            "https://i.dummyjson.com/data/products/96/2.jpg",
+            "https://i.dummyjson.com/data/products/96/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 97,
+        "title": "Random Men Topwear - T-shirt 97",
+        "description": "Description for Random Men Topwear - T-shirt 97",
+        "price": "197.49",
+        "discountPercentage": "18.40",
+        "rating": "3.11",
+        "stock": 69,
+        "brand": "Brand 97",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/97/1.jpg",
+            "https://i.dummyjson.com/data/products/97/2.jpg",
+            "https://i.dummyjson.com/data/products/97/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 98,
+        "title": "Random Men Bottomwear - Shorts 98",
+        "description": "Description for Random Men Bottomwear - Shorts 98",
+        "price": "34.67",
+        "discountPercentage": "32.59",
+        "rating": "1.34",
+        "stock": 17,
+        "brand": "Brand 98",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/98/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/98/1.jpg",
+            "https://i.dummyjson.com/data/products/98/2.jpg",
+            "https://i.dummyjson.com/data/products/98/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 99,
+        "title": "Random Unisex Topwear - Shirt 99",
+        "description": "Description for Random Unisex Topwear - Shirt 99",
+        "price": "189.35",
+        "discountPercentage": "31.64",
+        "rating": "2.93",
+        "stock": 39,
+        "brand": "Brand 99",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/99/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/99/1.jpg",
+            "https://i.dummyjson.com/data/products/99/2.jpg",
+            "https://i.dummyjson.com/data/products/99/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 100,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 100",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 100",
+        "price": "108.50",
+        "discountPercentage": "23.24",
+        "rating": "3.11",
+        "stock": 42,
+        "brand": "Brand 100",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/100/1.jpg",
+            "https://i.dummyjson.com/data/products/100/2.jpg",
+            "https://i.dummyjson.com/data/products/100/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 101,
+        "title": "Random Men Bottomwear - Pyajamas 101",
+        "description": "Description for Random Men Bottomwear - Pyajamas 101",
+        "price": "179.39",
+        "discountPercentage": "23.18",
+        "rating": "3.76",
+        "stock": 27,
+        "brand": "Brand 101",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/101/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/101/1.jpg",
+            "https://i.dummyjson.com/data/products/101/2.jpg",
+            "https://i.dummyjson.com/data/products/101/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 102,
+        "title": "Random Men Bottomwear - Pyajamas 102",
+        "description": "Description for Random Men Bottomwear - Pyajamas 102",
+        "price": "122.20",
+        "discountPercentage": "32.07",
+        "rating": "2.77",
+        "stock": 43,
+        "brand": "Brand 102",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/102/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/102/1.jpg",
+            "https://i.dummyjson.com/data/products/102/2.jpg",
+            "https://i.dummyjson.com/data/products/102/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 103,
+        "title": "Random Women Topwear - Shirt 103",
+        "description": "Description for Random Women Topwear - Shirt 103",
+        "price": "150.52",
+        "discountPercentage": "49.07",
+        "rating": "2.42",
+        "stock": 6,
+        "brand": "Brand 103",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/103/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/103/1.jpg",
+            "https://i.dummyjson.com/data/products/103/2.jpg",
+            "https://i.dummyjson.com/data/products/103/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 104,
+        "title": "Random Women Bottomwear - Cargos 104",
+        "description": "Description for Random Women Bottomwear - Cargos 104",
+        "price": "163.68",
+        "discountPercentage": "7.71",
+        "rating": "1.20",
+        "stock": 32,
+        "brand": "Brand 104",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/104/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/104/1.jpg",
+            "https://i.dummyjson.com/data/products/104/2.jpg",
+            "https://i.dummyjson.com/data/products/104/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 105,
+        "title": "Random Men Winterwear - Sweaters 105",
+        "description": "Description for Random Men Winterwear - Sweaters 105",
+        "price": "132.78",
+        "discountPercentage": "4.22",
+        "rating": "2.46",
+        "stock": 63,
+        "brand": "Brand 105",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/105/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/105/1.jpg",
+            "https://i.dummyjson.com/data/products/105/2.jpg",
+            "https://i.dummyjson.com/data/products/105/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 106,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 106",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 106",
+        "price": "46.58",
+        "discountPercentage": "34.21",
+        "rating": "4.13",
+        "stock": 90,
+        "brand": "Brand 106",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/106/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/106/1.jpg",
+            "https://i.dummyjson.com/data/products/106/2.jpg",
+            "https://i.dummyjson.com/data/products/106/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 107,
+        "title": "Random Unisex Bottomwear - Shorts 107",
+        "description": "Description for Random Unisex Bottomwear - Shorts 107",
+        "price": "173.81",
+        "discountPercentage": "35.28",
+        "rating": "1.93",
+        "stock": 63,
+        "brand": "Brand 107",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/107/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/107/1.jpg",
+            "https://i.dummyjson.com/data/products/107/2.jpg",
+            "https://i.dummyjson.com/data/products/107/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 108,
+        "title": "Random Men Bottomwear - Cargos 108",
+        "description": "Description for Random Men Bottomwear - Cargos 108",
+        "price": "108.92",
+        "discountPercentage": "18.77",
+        "rating": "2.58",
+        "stock": 13,
+        "brand": "Brand 108",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/108/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/108/1.jpg",
+            "https://i.dummyjson.com/data/products/108/2.jpg",
+            "https://i.dummyjson.com/data/products/108/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 109,
+        "title": "Random Unisex Topwear - T-shirt 109",
+        "description": "Description for Random Unisex Topwear - T-shirt 109",
+        "price": "92.04",
+        "discountPercentage": "33.15",
+        "rating": "4.46",
+        "stock": 90,
+        "brand": "Brand 109",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/109/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/109/1.jpg",
+            "https://i.dummyjson.com/data/products/109/2.jpg",
+            "https://i.dummyjson.com/data/products/109/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 110,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 110",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 110",
+        "price": "12.61",
+        "discountPercentage": "6.80",
+        "rating": "2.00",
+        "stock": 1,
+        "brand": "Brand 110",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/110/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/110/1.jpg",
+            "https://i.dummyjson.com/data/products/110/2.jpg",
+            "https://i.dummyjson.com/data/products/110/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 111,
+        "title": "Random Women Topwear - T-shirt 111",
+        "description": "Description for Random Women Topwear - T-shirt 111",
+        "price": "21.52",
+        "discountPercentage": "4.69",
+        "rating": "2.25",
+        "stock": 100,
+        "brand": "Brand 111",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/111/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/111/1.jpg",
+            "https://i.dummyjson.com/data/products/111/2.jpg",
+            "https://i.dummyjson.com/data/products/111/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 112,
+        "title": "Random Men Topwear - Shirt 112",
+        "description": "Description for Random Men Topwear - Shirt 112",
+        "price": "144.37",
+        "discountPercentage": "39.31",
+        "rating": "1.34",
+        "stock": 40,
+        "brand": "Brand 112",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/112/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/112/1.jpg",
+            "https://i.dummyjson.com/data/products/112/2.jpg",
+            "https://i.dummyjson.com/data/products/112/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 113,
+        "title": "Random Unisex Bottomwear - Jeans 113",
+        "description": "Description for Random Unisex Bottomwear - Jeans 113",
+        "price": "111.74",
+        "discountPercentage": "43.96",
+        "rating": "4.06",
+        "stock": 57,
+        "brand": "Brand 113",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/113/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/113/1.jpg",
+            "https://i.dummyjson.com/data/products/113/2.jpg",
+            "https://i.dummyjson.com/data/products/113/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 114,
+        "title": "Random Women Topwear - T-shirt 114",
+        "description": "Description for Random Women Topwear - T-shirt 114",
+        "price": "118.33",
+        "discountPercentage": "32.42",
+        "rating": "2.94",
+        "stock": 41,
+        "brand": "Brand 114",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/114/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/114/1.jpg",
+            "https://i.dummyjson.com/data/products/114/2.jpg",
+            "https://i.dummyjson.com/data/products/114/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 115,
+        "title": "Random Men Topwear - Printed T-shirt 115",
+        "description": "Description for Random Men Topwear - Printed T-shirt 115",
+        "price": "173.58",
+        "discountPercentage": "33.51",
+        "rating": "4.07",
+        "stock": 38,
+        "brand": "Brand 115",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/115/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/115/1.jpg",
+            "https://i.dummyjson.com/data/products/115/2.jpg",
+            "https://i.dummyjson.com/data/products/115/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 116,
+        "title": "Random Women Bottomwear - Pyajamas 116",
+        "description": "Description for Random Women Bottomwear - Pyajamas 116",
+        "price": "114.11",
+        "discountPercentage": "17.56",
+        "rating": "4.08",
+        "stock": 82,
+        "brand": "Brand 116",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/116/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/116/1.jpg",
+            "https://i.dummyjson.com/data/products/116/2.jpg",
+            "https://i.dummyjson.com/data/products/116/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 117,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 117",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 117",
+        "price": "159.65",
+        "discountPercentage": "35.78",
+        "rating": "4.51",
+        "stock": 83,
+        "brand": "Brand 117",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/117/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/117/1.jpg",
+            "https://i.dummyjson.com/data/products/117/2.jpg",
+            "https://i.dummyjson.com/data/products/117/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 118,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 118",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 118",
+        "price": "44.00",
+        "discountPercentage": "10.10",
+        "rating": "3.12",
+        "stock": 64,
+        "brand": "Brand 118",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/118/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/118/1.jpg",
+            "https://i.dummyjson.com/data/products/118/2.jpg",
+            "https://i.dummyjson.com/data/products/118/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 119,
+        "title": "Random Men Bottomwear - Joggers 119",
+        "description": "Description for Random Men Bottomwear - Joggers 119",
+        "price": "44.98",
+        "discountPercentage": "28.70",
+        "rating": "1.98",
+        "stock": 59,
+        "brand": "Brand 119",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/119/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/119/1.jpg",
+            "https://i.dummyjson.com/data/products/119/2.jpg",
+            "https://i.dummyjson.com/data/products/119/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 120,
+        "title": "Random Unisex Winterwear - Sweaters 120",
+        "description": "Description for Random Unisex Winterwear - Sweaters 120",
+        "price": "27.88",
+        "discountPercentage": "25.07",
+        "rating": "3.05",
+        "stock": 20,
+        "brand": "Brand 120",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/120/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/120/1.jpg",
+            "https://i.dummyjson.com/data/products/120/2.jpg",
+            "https://i.dummyjson.com/data/products/120/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 121,
+        "title": "Random Men Winterwear - Sweaters 121",
+        "description": "Description for Random Men Winterwear - Sweaters 121",
+        "price": "141.78",
+        "discountPercentage": "32.93",
+        "rating": "1.38",
+        "stock": 77,
+        "brand": "Brand 121",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/121/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/121/1.jpg",
+            "https://i.dummyjson.com/data/products/121/2.jpg",
+            "https://i.dummyjson.com/data/products/121/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 122,
+        "title": "Random Men Topwear - Shirt 122",
+        "description": "Description for Random Men Topwear - Shirt 122",
+        "price": "89.31",
+        "discountPercentage": "23.31",
+        "rating": "1.44",
+        "stock": 54,
+        "brand": "Brand 122",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/122/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/122/1.jpg",
+            "https://i.dummyjson.com/data/products/122/2.jpg",
+            "https://i.dummyjson.com/data/products/122/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 123,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 123",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 123",
+        "price": "32.64",
+        "discountPercentage": "11.64",
+        "rating": "3.99",
+        "stock": 35,
+        "brand": "Brand 123",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/123/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/123/1.jpg",
+            "https://i.dummyjson.com/data/products/123/2.jpg",
+            "https://i.dummyjson.com/data/products/123/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 124,
+        "title": "Random Women Winterwear - Jackets 124",
+        "description": "Description for Random Women Winterwear - Jackets 124",
+        "price": "12.56",
+        "discountPercentage": "32.68",
+        "rating": "1.07",
+        "stock": 79,
+        "brand": "Brand 124",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/124/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/124/1.jpg",
+            "https://i.dummyjson.com/data/products/124/2.jpg",
+            "https://i.dummyjson.com/data/products/124/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 125,
+        "title": "Random Unisex Winterwear - Jackets 125",
+        "description": "Description for Random Unisex Winterwear - Jackets 125",
+        "price": "98.19",
+        "discountPercentage": "33.51",
+        "rating": "3.65",
+        "stock": 28,
+        "brand": "Brand 125",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/125/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/125/1.jpg",
+            "https://i.dummyjson.com/data/products/125/2.jpg",
+            "https://i.dummyjson.com/data/products/125/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 126,
+        "title": "Random Unisex Topwear - T-shirt 126",
+        "description": "Description for Random Unisex Topwear - T-shirt 126",
+        "price": "49.34",
+        "discountPercentage": "1.11",
+        "rating": "1.38",
+        "stock": 46,
+        "brand": "Brand 126",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/126/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/126/1.jpg",
+            "https://i.dummyjson.com/data/products/126/2.jpg",
+            "https://i.dummyjson.com/data/products/126/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 127,
+        "title": "Random Women Topwear - Printed T-shirt 127",
+        "description": "Description for Random Women Topwear - Printed T-shirt 127",
+        "price": "81.90",
+        "discountPercentage": "10.08",
+        "rating": "1.12",
+        "stock": 60,
+        "brand": "Brand 127",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/127/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/127/1.jpg",
+            "https://i.dummyjson.com/data/products/127/2.jpg",
+            "https://i.dummyjson.com/data/products/127/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 128,
+        "title": "Random Men Winterwear - Sweaters 128",
+        "description": "Description for Random Men Winterwear - Sweaters 128",
+        "price": "162.91",
+        "discountPercentage": "5.95",
+        "rating": "4.96",
+        "stock": 63,
+        "brand": "Brand 128",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/128/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/128/1.jpg",
+            "https://i.dummyjson.com/data/products/128/2.jpg",
+            "https://i.dummyjson.com/data/products/128/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 129,
+        "title": "Random Unisex Winterwear - Sweaters 129",
+        "description": "Description for Random Unisex Winterwear - Sweaters 129",
+        "price": "79.62",
+        "discountPercentage": "34.69",
+        "rating": "2.63",
+        "stock": 7,
+        "brand": "Brand 129",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/129/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/129/1.jpg",
+            "https://i.dummyjson.com/data/products/129/2.jpg",
+            "https://i.dummyjson.com/data/products/129/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 130,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 130",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 130",
+        "price": "92.29",
+        "discountPercentage": "16.17",
+        "rating": "3.11",
+        "stock": 67,
+        "brand": "Brand 130",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/130/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/130/1.jpg",
+            "https://i.dummyjson.com/data/products/130/2.jpg",
+            "https://i.dummyjson.com/data/products/130/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 131,
+        "title": "Random Unisex Bottomwear - Cargos 131",
+        "description": "Description for Random Unisex Bottomwear - Cargos 131",
+        "price": "146.46",
+        "discountPercentage": "10.07",
+        "rating": "4.23",
+        "stock": 82,
+        "brand": "Brand 131",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/131/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/131/1.jpg",
+            "https://i.dummyjson.com/data/products/131/2.jpg",
+            "https://i.dummyjson.com/data/products/131/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 132,
+        "title": "Random Unisex Topwear - Shirt 132",
+        "description": "Description for Random Unisex Topwear - Shirt 132",
+        "price": "22.40",
+        "discountPercentage": "1.21",
+        "rating": "4.67",
+        "stock": 13,
+        "brand": "Brand 132",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/132/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/132/1.jpg",
+            "https://i.dummyjson.com/data/products/132/2.jpg",
+            "https://i.dummyjson.com/data/products/132/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 133,
+        "title": "Random Unisex Bottomwear - Jeans 133",
+        "description": "Description for Random Unisex Bottomwear - Jeans 133",
+        "price": "113.76",
+        "discountPercentage": "23.03",
+        "rating": "1.68",
+        "stock": 25,
+        "brand": "Brand 133",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/133/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/133/1.jpg",
+            "https://i.dummyjson.com/data/products/133/2.jpg",
+            "https://i.dummyjson.com/data/products/133/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 134,
+        "title": "Random Women Bottomwear - Cargos 134",
+        "description": "Description for Random Women Bottomwear - Cargos 134",
+        "price": "56.59",
+        "discountPercentage": "29.81",
+        "rating": "2.97",
+        "stock": 48,
+        "brand": "Brand 134",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/134/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/134/1.jpg",
+            "https://i.dummyjson.com/data/products/134/2.jpg",
+            "https://i.dummyjson.com/data/products/134/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 135,
+        "title": "Random Men Bottomwear - Jeans 135",
+        "description": "Description for Random Men Bottomwear - Jeans 135",
+        "price": "132.87",
+        "discountPercentage": "41.11",
+        "rating": "1.86",
+        "stock": 24,
+        "brand": "Brand 135",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/135/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/135/1.jpg",
+            "https://i.dummyjson.com/data/products/135/2.jpg",
+            "https://i.dummyjson.com/data/products/135/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 136,
+        "title": "Random Men Winterwear - Sweaters 136",
+        "description": "Description for Random Men Winterwear - Sweaters 136",
+        "price": "59.89",
+        "discountPercentage": "19.12",
+        "rating": "4.51",
+        "stock": 22,
+        "brand": "Brand 136",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/136/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/136/1.jpg",
+            "https://i.dummyjson.com/data/products/136/2.jpg",
+            "https://i.dummyjson.com/data/products/136/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 137,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 137",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 137",
+        "price": "46.26",
+        "discountPercentage": "26.23",
+        "rating": "4.48",
+        "stock": 97,
+        "brand": "Brand 137",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/137/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/137/1.jpg",
+            "https://i.dummyjson.com/data/products/137/2.jpg",
+            "https://i.dummyjson.com/data/products/137/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 138,
+        "title": "Random Men Bottomwear - Shorts 138",
+        "description": "Description for Random Men Bottomwear - Shorts 138",
+        "price": "100.70",
+        "discountPercentage": "22.04",
+        "rating": "4.89",
+        "stock": 41,
+        "brand": "Brand 138",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/138/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/138/1.jpg",
+            "https://i.dummyjson.com/data/products/138/2.jpg",
+            "https://i.dummyjson.com/data/products/138/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 139,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 139",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 139",
+        "price": "125.73",
+        "discountPercentage": "24.36",
+        "rating": "2.33",
+        "stock": 82,
+        "brand": "Brand 139",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/139/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/139/1.jpg",
+            "https://i.dummyjson.com/data/products/139/2.jpg",
+            "https://i.dummyjson.com/data/products/139/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 140,
+        "title": "Random Men Topwear - Shirt 140",
+        "description": "Description for Random Men Topwear - Shirt 140",
+        "price": "83.30",
+        "discountPercentage": "42.23",
+        "rating": "1.71",
+        "stock": 56,
+        "brand": "Brand 140",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/140/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/140/1.jpg",
+            "https://i.dummyjson.com/data/products/140/2.jpg",
+            "https://i.dummyjson.com/data/products/140/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 141,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 141",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 141",
+        "price": "141.35",
+        "discountPercentage": "19.81",
+        "rating": "3.39",
+        "stock": 65,
+        "brand": "Brand 141",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/141/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/141/1.jpg",
+            "https://i.dummyjson.com/data/products/141/2.jpg",
+            "https://i.dummyjson.com/data/products/141/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 142,
+        "title": "Random Men Bottomwear - Joggers 142",
+        "description": "Description for Random Men Bottomwear - Joggers 142",
+        "price": "73.06",
+        "discountPercentage": "13.74",
+        "rating": "2.94",
+        "stock": 17,
+        "brand": "Brand 142",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/142/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/142/1.jpg",
+            "https://i.dummyjson.com/data/products/142/2.jpg",
+            "https://i.dummyjson.com/data/products/142/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 143,
+        "title": "Random Unisex Winterwear - Sweaters 143",
+        "description": "Description for Random Unisex Winterwear - Sweaters 143",
+        "price": "42.18",
+        "discountPercentage": "14.27",
+        "rating": "3.95",
+        "stock": 29,
+        "brand": "Brand 143",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/143/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/143/1.jpg",
+            "https://i.dummyjson.com/data/products/143/2.jpg",
+            "https://i.dummyjson.com/data/products/143/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 144,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 144",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 144",
+        "price": "170.38",
+        "discountPercentage": "34.38",
+        "rating": "4.98",
+        "stock": 16,
+        "brand": "Brand 144",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/144/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/144/1.jpg",
+            "https://i.dummyjson.com/data/products/144/2.jpg",
+            "https://i.dummyjson.com/data/products/144/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 145,
+        "title": "Random Women Winterwear - Sweaters 145",
+        "description": "Description for Random Women Winterwear - Sweaters 145",
+        "price": "105.39",
+        "discountPercentage": "29.78",
+        "rating": "1.74",
+        "stock": 69,
+        "brand": "Brand 145",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/145/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/145/1.jpg",
+            "https://i.dummyjson.com/data/products/145/2.jpg",
+            "https://i.dummyjson.com/data/products/145/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 146,
+        "title": "Random Unisex Bottomwear - Cargos 146",
+        "description": "Description for Random Unisex Bottomwear - Cargos 146",
+        "price": "199.74",
+        "discountPercentage": "36.72",
+        "rating": "3.60",
+        "stock": 49,
+        "brand": "Brand 146",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/146/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/146/1.jpg",
+            "https://i.dummyjson.com/data/products/146/2.jpg",
+            "https://i.dummyjson.com/data/products/146/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 147,
+        "title": "Random Men Topwear - T-shirt 147",
+        "description": "Description for Random Men Topwear - T-shirt 147",
+        "price": "170.46",
+        "discountPercentage": "6.07",
+        "rating": "3.61",
+        "stock": 26,
+        "brand": "Brand 147",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/147/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/147/1.jpg",
+            "https://i.dummyjson.com/data/products/147/2.jpg",
+            "https://i.dummyjson.com/data/products/147/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 148,
+        "title": "Random Women Topwear - T-shirt 148",
+        "description": "Description for Random Women Topwear - T-shirt 148",
+        "price": "88.37",
+        "discountPercentage": "8.30",
+        "rating": "4.97",
+        "stock": 4,
+        "brand": "Brand 148",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/148/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/148/1.jpg",
+            "https://i.dummyjson.com/data/products/148/2.jpg",
+            "https://i.dummyjson.com/data/products/148/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 149,
+        "title": "Random Unisex Bottomwear - Cargos 149",
+        "description": "Description for Random Unisex Bottomwear - Cargos 149",
+        "price": "25.42",
+        "discountPercentage": "49.60",
+        "rating": "3.36",
+        "stock": 92,
+        "brand": "Brand 149",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/149/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/149/1.jpg",
+            "https://i.dummyjson.com/data/products/149/2.jpg",
+            "https://i.dummyjson.com/data/products/149/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 150,
+        "title": "Random Women Topwear - T-shirt 150",
+        "description": "Description for Random Women Topwear - T-shirt 150",
+        "price": "106.73",
+        "discountPercentage": "36.76",
+        "rating": "3.69",
+        "stock": 10,
+        "brand": "Brand 150",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/150/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/150/1.jpg",
+            "https://i.dummyjson.com/data/products/150/2.jpg",
+            "https://i.dummyjson.com/data/products/150/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 151,
+        "title": "Random Men Bottomwear - Pyajamas 151",
+        "description": "Description for Random Men Bottomwear - Pyajamas 151",
+        "price": "174.46",
+        "discountPercentage": "22.28",
+        "rating": "4.28",
+        "stock": 79,
+        "brand": "Brand 151",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/151/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/151/1.jpg",
+            "https://i.dummyjson.com/data/products/151/2.jpg",
+            "https://i.dummyjson.com/data/products/151/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 152,
+        "title": "Random Women Winterwear - Sweaters 152",
+        "description": "Description for Random Women Winterwear - Sweaters 152",
+        "price": "143.72",
+        "discountPercentage": "32.17",
+        "rating": "2.18",
+        "stock": 47,
+        "brand": "Brand 152",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/152/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/152/1.jpg",
+            "https://i.dummyjson.com/data/products/152/2.jpg",
+            "https://i.dummyjson.com/data/products/152/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 153,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 153",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 153",
+        "price": "104.58",
+        "discountPercentage": "32.48",
+        "rating": "3.53",
+        "stock": 25,
+        "brand": "Brand 153",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/153/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/153/1.jpg",
+            "https://i.dummyjson.com/data/products/153/2.jpg",
+            "https://i.dummyjson.com/data/products/153/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 154,
+        "title": "Random Men Bottomwear - Cargos 154",
+        "description": "Description for Random Men Bottomwear - Cargos 154",
+        "price": "45.44",
+        "discountPercentage": "34.29",
+        "rating": "2.60",
+        "stock": 17,
+        "brand": "Brand 154",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/154/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/154/1.jpg",
+            "https://i.dummyjson.com/data/products/154/2.jpg",
+            "https://i.dummyjson.com/data/products/154/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 155,
+        "title": "Random Men Topwear - Shirt 155",
+        "description": "Description for Random Men Topwear - Shirt 155",
+        "price": "105.64",
+        "discountPercentage": "41.54",
+        "rating": "4.03",
+        "stock": 21,
+        "brand": "Brand 155",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/155/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/155/1.jpg",
+            "https://i.dummyjson.com/data/products/155/2.jpg",
+            "https://i.dummyjson.com/data/products/155/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 156,
+        "title": "Random Women Topwear - T-shirt 156",
+        "description": "Description for Random Women Topwear - T-shirt 156",
+        "price": "88.34",
+        "discountPercentage": "0.65",
+        "rating": "4.31",
+        "stock": 1,
+        "brand": "Brand 156",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/156/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/156/1.jpg",
+            "https://i.dummyjson.com/data/products/156/2.jpg",
+            "https://i.dummyjson.com/data/products/156/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 157,
+        "title": "Random Unisex Winterwear - Sweaters 157",
+        "description": "Description for Random Unisex Winterwear - Sweaters 157",
+        "price": "96.40",
+        "discountPercentage": "18.39",
+        "rating": "3.27",
+        "stock": 18,
+        "brand": "Brand 157",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/157/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/157/1.jpg",
+            "https://i.dummyjson.com/data/products/157/2.jpg",
+            "https://i.dummyjson.com/data/products/157/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 158,
+        "title": "Random Men Bottomwear - Joggers 158",
+        "description": "Description for Random Men Bottomwear - Joggers 158",
+        "price": "80.02",
+        "discountPercentage": "33.42",
+        "rating": "2.97",
+        "stock": 38,
+        "brand": "Brand 158",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/158/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/158/1.jpg",
+            "https://i.dummyjson.com/data/products/158/2.jpg",
+            "https://i.dummyjson.com/data/products/158/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 159,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 159",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 159",
+        "price": "32.07",
+        "discountPercentage": "26.52",
+        "rating": "1.22",
+        "stock": 93,
+        "brand": "Brand 159",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/159/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/159/1.jpg",
+            "https://i.dummyjson.com/data/products/159/2.jpg",
+            "https://i.dummyjson.com/data/products/159/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 160,
+        "title": "Random Unisex Bottomwear - Pyajamas 160",
+        "description": "Description for Random Unisex Bottomwear - Pyajamas 160",
+        "price": "162.59",
+        "discountPercentage": "0.95",
+        "rating": "2.32",
+        "stock": 38,
+        "brand": "Brand 160",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/160/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/160/1.jpg",
+            "https://i.dummyjson.com/data/products/160/2.jpg",
+            "https://i.dummyjson.com/data/products/160/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 161,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 161",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 161",
+        "price": "29.90",
+        "discountPercentage": "27.63",
+        "rating": "1.88",
+        "stock": 5,
+        "brand": "Brand 161",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/161/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/161/1.jpg",
+            "https://i.dummyjson.com/data/products/161/2.jpg",
+            "https://i.dummyjson.com/data/products/161/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 162,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 162",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 162",
+        "price": "100.69",
+        "discountPercentage": "45.33",
+        "rating": "4.34",
+        "stock": 54,
+        "brand": "Brand 162",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/162/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/162/1.jpg",
+            "https://i.dummyjson.com/data/products/162/2.jpg",
+            "https://i.dummyjson.com/data/products/162/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 163,
+        "title": "Random Unisex Winterwear - Jackets 163",
+        "description": "Description for Random Unisex Winterwear - Jackets 163",
+        "price": "54.37",
+        "discountPercentage": "18.19",
+        "rating": "4.55",
+        "stock": 8,
+        "brand": "Brand 163",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/163/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/163/1.jpg",
+            "https://i.dummyjson.com/data/products/163/2.jpg",
+            "https://i.dummyjson.com/data/products/163/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 164,
+        "title": "Random Unisex Topwear - Shirt 164",
+        "description": "Description for Random Unisex Topwear - Shirt 164",
+        "price": "44.96",
+        "discountPercentage": "18.15",
+        "rating": "4.35",
+        "stock": 68,
+        "brand": "Brand 164",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/164/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/164/1.jpg",
+            "https://i.dummyjson.com/data/products/164/2.jpg",
+            "https://i.dummyjson.com/data/products/164/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 165,
+        "title": "Random Unisex Topwear - T-shirt 165",
+        "description": "Description for Random Unisex Topwear - T-shirt 165",
+        "price": "116.47",
+        "discountPercentage": "4.90",
+        "rating": "4.69",
+        "stock": 96,
+        "brand": "Brand 165",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/165/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/165/1.jpg",
+            "https://i.dummyjson.com/data/products/165/2.jpg",
+            "https://i.dummyjson.com/data/products/165/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 166,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 166",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 166",
+        "price": "162.64",
+        "discountPercentage": "37.48",
+        "rating": "3.99",
+        "stock": 47,
+        "brand": "Brand 166",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/166/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/166/1.jpg",
+            "https://i.dummyjson.com/data/products/166/2.jpg",
+            "https://i.dummyjson.com/data/products/166/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 167,
+        "title": "Random Unisex Bottomwear - Joggers 167",
+        "description": "Description for Random Unisex Bottomwear - Joggers 167",
+        "price": "101.62",
+        "discountPercentage": "7.07",
+        "rating": "2.15",
+        "stock": 46,
+        "brand": "Brand 167",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/167/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/167/1.jpg",
+            "https://i.dummyjson.com/data/products/167/2.jpg",
+            "https://i.dummyjson.com/data/products/167/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 168,
+        "title": "Random Women Bottomwear - Jeans 168",
+        "description": "Description for Random Women Bottomwear - Jeans 168",
+        "price": "21.76",
+        "discountPercentage": "1.16",
+        "rating": "1.85",
+        "stock": 93,
+        "brand": "Brand 168",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/168/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/168/1.jpg",
+            "https://i.dummyjson.com/data/products/168/2.jpg",
+            "https://i.dummyjson.com/data/products/168/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 169,
+        "title": "Random Unisex Topwear - T-shirt 169",
+        "description": "Description for Random Unisex Topwear - T-shirt 169",
+        "price": "70.63",
+        "discountPercentage": "10.15",
+        "rating": "2.46",
+        "stock": 88,
+        "brand": "Brand 169",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/169/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/169/1.jpg",
+            "https://i.dummyjson.com/data/products/169/2.jpg",
+            "https://i.dummyjson.com/data/products/169/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 170,
+        "title": "Random Women Topwear - Printed T-shirt 170",
+        "description": "Description for Random Women Topwear - Printed T-shirt 170",
+        "price": "51.26",
+        "discountPercentage": "10.08",
+        "rating": "4.59",
+        "stock": 97,
+        "brand": "Brand 170",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/170/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/170/1.jpg",
+            "https://i.dummyjson.com/data/products/170/2.jpg",
+            "https://i.dummyjson.com/data/products/170/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 171,
+        "title": "Random Men Bottomwear - Cargos 171",
+        "description": "Description for Random Men Bottomwear - Cargos 171",
+        "price": "133.61",
+        "discountPercentage": "9.01",
+        "rating": "2.21",
+        "stock": 7,
+        "brand": "Brand 171",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/171/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/171/1.jpg",
+            "https://i.dummyjson.com/data/products/171/2.jpg",
+            "https://i.dummyjson.com/data/products/171/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 172,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 172",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 172",
+        "price": "58.52",
+        "discountPercentage": "18.44",
+        "rating": "1.81",
+        "stock": 62,
+        "brand": "Brand 172",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/172/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/172/1.jpg",
+            "https://i.dummyjson.com/data/products/172/2.jpg",
+            "https://i.dummyjson.com/data/products/172/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 173,
+        "title": "Random Men Bottomwear - Pyajamas 173",
+        "description": "Description for Random Men Bottomwear - Pyajamas 173",
+        "price": "137.19",
+        "discountPercentage": "49.52",
+        "rating": "2.61",
+        "stock": 70,
+        "brand": "Brand 173",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/173/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/173/1.jpg",
+            "https://i.dummyjson.com/data/products/173/2.jpg",
+            "https://i.dummyjson.com/data/products/173/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 174,
+        "title": "Random Men Topwear - T-shirt 174",
+        "description": "Description for Random Men Topwear - T-shirt 174",
+        "price": "108.82",
+        "discountPercentage": "27.39",
+        "rating": "1.05",
+        "stock": 35,
+        "brand": "Brand 174",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/174/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/174/1.jpg",
+            "https://i.dummyjson.com/data/products/174/2.jpg",
+            "https://i.dummyjson.com/data/products/174/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 175,
+        "title": "Random Unisex Winterwear - Sweatshirt & Hoodies 175",
+        "description": "Description for Random Unisex Winterwear - Sweatshirt & Hoodies 175",
+        "price": "32.59",
+        "discountPercentage": "34.43",
+        "rating": "4.03",
+        "stock": 58,
+        "brand": "Brand 175",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/175/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/175/1.jpg",
+            "https://i.dummyjson.com/data/products/175/2.jpg",
+            "https://i.dummyjson.com/data/products/175/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 176,
+        "title": "Random Women Topwear - T-shirt 176",
+        "description": "Description for Random Women Topwear - T-shirt 176",
+        "price": "149.55",
+        "discountPercentage": "20.45",
+        "rating": "3.34",
+        "stock": 88,
+        "brand": "Brand 176",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/176/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/176/1.jpg",
+            "https://i.dummyjson.com/data/products/176/2.jpg",
+            "https://i.dummyjson.com/data/products/176/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 177,
+        "title": "Random Unisex Bottomwear - Joggers 177",
+        "description": "Description for Random Unisex Bottomwear - Joggers 177",
+        "price": "10.89",
+        "discountPercentage": "47.92",
+        "rating": "2.96",
+        "stock": 8,
+        "brand": "Brand 177",
+        "category": "Bottomwear",
+        "subcategory": "Joggers",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/177/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/177/1.jpg",
+            "https://i.dummyjson.com/data/products/177/2.jpg",
+            "https://i.dummyjson.com/data/products/177/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 178,
+        "title": "Random Men Bottomwear - Shorts 178",
+        "description": "Description for Random Men Bottomwear - Shorts 178",
+        "price": "27.85",
+        "discountPercentage": "17.54",
+        "rating": "3.56",
+        "stock": 35,
+        "brand": "Brand 178",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/178/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/178/1.jpg",
+            "https://i.dummyjson.com/data/products/178/2.jpg",
+            "https://i.dummyjson.com/data/products/178/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 179,
+        "title": "Random Men Topwear - Shirt 179",
+        "description": "Description for Random Men Topwear - Shirt 179",
+        "price": "104.09",
+        "discountPercentage": "33.78",
+        "rating": "1.29",
+        "stock": 36,
+        "brand": "Brand 179",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/179/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/179/1.jpg",
+            "https://i.dummyjson.com/data/products/179/2.jpg",
+            "https://i.dummyjson.com/data/products/179/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 180,
+        "title": "Random Unisex Topwear - Shirt 180",
+        "description": "Description for Random Unisex Topwear - Shirt 180",
+        "price": "38.66",
+        "discountPercentage": "48.16",
+        "rating": "2.48",
+        "stock": 75,
+        "brand": "Brand 180",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/180/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/180/1.jpg",
+            "https://i.dummyjson.com/data/products/180/2.jpg",
+            "https://i.dummyjson.com/data/products/180/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 181,
+        "title": "Random Unisex Winterwear - Jackets 181",
+        "description": "Description for Random Unisex Winterwear - Jackets 181",
+        "price": "162.41",
+        "discountPercentage": "35.14",
+        "rating": "4.08",
+        "stock": 42,
+        "brand": "Brand 181",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/181/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/181/1.jpg",
+            "https://i.dummyjson.com/data/products/181/2.jpg",
+            "https://i.dummyjson.com/data/products/181/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 182,
+        "title": "Random Unisex Bottomwear - Pyajamas 182",
+        "description": "Description for Random Unisex Bottomwear - Pyajamas 182",
+        "price": "106.83",
+        "discountPercentage": "33.52",
+        "rating": "1.93",
+        "stock": 70,
+        "brand": "Brand 182",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/182/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/182/1.jpg",
+            "https://i.dummyjson.com/data/products/182/2.jpg",
+            "https://i.dummyjson.com/data/products/182/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 183,
+        "title": "Random Women Topwear - Printed T-shirt 183",
+        "description": "Description for Random Women Topwear - Printed T-shirt 183",
+        "price": "95.69",
+        "discountPercentage": "45.49",
+        "rating": "1.53",
+        "stock": 25,
+        "brand": "Brand 183",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/183/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/183/1.jpg",
+            "https://i.dummyjson.com/data/products/183/2.jpg",
+            "https://i.dummyjson.com/data/products/183/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 184,
+        "title": "Random Unisex Topwear - Printed T-shirt 184",
+        "description": "Description for Random Unisex Topwear - Printed T-shirt 184",
+        "price": "191.84",
+        "discountPercentage": "48.89",
+        "rating": "1.32",
+        "stock": 51,
+        "brand": "Brand 184",
+        "category": "Topwear",
+        "subcategory": "Printed T-shirt",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/184/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/184/1.jpg",
+            "https://i.dummyjson.com/data/products/184/2.jpg",
+            "https://i.dummyjson.com/data/products/184/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 185,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 185",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 185",
+        "price": "119.64",
+        "discountPercentage": "12.16",
+        "rating": "3.36",
+        "stock": 15,
+        "brand": "Brand 185",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/185/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/185/1.jpg",
+            "https://i.dummyjson.com/data/products/185/2.jpg",
+            "https://i.dummyjson.com/data/products/185/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 186,
+        "title": "Random Men Bottomwear - Cargos 186",
+        "description": "Description for Random Men Bottomwear - Cargos 186",
+        "price": "168.52",
+        "discountPercentage": "18.13",
+        "rating": "2.04",
+        "stock": 45,
+        "brand": "Brand 186",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/186/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/186/1.jpg",
+            "https://i.dummyjson.com/data/products/186/2.jpg",
+            "https://i.dummyjson.com/data/products/186/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 187,
+        "title": "Random Women Bottomwear - Shorts 187",
+        "description": "Description for Random Women Bottomwear - Shorts 187",
+        "price": "42.66",
+        "discountPercentage": "48.78",
+        "rating": "3.30",
+        "stock": 54,
+        "brand": "Brand 187",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/187/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/187/1.jpg",
+            "https://i.dummyjson.com/data/products/187/2.jpg",
+            "https://i.dummyjson.com/data/products/187/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 188,
+        "title": "Random Women Bottomwear - Cargos 188",
+        "description": "Description for Random Women Bottomwear - Cargos 188",
+        "price": "61.93",
+        "discountPercentage": "40.14",
+        "rating": "3.66",
+        "stock": 32,
+        "brand": "Brand 188",
+        "category": "Bottomwear",
+        "subcategory": "Cargos",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/188/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/188/1.jpg",
+            "https://i.dummyjson.com/data/products/188/2.jpg",
+            "https://i.dummyjson.com/data/products/188/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 189,
+        "title": "Random Men Topwear - Shirt 189",
+        "description": "Description for Random Men Topwear - Shirt 189",
+        "price": "167.05",
+        "discountPercentage": "7.63",
+        "rating": "2.99",
+        "stock": 50,
+        "brand": "Brand 189",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/189/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/189/1.jpg",
+            "https://i.dummyjson.com/data/products/189/2.jpg",
+            "https://i.dummyjson.com/data/products/189/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 190,
+        "title": "Random Women Topwear - Shirt 190",
+        "description": "Description for Random Women Topwear - Shirt 190",
+        "price": "52.93",
+        "discountPercentage": "36.90",
+        "rating": "1.60",
+        "stock": 82,
+        "brand": "Brand 190",
+        "category": "Topwear",
+        "subcategory": "Shirt",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/190/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/190/1.jpg",
+            "https://i.dummyjson.com/data/products/190/2.jpg",
+            "https://i.dummyjson.com/data/products/190/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 191,
+        "title": "Random Women Bottomwear - Shorts 191",
+        "description": "Description for Random Women Bottomwear - Shorts 191",
+        "price": "85.44",
+        "discountPercentage": "36.07",
+        "rating": "3.66",
+        "stock": 51,
+        "brand": "Brand 191",
+        "category": "Bottomwear",
+        "subcategory": "Shorts",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/191/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/191/1.jpg",
+            "https://i.dummyjson.com/data/products/191/2.jpg",
+            "https://i.dummyjson.com/data/products/191/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 192,
+        "title": "Random Men Topwear - T-shirt 192",
+        "description": "Description for Random Men Topwear - T-shirt 192",
+        "price": "69.04",
+        "discountPercentage": "25.15",
+        "rating": "1.46",
+        "stock": 32,
+        "brand": "Brand 192",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/192/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/192/1.jpg",
+            "https://i.dummyjson.com/data/products/192/2.jpg",
+            "https://i.dummyjson.com/data/products/192/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 193,
+        "title": "Random Unisex Winterwear - Jackets 193",
+        "description": "Description for Random Unisex Winterwear - Jackets 193",
+        "price": "192.68",
+        "discountPercentage": "16.22",
+        "rating": "1.84",
+        "stock": 61,
+        "brand": "Brand 193",
+        "category": "Winterwear",
+        "subcategory": "Jackets",
+        "gender": "Unisex",
+        "thumbnail": "https://i.dummyjson.com/data/products/193/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/193/1.jpg",
+            "https://i.dummyjson.com/data/products/193/2.jpg",
+            "https://i.dummyjson.com/data/products/193/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 194,
+        "title": "Random Women Bottomwear - Pyajamas 194",
+        "description": "Description for Random Women Bottomwear - Pyajamas 194",
+        "price": "81.69",
+        "discountPercentage": "42.30",
+        "rating": "2.41",
+        "stock": 74,
+        "brand": "Brand 194",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/194/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/194/1.jpg",
+            "https://i.dummyjson.com/data/products/194/2.jpg",
+            "https://i.dummyjson.com/data/products/194/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 195,
+        "title": "Random Men Winterwear - Sweatshirt & Hoodies 195",
+        "description": "Description for Random Men Winterwear - Sweatshirt & Hoodies 195",
+        "price": "148.67",
+        "discountPercentage": "7.45",
+        "rating": "1.20",
+        "stock": 2,
+        "brand": "Brand 195",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/195/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/195/1.jpg",
+            "https://i.dummyjson.com/data/products/195/2.jpg",
+            "https://i.dummyjson.com/data/products/195/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 196,
+        "title": "Random Women Winterwear - Sweaters 196",
+        "description": "Description for Random Women Winterwear - Sweaters 196",
+        "price": "187.34",
+        "discountPercentage": "23.27",
+        "rating": "4.72",
+        "stock": 17,
+        "brand": "Brand 196",
+        "category": "Winterwear",
+        "subcategory": "Sweaters",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/196/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/196/1.jpg",
+            "https://i.dummyjson.com/data/products/196/2.jpg",
+            "https://i.dummyjson.com/data/products/196/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 197,
+        "title": "Random Women Winterwear - Sweatshirt & Hoodies 197",
+        "description": "Description for Random Women Winterwear - Sweatshirt & Hoodies 197",
+        "price": "106.01",
+        "discountPercentage": "43.76",
+        "rating": "3.50",
+        "stock": 85,
+        "brand": "Brand 197",
+        "category": "Winterwear",
+        "subcategory": "Sweatshirt & Hoodies",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/197/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/197/1.jpg",
+            "https://i.dummyjson.com/data/products/197/2.jpg",
+            "https://i.dummyjson.com/data/products/197/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 198,
+        "title": "Random Women Bottomwear - Pyajamas 198",
+        "description": "Description for Random Women Bottomwear - Pyajamas 198",
+        "price": "199.69",
+        "discountPercentage": "38.69",
+        "rating": "1.46",
+        "stock": 1,
+        "brand": "Brand 198",
+        "category": "Bottomwear",
+        "subcategory": "Pyajamas",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/198/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/198/1.jpg",
+            "https://i.dummyjson.com/data/products/198/2.jpg",
+            "https://i.dummyjson.com/data/products/198/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 199,
+        "title": "Random Women Bottomwear - Jeans 199",
+        "description": "Description for Random Women Bottomwear - Jeans 199",
+        "price": "194.54",
+        "discountPercentage": "9.01",
+        "rating": "4.03",
+        "stock": 83,
+        "brand": "Brand 199",
+        "category": "Bottomwear",
+        "subcategory": "Jeans",
+        "gender": "Women",
+        "thumbnail": "https://i.dummyjson.com/data/products/199/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/199/1.jpg",
+            "https://i.dummyjson.com/data/products/199/2.jpg",
+            "https://i.dummyjson.com/data/products/199/3.jpg"
+        ],
+        "deleted": false
+    },
+    {
+        "id": 200,
+        "title": "Random Men Topwear - T-shirt 200",
+        "description": "Description for Random Men Topwear - T-shirt 200",
+        "price": "173.83",
+        "discountPercentage": "17.21",
+        "rating": "1.71",
+        "stock": 9,
+        "brand": "Brand 200",
+        "category": "Topwear",
+        "subcategory": "T-shirt",
+        "gender": "Men",
+        "thumbnail": "https://i.dummyjson.com/data/products/200/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/200/1.jpg",
+            "https://i.dummyjson.com/data/products/200/2.jpg",
+            "https://i.dummyjson.com/data/products/200/3.jpg"
+        ],
+        "deleted": false
+    }
+]

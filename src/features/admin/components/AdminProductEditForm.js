@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
+import React, { useEffect, useState } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -15,22 +15,40 @@ import {
   updateProductByIdAsync,
 } from "../../products/productSlice";
 import { Grid } from "react-loader-spinner";
+import { useAlert } from "react-alert";
+import { faSquarePollVertical } from "@fortawesome/free-solid-svg-icons";
 
 function AdminProductEditForm() {
   const {
+    control,
     register,
     reset,
     setValue,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const brand = useSelector(selectBrand);
   const category = useSelector(selectCategory);
-
+  const alert = useAlert();
   const product = useSelector(selectProduct);
   const status = useSelector(selectProductListStatus);
   const dispatch = useDispatch();
   const params = useParams();
+
+  const [variantFields, setVariantFields] = useState([
+    { color: "", size: "", stock: "" },
+  ]);
+
+  const addVariantField = () => {
+    setVariantFields([...variantFields, { color: "", size: "", stock: "" }]);
+  };
+
+  const removeVariantField = (index) => {
+    const updatedVariants = [...variantFields];
+    updatedVariants.splice(index, 1);
+    setVariantFields(updatedVariants);
+  };
 
   useEffect(() => {
     dispatch(fetchBrandAsync());
@@ -61,12 +79,79 @@ function AdminProductEditForm() {
       setValue("image3", product.images[2]);
       setValue("image4", product.images[3]);
       setValue("image5", product.images[4]);
+      // product.colors.map((color) => setValue("colors", true));
     }
   }, [product, setValue, params.id]);
 
   const handleDelete = () => {
-    dispatch(updateProductByIdAsync({ ...product, deleted: "true" }));
+    dispatch(
+      updateProductByIdAsync({
+        product: { ...product, deleted: "true" },
+        alert,
+      })
+    );
   };
+
+  const colors = [
+    {
+      name: "White",
+      class: "bg-white",
+      selectedClass: "ring-gray-400",
+      id: "white",
+    },
+    {
+      name: "Gray",
+      class: "bg-gray-200",
+      selectedClass: "ring-gray-400",
+      id: "gray",
+    },
+    {
+      name: "Black",
+      class: "bg-gray-900",
+      selectedClass: "ring-gray-900",
+      id: "black",
+    },
+    {
+      name: "Blue",
+      class: "bg-blue-600",
+      selectedClass: "ring-blue-600",
+      id: "blue",
+    },
+    {
+      name: "Green",
+      class: "bg-green-600",
+      selectedClass: "ring-green-600",
+      id: "green",
+    },
+    {
+      name: "Yellow",
+      class: "bg-yellow-600",
+      selectedClass: "ring-yellow-600",
+      id: "yellow",
+    },
+    {
+      name: "Orange",
+      class: "bg-orange-600",
+      selectedClass: "ring-orange-600",
+      id: "orange",
+    },
+    {
+      name: "Red",
+      class: "bg-red-600",
+      selectedClass: "ring-red-600",
+      id: "red",
+    },
+  ];
+  const sizes = [
+    { name: "XXS", inStock: false, id: "xxs" },
+    { name: "XS", inStock: true, id: "xs" },
+    { name: "S", inStock: true, id: "s" },
+    { name: "M", inStock: true, id: "m" },
+    { name: "L", inStock: true, id: "l" },
+    { name: "XL", inStock: true, id: "xl" },
+    { name: "2XL", inStock: true, id: "2xl" },
+    { name: "3XL", inStock: true, id: "3xl" },
+  ];
 
   return (
     <div>
@@ -88,6 +173,7 @@ function AdminProductEditForm() {
         noValidate
         onSubmit={handleSubmit((data) => {
           console.log(data);
+
           let newImages = [
             data.image1,
             data.image2,
@@ -102,19 +188,57 @@ function AdminProductEditForm() {
           delete data["image4"];
           delete data["image5"];
 
-          const updatedProduct = { ...data, images: newImages };
+          let updatedProduct = { ...data, images: newImages };
+
+          // if (updatedProduct.colors) {
+          //   updatedProduct.colors = updatedProduct.colors.map((color) =>
+          //     colors.find((clr) => clr.id === color)
+          //   );
+          // }
+
+          // if (updatedProduct.sizes) {
+          //   updatedProduct.sizes = updatedProduct.sizes.map((size) =>
+          //     sizes.find((sz) => sz.id === size)
+          //   );
+          // }
+          if (updatedProduct.variants) {
+            for (let i = 0; i < updatedProduct.variants.length; i++) {
+              for (let j = 0; j < colors.length; j++) {
+                if (updatedProduct.variants[i].color === colors[j].id) {
+                  updatedProduct.variants[i] = {
+                    ...updatedProduct.variants[i],
+                    id: colors[j].id,
+                    class: colors[j].class,
+                    selectedClass: colors[j].selectedClass,
+                    inStock: true,
+                    stock: +updatedProduct.variants[i].stock,
+                  };
+                }
+              }
+            }
+          }
+
           console.log(updatedProduct);
+
           if (params.id) {
             dispatch(
               updateProductByIdAsync({
-                ...updatedProduct,
-                rating: product.rating,
-                id: product.id,
+                product: {
+                  ...updatedProduct,
+                  rating: product.rating,
+                  id: product.id,
+                },
+                alert,
               })
             );
             reset();
           } else {
-            dispatch(addProductAsync({ ...updatedProduct, rating: 0 }));
+            dispatch(
+              addProductAsync({
+                product: { ...updatedProduct, rating: 0 },
+                alert,
+              })
+            );
             reset();
           }
         })}
@@ -248,6 +372,116 @@ function AdminProductEditForm() {
               ))}
             </select>
           </div>
+          {/* <div>
+            <label
+              htmlFor="sizes"
+              className="block text-sm font-medium text-gray-900"
+            >
+              Sizes
+            </label>
+            <div className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              {sizes.map((size, index) => (
+                <>
+                  <input
+                    {...register("sizes")}
+                    key={index}
+                    value={size.id}
+                    type="checkbox"
+                  ></input>
+                  {size.name}
+                </>
+              ))}
+            </div>
+          </div> */}
+          {/* <div>
+            <label
+              htmlFor="colors"
+              className="block text-sm font-medium text-gray-900"
+            >
+              Colors
+            </label>
+            <div className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              {colors.map((color, index) => (
+                <>
+                  <input
+                    {...register("colors")}
+                    key={index}
+                    value={color.id}
+                    type="checkbox"
+                  ></input>
+                  {color.name}
+                </>
+              ))}
+            </div>
+          </div> */}
+          <div className="mt-6">
+            <label
+              htmlFor="variants"
+              className="block text-sm font-medium text-gray-900"
+            >
+              Variants
+            </label>
+            <div className="mt-1">
+              {variantFields.map((variant, index) => (
+                <div key={index} className="grid grid-cols-3 gap-2 mb-2">
+                  <Controller
+                    name={`variants[${index}].color`}
+                    control={control}
+                    defaultValue={variant.color}
+                    render={({ field }) => (
+                      <input
+                        type="text"
+                        placeholder="Color"
+                        {...field}
+                        className="col-span-1 w-full px-2 py-1 border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      />
+                    )}
+                  />
+                  <Controller
+                    name={`variants[${index}].size`}
+                    control={control}
+                    defaultValue={variant.size}
+                    render={({ field }) => (
+                      <input
+                        type="text"
+                        placeholder="Size-S,M,L,XL"
+                        {...field}
+                        className="col-span-1 w-full px-2 py-1 border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      />
+                    )}
+                  />
+                  <Controller
+                    name={`variants[${index}].stock`}
+                    control={control}
+                    defaultValue={variant.stock}
+                    render={({ field }) => (
+                      <input
+                        type="number"
+                        placeholder="Stock"
+                        {...field}
+                        className="col-span-1 w-full px-2 py-1 border rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      />
+                    )}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => removeVariantField(index)}
+                    className="mt-1 col-span-3 text-red-600 hover:text-red-800"
+                  >
+                    Remove Variant
+                  </button>
+                </div>
+              ))}
+              <button
+                type="button"
+                onClick={addVariantField}
+                className="px-2 py-1 text-sm font-medium text-gray-900 bg-indigo-100 border rounded-md border-indigo-300 hover:bg-indigo-200"
+              >
+                Add Variant
+              </button>
+            </div>
+          </div>
+
           <div>
             <label
               htmlFor="thumbnail"

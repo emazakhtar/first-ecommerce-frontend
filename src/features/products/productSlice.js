@@ -25,6 +25,7 @@ export const fetchAllProductsAsync = createAsyncThunk(
     return response.data;
   }
 );
+
 export const fetchProductsByFilterAsync = createAsyncThunk(
   "product/fetchProductsByFilter",
   async ({ filter, sort, pagination }) => {
@@ -32,6 +33,7 @@ export const fetchProductsByFilterAsync = createAsyncThunk(
     return response.data;
   }
 );
+
 export const fetchProductByIdAsync = createAsyncThunk(
   "product/fetchProductById",
   async (id) => {
@@ -39,6 +41,7 @@ export const fetchProductByIdAsync = createAsyncThunk(
     return response.data;
   }
 );
+
 export const fetchBrandAsync = createAsyncThunk(
   "product/fetchBrandAsync",
   async () => {
@@ -46,6 +49,7 @@ export const fetchBrandAsync = createAsyncThunk(
     return response.data;
   }
 );
+
 export const fetchCategoryAsync = createAsyncThunk(
   "product/fetchCategoryAsync",
   async () => {
@@ -53,18 +57,26 @@ export const fetchCategoryAsync = createAsyncThunk(
     return response.data;
   }
 );
+
 export const updateProductByIdAsync = createAsyncThunk(
   "product/updateProductById",
-  async (updatedProduct) => {
-    const response = await updateProductById(updatedProduct);
+  async ({ product, alert }) => {
+    const response = await updateProductById(product);
+    if (product.deleted === true) {
+      alert.success("Product Deleted");
+    } else {
+      alert.success("Product Edited");
+    }
+
     return response.data;
   }
 );
 
 export const addProductAsync = createAsyncThunk(
   "product/addProduct",
-  async (product) => {
+  async ({ product, alert }) => {
     const response = await addProduct(product);
+    alert.success("Product Added");
     return response.data;
   }
 );

@@ -17,9 +17,13 @@ const initialState = {
 
 export const createOrderAsync = createAsyncThunk(
   "order/createOrder",
-  async (orderData) => {
-    const response = await createOrder(orderData);
-    return response.data;
+  async (orderData, { rejectWithValue }) => {
+    try {
+      const response = await createOrder(orderData);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
   }
 );
 
@@ -63,6 +67,10 @@ export const ordersSlice = createSlice({
       .addCase(createOrderAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.orderSuccess = action.payload;
+      })
+      .addCase(createOrderAsync.rejected, (state, action) => {
+        state.status = "idle";
+        state.error = action.payload;
       })
       .addCase(fetchAllOrdersAsync.pending, (state) => {
         state.status = "loading";
