@@ -20,7 +20,7 @@ function MyOrders() {
   }, [dispatch]);
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mt-10 mx-auto py-8">
       {status === "loading" && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           {/* Loader component */}

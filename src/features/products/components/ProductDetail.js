@@ -147,7 +147,7 @@ function ProductDetail() {
                     </div>
                   </li>
                 ))}
-              <li className="text-sm">
+              {/* <li className="text-sm mt-10">
                 <a
                   href={product.href}
                   aria-current="page"
@@ -155,15 +155,15 @@ function ProductDetail() {
                 >
                   {product.title}
                 </a>
-              </li>
+              </li> */}
             </ol>
           </nav>
 
           {/* Image carousel */}
           <Carousel>
             {product.images.map((image, index) => (
-              <div key={index}>
-                <img src={image} alt={product.title} />
+              <div key={index} className="md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto">
+                <img src={image} alt={product.title} className="w-full" />
               </div>
             ))}
           </Carousel>

@@ -34,6 +34,7 @@ import {
 import StripeCheckout from "./pages/StripeCheckout";
 import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
+import QuickView from "./features/products/components/QuickView";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,14 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <ProductDetailPage />
+      </Protected>
+    ),
+  },
+  {
+    path: "/product-quickview/:id",
+    element: (
+      <Protected>
+        <QuickView></QuickView>
       </Protected>
     ),
   },

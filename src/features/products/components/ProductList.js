@@ -513,7 +513,7 @@ function ProductGrid({ products, status, handleCart }) {
 
                     {product.stock <= 0 ? (
                       <div className="flex justify-center">
-                        <p className="w-4/5 mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-600 transition duration-300">
+                        <p className="w-4/5 mt-4 bg-red-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-600 transition duration-300">
                           Out of Stock
                         </p>
                       </div>
