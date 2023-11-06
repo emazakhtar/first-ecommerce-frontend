@@ -466,7 +466,6 @@ function ProductGrid({ products, status, handleCart }) {
                   <div key={index}>
                     <Link to={`/product-detail/${product.id}`}>
                       <div
-                        key={index}
                         className={`group relative border-solid border-2 border-gray-200 p-2 w-full ${
                           status === "loading" ? "blur" : ""
                         }`}

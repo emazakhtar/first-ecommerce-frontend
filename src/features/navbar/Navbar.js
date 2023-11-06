@@ -76,7 +76,7 @@ function Navbar({ children }) {
                       <div className="ml-4 flex items-center md:ml-6">
                         <Link to="/my-cart">
                           <button
-                            cursor-pointer
+                            cursor-pointer="true"
                             type="button"
                             className="relative rounded-full bg-blue-950 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900"
                           >
@@ -140,7 +140,7 @@ function Navbar({ children }) {
 
                       <Link className="mt-2" to="/my-cart">
                         <button
-                          cursor-pointer
+                          cursor-pointer="true"
                           type="button"
                           className="relative ml-auto flex-shrink-0 rounded-full bg-blue-950 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900"
                         >
@@ -182,9 +182,8 @@ function Navbar({ children }) {
                     {navigation.map(
                       (item) =>
                         item[userInfo.role] && (
-                          <Link to={item.link}>
+                          <Link key={item.name} to={item.link}>
                             <Disclosure.Button
-                              key={item.name}
                               as="a"
                               className={classNames(
                                 item.current

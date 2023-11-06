@@ -79,7 +79,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/product-quickview/:id",
+    path: "/product-quickview",
     element: (
       <Protected>
         <QuickView></QuickView>

@@ -60,7 +60,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `https://emazakhtar.com/order-success/${orderSuccess.id}`,
+        return_url: `https://mern-ecommerce-eosin.vercel.app/order-success/${orderSuccess.id}`,
       },
     });
 

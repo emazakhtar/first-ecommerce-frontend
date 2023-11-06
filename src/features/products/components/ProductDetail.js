@@ -64,7 +64,10 @@ function ProductDetail() {
           variant.size === newCartItem.size &&
           variant.color === newCartItem.color
       );
-      if (product.variants[variantIndex].stock > 0) {
+      if (
+        product.variants.length > 0 &&
+        product.variants[variantIndex].stock > 0
+      ) {
         dispatch(addToCartAsync({ item: newCartItem, alert }));
         // it will be based on server response of backend
       } else {
@@ -212,8 +215,8 @@ function ProductDetail() {
                     {product &&
                       product.variants &&
                       uniqueColors &&
-                      uniqueColors.map((variant) => (
-                        <>
+                      uniqueColors.map((variant, index) => (
+                        <div key={index}>
                           {variant.color && (
                             <div className="mr-4">
                               <RadioGroup
@@ -257,7 +260,7 @@ function ProductDetail() {
                               </RadioGroup>
                             </div>
                           )}
-                        </>
+                        </div>
                       ))}
                   </div>
                   <div className="flex flex-row">
@@ -265,8 +268,8 @@ function ProductDetail() {
                     {product &&
                       product.variants &&
                       uniqueSizes &&
-                      uniqueSizes.map((variant) => (
-                        <div>
+                      uniqueSizes.map((variant, index) => (
+                        <div key={index}>
                           {variant.size && (
                             <div className="mt-10">
                               {/* <div className="flex items-center justify-between">
