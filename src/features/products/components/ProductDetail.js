@@ -163,14 +163,24 @@ function ProductDetail() {
           </nav>
 
           {/* Image carousel */}
-          <Carousel>
-            {product.images.map((image, index) => (
-              <div key={index} className="md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto">
-                <img src={image} alt={product.title} className="w-full" />
-              </div>
-            ))}
-          </Carousel>
-
+          <div className="mt-16">
+            {" "}
+            {/* Changed margin-top from mt-10 to mt-16 */}
+            <Carousel>
+              {product.images.map((image, index) => (
+                <div
+                  key={index}
+                  className="mx-auto w-full sm:w-2/3 md:w-1/2 lg:w-2/3 xl:w-1/2"
+                >
+                  <img
+                    src={image}
+                    alt={product.title}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              ))}
+            </Carousel>
+          </div>
           {/* Product info */}
           <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
             <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">

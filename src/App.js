@@ -35,16 +35,17 @@ import StripeCheckout from "./pages/StripeCheckout";
 import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
 import QuickView from "./features/products/components/QuickView";
+import LandingPage from "./pages/LandingPage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/all-products",
 
-    element: (
-      <Protected>
-        <Home />
-      </Protected>
-    ),
+    element: <Home />,
+  },
+  {
+    path: "/",
+    element: <LandingPage />,
   },
   {
     path: "/login",
@@ -179,6 +180,7 @@ const router = createBrowserRouter([
       </Protected>
     ),
   },
+
   {
     path: "*",
     element: <PageNotFound></PageNotFound>,
@@ -190,11 +192,11 @@ function App() {
   const user = useSelector(selectLoggedInUserToken);
   const checkedUser = useSelector(selectCheckedUser);
 
-  useEffect(() => {
-    if (!user) {
-      dispatch(checkUserAsync());
-    }
-  }, [dispatch, user]);
+  // useEffect(() => {
+  //   if (!user) {
+  //     dispatch(checkUserAsync());
+  //   }
+  // }, [dispatch, user]);
 
   useEffect(() => {
     if (user) {
@@ -205,11 +207,7 @@ function App() {
     }
   }, [dispatch, user]);
 
-  return (
-    <div className="App">
-      {checkedUser && <RouterProvider router={router} />}
-    </div>
-  );
+  return <div className="App">{<RouterProvider router={router} />}</div>;
 }
 
 export default App;
