@@ -39,14 +39,17 @@ import LandingPage from "./pages/LandingPage";
 
 const router = createBrowserRouter([
   {
-    path: "/all-products",
-
-    element: <Home />,
-  },
-  {
     path: "/",
-    element: <LandingPage />,
+    element: (
+      <Protected>
+        <Home />
+      </Protected>
+    ),
   },
+  // {
+  //   path: "/",
+  //   element: <LandingPage />,
+  // },
   {
     path: "/login",
     element: <LoginPage />,
@@ -192,11 +195,11 @@ function App() {
   const user = useSelector(selectLoggedInUserToken);
   const checkedUser = useSelector(selectCheckedUser);
 
-  // useEffect(() => {
-  //   if (!user) {
-  //     dispatch(checkUserAsync());
-  //   }
-  // }, [dispatch, user]);
+  useEffect(() => {
+    if (!user) {
+      dispatch(checkUserAsync());
+    }
+  }, [dispatch, user]);
 
   useEffect(() => {
     if (user) {
@@ -207,7 +210,11 @@ function App() {
     }
   }, [dispatch, user]);
 
-  return <div className="App">{<RouterProvider router={router} />}</div>;
+  return (
+    <div className="App">
+      {checkedUser && <RouterProvider router={router} />}
+    </div>
+  );
 }
 
 export default App;
