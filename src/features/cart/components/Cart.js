@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +13,7 @@ import { Grid } from "react-loader-spinner";
 // Import FontAwesome icons here
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import {} from "../../auth/authSlice";
 
 function Cart() {
   const [open, setOpen] = useState(true);
@@ -34,7 +35,8 @@ function Cart() {
   };
 
   const totalAmount = cartItems.reduce(
-    (amount, item) => item.product.discountedPrice + amount,
+    (amount, item) =>
+      item.product.discountedPrice * item.product.quantity + amount,
     0
   );
 
@@ -144,7 +146,7 @@ function Cart() {
           <div className="mt-6">
             <Link
               to="/checkout"
-              className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+              className="flex items-center justify-center rounded-md border border-transparent bg-red-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-red-700"
             >
               Checkout
             </Link>
@@ -155,7 +157,7 @@ function Cart() {
               <Link to="/">
                 <button
                   type="button"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                  className="font-medium text-red-600 hover:text-red-500"
                   onClick={() => setOpen(false)}
                 >
                   Continue Shopping

@@ -36,20 +36,17 @@ import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
 import QuickView from "./features/products/components/QuickView";
 import LandingPage from "./pages/LandingPage";
+import { fetchAllUsersOrders } from "./features/users/usersAPI";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: (
-      <Protected>
-        <Home />
-      </Protected>
-    ),
+    path: "/all-products",
+    element: <Home />,
   },
-  // {
-  //   path: "/",
-  //   element: <LandingPage />,
-  // },
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
   {
     path: "/login",
     element: <LoginPage />,
@@ -76,11 +73,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/product-detail/:id",
-    element: (
-      <Protected>
-        <ProductDetailPage />
-      </Protected>
-    ),
+    element: <ProductDetailPage />,
   },
   {
     path: "/product-quickview",
@@ -210,11 +203,7 @@ function App() {
     }
   }, [dispatch, user]);
 
-  return (
-    <div className="App">
-      {checkedUser && <RouterProvider router={router} />}
-    </div>
-  );
+  return <div className="App">{<RouterProvider router={router} />}</div>;
 }
 
 export default App;

@@ -29,11 +29,11 @@ function Navbar({ children }) {
   const userInfo = useSelector(selectLoggedInUserInfo);
   return (
     <>
-      {userInfo && (
+      {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-blue-950 ${userInfo && "fixed top-0 w-full z-50"}`}
+            className={`bg-red-800 ${userInfo && "fixed top-0 w-full z-50"}`}
           >
             {({ open }) => (
               <>
@@ -42,33 +42,34 @@ function Navbar({ children }) {
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Link to="/">
-                          <h1 className="bg-blue-950 text-xl sm:text-3xl md:text-3xl lg:text-3xl fon-sans font-bold text-white text-center ">
+                          <h1 className="bg-red-80 text-xl sm:text-3xl md:text-3xl lg:text-3xl fon-sans font-bold text-white text-center ">
                             Ecommerce
                           </h1>
                         </Link>
                       </div>
                       <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                          {navigation.map(
-                            (item) =>
-                              item[userInfo.role] && (
-                                <Link
-                                  key={item.name}
-                                  to={item.link}
-                                  className={classNames(
-                                    item.current
-                                      ? "bg-gray-900 text-white"
-                                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                    "rounded-md px-3 py-2 text-sm font-medium"
-                                  )}
-                                  aria-current={
-                                    item.current ? "page" : undefined
-                                  }
-                                >
-                                  {item.name}
-                                </Link>
-                              )
-                          )}
+                          {userInfo &&
+                            navigation.map(
+                              (item) =>
+                                item[userInfo.role] && (
+                                  <Link
+                                    key={item.name}
+                                    to={item.link}
+                                    className={classNames(
+                                      item.current
+                                        ? "bg-gray-900 text-white"
+                                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                                      "rounded-md px-3 py-2 text-sm font-medium"
+                                    )}
+                                    aria-current={
+                                      item.current ? "page" : undefined
+                                    }
+                                  >
+                                    {item.name}
+                                  </Link>
+                                )
+                            )}
                         </div>
                       </div>
                     </div>
@@ -78,7 +79,7 @@ function Navbar({ children }) {
                           <button
                             cursor-pointer="true"
                             type="button"
-                            className="relative rounded-full bg-blue-950 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900"
+                            className="relative rounded-full bg-red-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                           >
                             <span className="absolute -inset-1.5" />
                             <ShoppingCartIcon
@@ -88,14 +89,14 @@ function Navbar({ children }) {
                           </button>
                         </Link>
                         {cartItems.length > 0 && (
-                          <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-blue-50 px-2 py-1 text-xs font-medium text-blue-950 ring-1 ring-inset ring-blue-500/10">
+                          <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-500/10">
                             {cartItems.length}
                           </span>
                         )}
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3">
                           <div>
-                            <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-blue-950 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900">
+                            <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-red-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
                               <span className="absolute -inset-1.5" />
                               <span className="sr-only">Open user menu</span>
                               <img
@@ -142,7 +143,7 @@ function Navbar({ children }) {
                         <button
                           cursor-pointer="true"
                           type="button"
-                          className="relative ml-auto flex-shrink-0 rounded-full bg-blue-950 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900"
+                          className="relative ml-auto flex-shrink-0 rounded-full bg-red-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                         >
                           <span className="absolute -inset-1.5" />
 
@@ -153,11 +154,11 @@ function Navbar({ children }) {
                         </button>
                       </Link>
                       {cartItems.length > 0 && (
-                        <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-blue-50 px-2 py-1 text-xs font-medium text-blue-950 ring-1 ring-inset ring-blue-500/10">
+                        <span className="inline-flex items-center rounded-md mb-7 -ml-2 bg-red-50 px-2 py-1 text-xs font-medium text-red-750 ring-1 ring-inset ring-red-500/10">
                           {cartItems.length}
                         </span>
                       )}
-                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-blue-950 p-2 text-gray-400 hover:bg-blue-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900">
+                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-red-850 p-2 text-gray-400 hover:bg-red-850 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
                         <span className="absolute -inset-0.5" />
                         <span className="sr-only">Open main menu</span>
 
@@ -179,54 +180,54 @@ function Navbar({ children }) {
 
                 <Disclosure.Panel className="md:hidden">
                   <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                    {navigation.map(
-                      (item) =>
-                        item[userInfo.role] && (
-                          <Link key={item.name} to={item.link}>
-                            <Disclosure.Button
-                              as="a"
-                              className={classNames(
-                                item.current
-                                  ? "bg-gray-900 text-white"
-                                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                "block rounded-md px-3 py-2 text-base font-medium"
-                              )}
-                              aria-current={item.current ? "page" : undefined}
-                            >
-                              {item.name}
-                            </Disclosure.Button>
-                          </Link>
-                        )
-                    )}
+                    {userInfo &&
+                      navigation.map(
+                        (item) =>
+                          item[userInfo.role] && (
+                            <Link key={item.name} to={item.link}>
+                              <Disclosure.Button
+                                as="a"
+                                className={classNames(
+                                  item.current
+                                    ? "bg-gray-900 text-white"
+                                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                                  "block rounded-md px-3 py-2 text-base font-medium"
+                                )}
+                                aria-current={item.current ? "page" : undefined}
+                              >
+                                {item.name}
+                              </Disclosure.Button>
+                            </Link>
+                          )
+                      )}
                   </div>
                   <div className="border-t border-gray-700 pb-3 pt-4">
                     <div className="flex items-center px-5">
                       <div className="flex-shrink-0">
                         <img
                           className="h-10 w-10 rounded-full"
-                          src={userInfo.imageUrl}
-                          alt=""
+                          src={userInfo && userInfo.imageUrl}
+                          alt="user-img"
                         />
                       </div>
                       <div className="ml-3">
                         <div className="text-base font-medium leading-none text-white">
-                          {userInfo.name}
+                          {userInfo && userInfo.name}
                         </div>
                         <div className="text-sm font-medium leading-none text-gray-400">
-                          {userInfo.email}
+                          {userInfo && userInfo.email}
                         </div>
                       </div>
                     </div>
                     <div className="mt-3 space-y-1 px-2">
                       {userNavigation.map((item) => (
-                        <Disclosure.Button
+                        <Link
                           key={item.name}
-                          as="a"
-                          href={item.link}
+                          to={item.link}
                           className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                         >
                           {item.name}
-                        </Disclosure.Button>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -248,7 +249,7 @@ function Navbar({ children }) {
             </div>
           </main>
         </div>
-      )}
+      }
     </>
   );
 }

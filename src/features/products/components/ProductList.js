@@ -156,8 +156,8 @@ function ProductList() {
           ></MobileFilter>
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-3xl font-bold tracking-tight text-gray-500">
-                Store
+              <h1 className="text-xl font-bold tracking-tight text-gray-600">
+                All Items
               </h1>
 
               <div className="flex items-center">
@@ -520,7 +520,7 @@ function ProductGrid({ products, status, handleCart }) {
                       <div className="flex justify-center mb-4">
                         <button
                           onClick={() => handleCart(product.id)}
-                          className="w-4/5 mt-4 bg-blue-400 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-300 transition duration-300"
+                          className="w-4/5 mt-4 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-400 transition duration-300"
                         >
                           Add to Cart
                         </button>

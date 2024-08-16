@@ -519,7 +519,7 @@ function AdminProductEditForm() {
             </label>
             <input
               type="text"
-              {...register("image2", { required: "Image 2 is required" })}
+              {...register("image2")}
               id="image2"
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
@@ -533,7 +533,7 @@ function AdminProductEditForm() {
             </label>
             <input
               type="text"
-              {...register("image3", { required: "Image 3 is required" })}
+              {...register("image3")}
               id="image3"
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
@@ -547,7 +547,7 @@ function AdminProductEditForm() {
             </label>
             <input
               type="text"
-              {...register("image4", { required: "Image 4 is required" })}
+              {...register("image4")}
               id="image4"
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
@@ -561,7 +561,7 @@ function AdminProductEditForm() {
             </label>
             <input
               type="text"
-              {...register("image5", { required: "Image 5 is required" })}
+              {...register("image5")}
               id="image5"
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />

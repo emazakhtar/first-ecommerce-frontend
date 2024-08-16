@@ -11,6 +11,7 @@ import {
 const initialState = {
   LoggedInUserToken: null,
   status: "idle",
+  checkUserInitialized: "false",
   error: null,
   checkedUser: false,
   emailSent: null,
@@ -148,11 +149,13 @@ export const authSlice = createSlice({
         state.status = "idle";
         state.LoggedInUserToken = action.payload;
         state.checkedUser = true;
+        state.checkUserInitialized = true;
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
         state.status = "rejected";
         state.error = action.payload;
         state.checkedUser = true;
+        state.checkUserInitialized = true;
       })
       .addCase(signOutAsync.pending, (state) => {
         state.status = "loading";
@@ -202,5 +205,7 @@ export const selectEmailSent = (state) => state.auth.emailSent;
 export const selectResetPasswordStatus = (state) =>
   state.auth.resetPasswordStatus;
 export const selectAuthStatus = (state) => state.auth.status;
+export const selectcheckedUserInitialized = (state) =>
+  state.auth.checkUserInitialized;
 
 export default authSlice.reducer;

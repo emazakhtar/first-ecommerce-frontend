@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchProductByIdAsync,
@@ -18,6 +18,8 @@ import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { selectLoggedInUserInfo } from "../../users/usersSlice";
+import { selectLoggedInUserToken } from "../../auth/authSlice";
 
 const highlights = [
   "Hand cut and sewn locally",
@@ -39,6 +41,7 @@ function ProductDetail() {
   const alert = useAlert();
   const status = useSelector(selectProductListStatus);
   const cartStatus = useSelector(selectCartStatus);
+  const userLoggedIn = useSelector(selectLoggedInUserToken);
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
@@ -46,7 +49,9 @@ function ProductDetail() {
 
   const handleCart = (e) => {
     e.preventDefault();
-
+    if (!userLoggedIn) {
+      <Navigate to="/login" replace={true}></Navigate>;
+    }
     if (cartItems.findIndex((item) => item.product.id === product.id) < 0) {
       const newCartItem = {
         quantity: 1,
@@ -194,6 +199,9 @@ function ProductDetail() {
               <h2 className="sr-only">Product information</h2>
               <p className="text-3xl tracking-tight text-gray-900">
                 ${product.price}
+              </p>
+              <p className="text-3xl tracking-tight text-gray-900">
+                ${product.discountedPrice}
               </p>
 
               {/* Reviews */}
@@ -363,7 +371,7 @@ function ProductDetail() {
                   <button
                     onClick={(e) => handleCart(e)}
                     type="submit"
-                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                   >
                     Add to Cart
                   </button>
@@ -407,7 +415,32 @@ function ProductDetail() {
                 <h2 className="text-sm font-medium text-gray-900">Details</h2>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-sm text-gray-600">{product.details}</p>
+                  <p className="text-sm text-gray-600">
+                    {product.warrantyInformation}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {product.shippingInformation}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {product.availabilityStatus}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-10">
+                <h2 className="text-sm font-medium text-gray-900">
+                  Dimensions
+                </h2>
+
+                <div className="mt-4 space-y-6">
+                  <p className="text-sm text-gray-600">
+                    {product.dimensions.width}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {product.dimensions.height}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {product.dimensions.depth}
+                  </p>
                 </div>
               </div>
             </div>

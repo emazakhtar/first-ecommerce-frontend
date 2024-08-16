@@ -8,6 +8,7 @@ import {
   updateUserAsync,
 } from "../usersSlice";
 import { Grid } from "react-loader-spinner";
+import { selectLoggedInUserToken } from "../../auth/authSlice";
 
 function UserProfile() {
   const [selectedEditIndex, setSelectedEditIndex] = useState(-1);
@@ -23,10 +24,12 @@ function UserProfile() {
     formState: { errors },
   } = useForm();
 
+  const userLoggedIn = useSelector(selectLoggedInUserToken);
   const user = useSelector(selectLoggedInUserInfo);
-  const userAddys = user.address;
+  const userAddys = user && user.address;
   const status = useSelector(selectUserStatus);
-  const handleEditForm = (index) => {
+
+  let handleEditForm = (index) => {
     setSelectedEditIndex(index);
     setValue("name", userAddys[index].name);
     setValue("email", userAddys[index].email);
@@ -175,7 +178,9 @@ function UserProfile() {
                   >
                     Full name
                   </label>
-                  <p className="mt-2 text-sm text-gray-500">{user.name}</p>
+                  <p className="mt-2 text-sm text-gray-500">
+                    {user && user.name}
+                  </p>
                 </div>
 
                 <div className="sm:col-span-4">
@@ -185,7 +190,9 @@ function UserProfile() {
                   >
                     Email address
                   </label>
-                  <p className="mt-2 text-sm text-gray-500">{user.email}</p>
+                  <p className="mt-2 text-sm text-gray-500">
+                    {user && user.email}
+                  </p>
                 </div>
               </div>
 

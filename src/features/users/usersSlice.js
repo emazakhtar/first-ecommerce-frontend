@@ -59,7 +59,7 @@ export const usersSlice = createSlice({
       })
       .addCase(fetchAllUsersOrdersAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.LoggedInUserInfo.orders = action.payload;
+        state.LoggedInUserInfo.orders = action.payload || [];
       });
   },
 });

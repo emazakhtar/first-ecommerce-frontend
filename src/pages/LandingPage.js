@@ -1,27 +1,36 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectLoggedInUserToken } from "../features/auth/authSlice";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
+  const loggedInUserToken = useSelector(selectLoggedInUserToken);
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Big Header */}
-      <header className="bg-indigo-700 w-full h-[60vh] flex flex-col justify-end relative">
+      <header className="bg-red-700 w-full h-[60vh] flex flex-col justify-end relative">
         {/* Sub-header */}
-        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-gray-200 p-4 text-center relative z-10">
+        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-red-800 p-4 text-center relative z-10">
           <nav className="container mx-auto flex justify-around items-center">
-            <a href="/all-products" className="text-gray-800">
+            <Link to={"/all-products"} className="text-gray-200">
               All Products
-            </a>
-            <a href="#home" className="text-gray-800">
-              Home
-            </a>
-            <a href="#men" className="text-gray-800">
+            </Link>
+
+            <Link to={"/men"} className="text-gray-200">
               Men
-            </a>
-            <a href="#women" className="text-gray-800">
+            </Link>
+            <Link to={"/women"} className="text-gray-200">
               Women
-            </a>
-            <a href="#kids" className="text-gray-800">
+            </Link>
+            <a href="/kids" className="text-gray-200">
               Kids
+            </a>
+
+            <a href="/login" className="text-gray-200">
+              Login
+            </a>
+            <a href="logout" className="text-gray-200">
+              Logout
             </a>
           </nav>
         </div>
@@ -32,7 +41,7 @@ const LandingPage = () => {
         {/* Image of a model */}
         <div className="w-full flex justify-center py-8">
           <img
-            src="https://via.placeholder.com/600x400"
+            src="https://www.shutterstock.com/image-vector/flat-50-percent-off-sale-260nw-2196408347.jpg"
             alt="Model"
             className="h-auto max-w-full"
           />
@@ -62,7 +71,7 @@ const LandingPage = () => {
           <div className="flex justify-between space-x-4 max-w-7xl mx-auto">
             <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
-                src="https://via.placeholder.com/200x300"
+                src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
                 alt="Product 1"
                 className="h-auto max-w-full mb-4"
               />
@@ -70,7 +79,7 @@ const LandingPage = () => {
             </div>
             <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
-                src="https://via.placeholder.com/200x300"
+                src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
                 alt="Product 2"
                 className="h-auto max-w-full mb-4"
               />
@@ -78,7 +87,7 @@ const LandingPage = () => {
             </div>
             <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
-                src="https://via.placeholder.com/200x300"
+                src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
                 alt="Product 3"
                 className="h-auto max-w-full mb-4"
               />
@@ -98,7 +107,7 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-white shadow-lg p-4 w-1/2 flex flex-col items-center">
           <img
-            src="https://via.placeholder.com/200x300"
+            src="https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
             alt="Product 1"
             className="h-auto max-w-full mb-4"
           />
@@ -110,7 +119,7 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-white shadow-lg p-4 w-1/2 flex flex-col items-center">
           <img
-            src="https://via.placeholder.com/200x300"
+            src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
             alt="Product 2"
             className="h-auto max-w-full mb-4"
           />
@@ -122,7 +131,7 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-white shadow-lg p-4 w-1/2 flex flex-col items-center">
           <img
-            src="https://via.placeholder.com/200x300"
+            src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png"
             alt="Product 3"
             className="h-auto max-w-full mb-4"
           />
