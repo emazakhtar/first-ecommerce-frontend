@@ -34,7 +34,7 @@ function Checkout() {
 
   const [addNewAddressFormOpen, setAddNewAddressFormOpen] = useState(false);
   const totalAmount = cartItems.reduce(
-    (amount, item) => item.product.discountedPrice + amount,
+    (amount, item) => item.product.discountedPrice * item.quantity + amount,
     0
   );
   const totalItems = cartItems.reduce(

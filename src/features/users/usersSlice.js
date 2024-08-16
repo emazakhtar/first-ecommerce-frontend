@@ -59,7 +59,7 @@ export const usersSlice = createSlice({
       })
       .addCase(fetchAllUsersOrdersAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.LoggedInUserInfo.orders = action.payload || [];
+         state.LoggedInUserInfo.orders =  action.payload;
       });
   },
 });
@@ -67,7 +67,7 @@ export const usersSlice = createSlice({
 export const { resetUserInfo } = usersSlice.actions;
 
 export const selectLoggedInUserInfo = (state) => state.user.LoggedInUserInfo;
-export const selectUserOrders = (state) => state.user.LoggedInUserInfo.orders;
+export const selectUserOrders = (state) => state.user.LoggedInUserInfo!==null && state.user.LoggedInUserInfo.orders;
 export const selectUserStatus = (state) => state.user.status;
 
 export default usersSlice.reducer;

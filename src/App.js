@@ -18,7 +18,7 @@ import {
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import PageNotFound from "./pages/404";
 import MyOrdersPage from "./pages/MyOrdersPage";
-import { loadUsersInfoAsync } from "./features/users/usersSlice";
+import { fetchAllUsersOrdersAsync, loadUsersInfoAsync } from "./features/users/usersSlice";
 import Logout from "./features/auth/components/Logout";
 import ProfilePage from "./pages/ProfilePage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
@@ -36,7 +36,7 @@ import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
 import QuickView from "./features/products/components/QuickView";
 import LandingPage from "./pages/LandingPage";
-import { fetchAllUsersOrders } from "./features/users/usersAPI";
+
 
 const router = createBrowserRouter([
   {
@@ -45,7 +45,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <LandingPage />,
+    element:
+    <Navbar>
+    <LandingPage />
+    </Navbar>
+   
   },
   {
     path: "/login",
@@ -200,6 +204,7 @@ function App() {
       dispatch(fetchAllCartAsync());
       dispatch(fetchBrandAsync());
       dispatch(fetchCategoryAsync());
+      dispatch(fetchAllUsersOrdersAsync());
     }
   }, [dispatch, user]);
 

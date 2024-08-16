@@ -36,7 +36,7 @@ function Cart() {
 
   const totalAmount = cartItems.reduce(
     (amount, item) =>
-      item.product.discountedPrice * item.product.quantity + amount,
+      item.product.discountedPrice * item.quantity + amount,
     0
   );
 

@@ -22,7 +22,7 @@ export function fetchAllUsersOrders() {
     resolve({ data });
   });
 }
-
+  
 export function loadUsersInfo() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here

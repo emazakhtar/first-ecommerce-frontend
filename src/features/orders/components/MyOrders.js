@@ -15,9 +15,9 @@ function MyOrders() {
   const orders = useSelector(selectUserOrders);
   const status = useSelector(selectUserStatus);
 
-  useEffect(() => {
-    dispatch(fetchAllUsersOrdersAsync());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchAllUsersOrdersAsync());
+  // }, [dispatch]);
 
   return (
     <div className="container mt-10 mx-auto py-8">
@@ -35,7 +35,7 @@ function MyOrders() {
           />
         </div>
       )}
-      {status !== "loading" && !orders && orders.length === 0 && (
+      {status !== "loading" && orders && orders.length === 0 && (
         <div className="text-center mt-6">
           <p className="text-gray-600 text-lg">
             Currently, you have no orders...
