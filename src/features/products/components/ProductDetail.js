@@ -69,9 +69,16 @@ function ProductDetail() {
       //     variant.size === newCartItem.size &&
       //     variant.color === newCartItem.color
       // );
-      // this logic is added in the below if block...
-      //   && product.variants[variantIndex].stock > 0
-      if (product.variants.length > 0) {
+
+      //******************
+      // logic inside if block when variants are there...
+      // if (
+      //   product.variants.length > 0 &&
+      //   product.variants[variantIndex].stock > 0
+      // ) {
+      // ******************
+
+      if (product.stock > 0) {
         dispatch(addToCartAsync({ item: newCartItem, alert }));
         // it will be based on server response of backend
       } else {
