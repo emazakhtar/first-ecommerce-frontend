@@ -58,21 +58,20 @@ function ProductDetail() {
         product: product.id,
       };
 
-      if (selectedColor) {
-        newCartItem.color = selectedColor;
-      }
-      if (selectedSize) {
-        newCartItem.size = selectedSize;
-      }
-      const variantIndex = product.variants.findIndex(
-        (variant) =>
-          variant.size === newCartItem.size &&
-          variant.color === newCartItem.color
-      );
-      if (
-        product.variants.length > 0 &&
-        product.variants[variantIndex].stock > 0
-      ) {
+      // if (selectedColor) {
+      //   newCartItem.color = selectedColor;
+      // }
+      // if (selectedSize) {
+      //   newCartItem.size = selectedSize;
+      // }
+      // const variantIndex = product.variants.findIndex(
+      //   (variant) =>
+      //     variant.size === newCartItem.size &&
+      //     variant.color === newCartItem.color
+      // );
+      // this logic is added in the below if block...
+      //   && product.variants[variantIndex].stock > 0
+      if (product.variants.length > 0) {
         dispatch(addToCartAsync({ item: newCartItem, alert }));
         // it will be based on server response of backend
       } else {
@@ -203,7 +202,6 @@ function ProductDetail() {
               <p className="text-xl tracking-tight text-gray-600 line-through">
                 ${product.price}
               </p>
-
               {/* Reviews */}
               <div className="mt-6">
                 <h3 className="sr-only">Reviews</h3>
@@ -225,9 +223,8 @@ function ProductDetail() {
                   <p className="sr-only">{product.rating} out of 5 stars</p>
                 </div>
               </div>
-
               <form className="mt-10">
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <div className="flex flex-row">
                     <h3 className="text-sm font-medium text-gray-900">Color</h3>
                     {product &&
@@ -290,11 +287,11 @@ function ProductDetail() {
                         <div key={index}>
                           {variant.size && (
                             <div className="mt-10">
-                              {/* <div className="flex items-center justify-between">
+                              <div className="flex items-center justify-between">
                                 <div className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                                   Size guide
                                 </div>
-                              </div> */}
+                              </div>
 
                               <RadioGroup
                                 value={selectedSize}
@@ -366,7 +363,7 @@ function ProductDetail() {
                         </div>
                       ))}
                   </div>
-                </div>
+                </div> */}
                 {product.stock > 0 ? (
                   <button
                     onClick={(e) => handleCart(e)}
@@ -384,7 +381,7 @@ function ProductDetail() {
             </div>
 
             <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-              {/* Description and details */}
+              Description and details
               <div>
                 <h3 className="sr-only">Description</h3>
 
@@ -394,7 +391,6 @@ function ProductDetail() {
                   </p>
                 </div>
               </div>
-
               <div className="mt-10">
                 <h3 className="text-sm font-medium text-gray-900">
                   Highlights
@@ -410,7 +406,6 @@ function ProductDetail() {
                   </ul>
                 </div>
               </div>
-
               <div className="mt-10">
                 <h2 className="text-sm font-medium text-gray-900">Details</h2>
 
