@@ -15,6 +15,14 @@ function MyOrders() {
   const orders = useSelector(selectUserOrders);
   const status = useSelector(selectUserStatus);
 
+  const isReturnable = (orderDate) => {
+    const returnPeriod = 7; // days
+    const orderDateObj = new Date(orderDate);
+    const currentDate = new Date();
+    const differenceInDays = Math.floor((currentDate - orderDateObj) / (1000 * 60 * 60 * 24));
+    return differenceInDays <= returnPeriod;
+  };
+
   // useEffect(() => {
   //   dispatch(fetchAllUsersOrdersAsync());
   // }, [dispatch]);
@@ -115,6 +123,9 @@ function MyOrders() {
                           ${order.totalAmount}
                         </span>
                       </div>
+                      <Link to = {`/exchange/${order.id}`}> 
+                      {isReturnable(order.createdAt) && <button   className="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Return/Exchange</button>}
+                      </Link>
                     </div>
                   </div>
                   <div className="mt-4 text-gray-600">

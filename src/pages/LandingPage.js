@@ -4,15 +4,16 @@ import { selectLoggedInUserToken } from "../features/auth/authSlice";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
-
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Big Header */}
-      <header className="bg-red-700 w-full h-[60vh] flex flex-col justify-end relative">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT346ZpqRisJO1o00jU8Fn0YK32rSh2H02pCQ&s"/> 
+      <header
+        className="bg-red-700 mt-16 w-full h-[60vh] flex flex-col justify-end relative"
+        style={{ width: "100%" }}
+      >
         {/* Sub-header */}
-        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-red-800 p-4 text-center relative z-10">
+        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-red-700 p-4 text-center relative z-10">
           <nav className="container mx-auto flex justify-around items-center">
             <Link to={"/all-products"} className="text-gray-200">
               All Products
@@ -27,13 +28,15 @@ const LandingPage = () => {
             <Link to={"/kids"} className="text-gray-200">
               Kids
             </Link>
-{loggedInUserToken ?  <Link to={"logout"} className="text-gray-200">
-              Logout
-            </Link>:  <Link to={"/login"} className="text-gray-200">
-              Login
-            </Link>}
-          
-          
+            {loggedInUserToken ? (
+              <Link to={"logout"} className="text-gray-200">
+                Logout
+              </Link>
+            ) : (
+              <Link to={"/login"} className="text-gray-200">
+                Login
+              </Link>
+            )}
           </nav>
         </div>
       </header>
@@ -41,7 +44,7 @@ const LandingPage = () => {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center p-4">
         {/* Image of a model */}
-       
+
         <div className="w-full flex justify-center py-8">
           <img
             src="https://www.shutterstock.com/image-vector/flat-50-percent-off-sale-260nw-2196408347.jpg"
@@ -49,7 +52,7 @@ const LandingPage = () => {
             className="h-auto max-w-full"
           />
         </div>
-      
+
         {/* Information Section */}
         <div className="bg-wheatsmoke w-full p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -71,38 +74,47 @@ const LandingPage = () => {
 
         {/* Product Section */}
         <div className="w-full py-8 flex justify-center">
-        
           <div className="flex justify-between space-x-4 max-w-7xl mx-auto">
-   
             <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
-           
               <img
                 src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
                 alt="Product 1"
                 className="h-auto max-w-full mb-4"
               />
-              <Link to= {"/product-detail/66b3343be5c4892830b83eba"} className="text-gray-600">Essence Mascara
-</Link>
-           
+              <Link
+                to={"/product-detail/66b3343be5c4892830b83eba"}
+                className="text-gray-600"
+              >
+                Essence Mascara
+              </Link>
             </div>
-         
-            
+
             <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
                 src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
                 alt="Product 2"
                 className="h-auto max-w-full mb-4"
               />
-              <Link to= {"/product-detail/66b3343be5c4892830b83ebb"}className="text-gray-600">Eyeshadow Palette</Link>
+              <Link
+                to={"/product-detail/66b3343be5c4892830b83ebb"}
+                className="text-gray-600"
+              >
+                Eyeshadow Palette
+              </Link>
             </div>
-          
+
             <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
                 src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
                 alt="Product 3"
                 className="h-auto max-w-full mb-4"
               />
-              <Link to ={"/product-detail/66b3343be5c4892830b83ebc"} className="text-gray-600">Powder Canister</Link>
+              <Link
+                to={"/product-detail/66b3343be5c4892830b83ebc"}
+                className="text-gray-600"
+              >
+                Powder Canister
+              </Link>
             </div>
           </div>
         </div>
@@ -122,7 +134,12 @@ const LandingPage = () => {
             alt="Product 1"
             className="h-auto max-w-full mb-4"
           />
-          <Link to = {"/product-detail/66b3343be5c4892830b83ebd"} className="text-gray-600">Red Lipstick</Link>
+          <Link
+            to={"/product-detail/66b3343be5c4892830b83ebd"}
+            className="text-gray-600"
+          >
+            Red Lipstick
+          </Link>
         </div>
       </div>
 
@@ -134,7 +151,12 @@ const LandingPage = () => {
             alt="Product 2"
             className="h-auto max-w-full mb-4"
           />
-          <Link to = {"/product-detail/66b3343be5c4892830b83ebe"} className="text-gray-600">Red Nail Polish</Link>
+          <Link
+            to={"/product-detail/66b3343be5c4892830b83ebe"}
+            className="text-gray-600"
+          >
+            Red Nail Polish
+          </Link>
         </div>
       </div>
 
@@ -146,7 +168,12 @@ const LandingPage = () => {
             alt="Product 3"
             className="h-auto max-w-full mb-4"
           />
-          <Link to = {"/product-detail/66b3343be5c4892830b83ebf"}className="text-gray-600">Calvin Klein CK One</Link>
+          <Link
+            to={"/product-detail/66b3343be5c4892830b83ebf"}
+            className="text-gray-600"
+          >
+            Calvin Klein CK One
+          </Link>
         </div>
       </div>
 

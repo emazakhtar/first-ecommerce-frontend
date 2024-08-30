@@ -9,16 +9,12 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCart } from "../cart/cartSlice";
 import { selectLoggedInUserInfo } from "../users/usersSlice";
+import { selectLoggedInUserToken } from "../auth/authSlice";
 
 const navigation = [
   // { name: "Products", link: "/", user: true },
   { name: "Admin Products", link: "/admin/home", admin: true },
   { name: "Admin Orders", link: "/admin/orders", admin: true },
-];
-const userNavigation = [
-  { name: "My Profile", link: "/profile", href: "#" },
-  { name: "My Orders", link: "/my-orders", href: "#" },
-  { name: "Log out", link: "/logout", href: "#" },
 ];
 
 function classNames(...classes) {
@@ -27,13 +23,34 @@ function classNames(...classes) {
 function Navbar({ children }) {
   const cartItems = useSelector(selectCart);
   const userInfo = useSelector(selectLoggedInUserInfo);
+  const user = useSelector(selectLoggedInUserToken);
+
+  // login logout logic for navbar
+
+  let loginLogout = "Login";
+  let link = "login";
+
+  if (user) {
+    loginLogout = "Logout";
+    link = "/logout";
+  } else {
+    loginLogout = "Login";
+    link = "/login";
+  }
+
+  const userNavigation = [
+    { name: "My Profile", link: "/profile", href: "#" },
+    { name: "My Orders", link: "/my-orders", href: "#" },
+    { name: loginLogout, link: link, href: "#" },
+  ];
+
   return (
     <>
       {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-red-800 ${userInfo && "fixed top-0 w-full z-50"}`}
+            className={`bg-red-700 ${userInfo && "fixed top-0 w-full z-50"}`}
           >
             {({ open }) => (
               <>
@@ -42,8 +59,8 @@ function Navbar({ children }) {
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Link to="/">
-                          <h1 className="bg-red-80 text-xl sm:text-3xl md:text-3xl lg:text-3xl fon-sans font-bold text-white text-center ">
-                            Ecommerce
+                          <h1 className="bg-red-80 text-xl sm:text-xl md:text-xl lg:text-xl fon-sans text-white text-center ">
+                            E-commerce
                           </h1>
                         </Link>
                       </div>
@@ -79,7 +96,7 @@ function Navbar({ children }) {
                           <button
                             cursor-pointer="true"
                             type="button"
-                            className="relative rounded-full bg-red-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                            className="relative rounded-full bg-red-700 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                           >
                             <span className="absolute -inset-1.5" />
                             <ShoppingCartIcon
@@ -96,7 +113,7 @@ function Navbar({ children }) {
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3">
                           <div>
-                            <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-red-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
+                            <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-red-700 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
                               <span className="absolute -inset-1.5" />
                               <span className="sr-only">Open user menu</span>
                               <img
@@ -143,7 +160,7 @@ function Navbar({ children }) {
                         <button
                           cursor-pointer="true"
                           type="button"
-                          className="relative ml-auto flex-shrink-0 rounded-full bg-red-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                          className="relative ml-auto flex-shrink-0 rounded-full bg-red-700 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                         >
                           <span className="absolute -inset-1.5" />
 

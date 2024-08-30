@@ -36,6 +36,7 @@ import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
 import QuickView from "./features/products/components/QuickView";
 import LandingPage from "./pages/LandingPage";
+import Return from "./features/orders/components/Return";
 
 
 const router = createBrowserRouter([
@@ -177,6 +178,14 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <StripeCheckout></StripeCheckout>
+      </Protected>
+    ),
+  },
+  {
+    path: "/exchange/:orderId",
+    element: (
+      <Protected>
+        <Return></Return>
       </Protected>
     ),
   },
