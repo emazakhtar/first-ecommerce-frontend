@@ -82,7 +82,7 @@ function ProductDetail() {
         dispatch(addToCartAsync({ item: newCartItem, alert }));
         // it will be based on server response of backend
       } else {
-        alert.error("selected variant out of stock");
+        alert.error("selected product out of stock");
       }
     } else {
       alert.error("item already added to cart");
