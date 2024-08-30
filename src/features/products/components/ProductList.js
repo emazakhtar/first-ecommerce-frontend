@@ -10,7 +10,7 @@ import {
   Squares2X2Icon,
   StarIcon,
 } from "@heroicons/react/20/solid";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchProductsByFilterAsync,
@@ -25,6 +25,8 @@ import Pagination from "../../common/Pagination";
 import { Grid } from "react-loader-spinner";
 import { addToCartAsync, selectCart } from "../../cart/cartSlice";
 import { useAlert } from "react-alert";
+import { selectLoggedInUserInfo } from "../../users/usersSlice";
+import { selectLoggedInUserToken } from "../../auth/authSlice";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -59,6 +61,8 @@ function ProductList() {
   const status = useSelector(selectProductListStatus);
   const cartItems = useSelector(selectCart);
   const alert = useAlert();
+  const userLoggedIn = useSelector(selectLoggedInUserToken);
+  const navigate = useNavigate();
 
   const filters = [
     {
@@ -131,6 +135,11 @@ function ProductList() {
   };
 
   const handleCart = (id) => {
+    // navigate to /login if user not logged in.......
+    if (!userLoggedIn) {
+      navigate("/login");
+    }
+
     if (cartItems.findIndex((item) => item.product.id === id) < 0) {
       const newCartItem = {
         quantity: 1,

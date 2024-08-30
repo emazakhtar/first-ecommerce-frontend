@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchProductByIdAsync,
@@ -18,7 +18,6 @@ import { useAlert } from "react-alert";
 import { Grid } from "react-loader-spinner";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { selectLoggedInUserInfo } from "../../users/usersSlice";
 import { selectLoggedInUserToken } from "../../auth/authSlice";
 
 const highlights = [
@@ -42,6 +41,7 @@ function ProductDetail() {
   const status = useSelector(selectProductListStatus);
   const cartStatus = useSelector(selectCartStatus);
   const userLoggedIn = useSelector(selectLoggedInUserToken);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
@@ -50,7 +50,7 @@ function ProductDetail() {
   const handleCart = (e) => {
     e.preventDefault();
     if (!userLoggedIn) {
-      <Navigate to="/login" replace={true}></Navigate>;
+      navigate("/login");
     }
     if (cartItems.findIndex((item) => item.product.id === product.id) < 0) {
       const newCartItem = {
