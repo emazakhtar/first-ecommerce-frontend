@@ -19,7 +19,9 @@ function MyOrders() {
     const returnPeriod = 7; // days
     const orderDateObj = new Date(orderDate);
     const currentDate = new Date();
-    const differenceInDays = Math.floor((currentDate - orderDateObj) / (1000 * 60 * 60 * 24));
+    const differenceInDays = Math.floor(
+      (currentDate - orderDateObj) / (1000 * 60 * 60 * 24)
+    );
     return differenceInDays <= returnPeriod;
   };
 
@@ -65,14 +67,14 @@ function MyOrders() {
             status === "loading" ? "blur" : ""
           }`}
         >
-          <h1 className="text-3xl font-semibold bg-red-500 text-white p-4">
+          <h1 className="text-3xl font-semibold bg-gray-800 text-white p-4">
             My Orders
           </h1>
           <ul className="divide-y divide-gray-300">
             {orders &&
               orders.map((order, index) => (
                 <li key={index} className="p-4 ">
-                  <div className=" border border-gray-300 flex flex-col md:flex-row items-center">
+                  <div className=" border border-gray-300 flex flex-col md:flex-row items-center p-5">
                     <div className="flex-1">
                       {order.cartItems.map((item) => (
                         <div
@@ -123,8 +125,12 @@ function MyOrders() {
                           ${order.totalAmount}
                         </span>
                       </div>
-                      <Link to = {`/exchange/${order.id}`}> 
-                      {isReturnable(order.createdAt) && <button   className="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Return/Exchange</button>}
+                      <Link to={`/exchange/${order.id}`}>
+                        {isReturnable(order.createdAt) && (
+                          <button className="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Return/Exchange
+                          </button>
+                        )}
                       </Link>
                     </div>
                   </div>
