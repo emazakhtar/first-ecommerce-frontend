@@ -186,7 +186,7 @@ function ProductDetail() {
                   <img
                     src={image}
                     alt={product.title}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-contain h-64 w-auto"
                   />
                 </div>
               ))}
@@ -375,12 +375,12 @@ function ProductDetail() {
                   <button
                     onClick={(e) => handleCart(e)}
                     type="submit"
-                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-800 px-8 py-3 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                   >
                     Add to Cart
                   </button>
                 ) : (
-                  <div className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                  <div className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-600 px-8 py-3 text-base font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                     Out Of Stock
                   </div>
                 )}

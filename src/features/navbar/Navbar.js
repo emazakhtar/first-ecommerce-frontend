@@ -50,7 +50,7 @@ function Navbar({ children }) {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-red-700 ${userInfo && "fixed top-0 w-full z-50"}`}
+            className={`bg-white ${userInfo && "fixed top-0 w-full z-50"}`}
           >
             {({ open }) => (
               <>
@@ -59,7 +59,7 @@ function Navbar({ children }) {
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Link to="/">
-                          <h1 className="bg-red-80 text-xl sm:text-xl md:text-xl lg:text-xl fon-sans text-white text-center ">
+                          <h1 className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-white text-center text-black ml-2">
                             E-commerce
                           </h1>
                         </Link>
@@ -96,7 +96,7 @@ function Navbar({ children }) {
                           <button
                             cursor-pointer="true"
                             type="button"
-                            className="relative rounded-full bg-red-700 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                            className="relative rounded-full bg-white p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                           >
                             <span className="absolute -inset-1.5" />
                             <ShoppingCartIcon
@@ -160,7 +160,7 @@ function Navbar({ children }) {
                         <button
                           cursor-pointer="true"
                           type="button"
-                          className="relative ml-auto flex-shrink-0 rounded-full bg-red-700 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                          className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                         >
                           <span className="absolute -inset-1.5" />
 
@@ -175,7 +175,7 @@ function Navbar({ children }) {
                           {cartItems.length}
                         </span>
                       )}
-                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-red-850 p-2 text-gray-400 hover:bg-red-850 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
+                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
                         <span className="absolute -inset-0.5" />
                         <span className="sr-only">Open main menu</span>
 
@@ -221,11 +221,11 @@ function Navbar({ children }) {
                   <div className="border-t border-gray-700 pb-3 pt-4">
                     <div className="flex items-center px-5">
                       <div className="flex-shrink-0">
-                        <img
+                        {/* <img
                           className="h-10 w-10 rounded-full"
                           src={userInfo && userInfo.imageUrl}
                           alt="user-img"
-                        />
+                        /> */}
                       </div>
                       <div className="ml-3">
                         <div className="text-base font-medium leading-none text-white">

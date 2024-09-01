@@ -5,35 +5,36 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Big Header */}
       <header
-        className="bg-red-700 mt-16 w-full h-[60vh] flex flex-col justify-end relative"
+        className="bg-white mt-16 w-full h-[60vh] flex flex-col justify-end relative"
         style={{ width: "100%" }}
       >
         {/* Sub-header */}
-        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-red-700 p-4 text-center relative z-10">
+        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-white p-4 text-center relative z-10">
           <nav className="container mx-auto flex justify-around items-center">
-            <Link to={"/all-products"} className="text-gray-200">
+            <Link to={"/all-products"} className="text-gray">
               All Products
             </Link>
 
-            <Link to={"/men"} className="text-gray-200">
+            <Link to={"/men"} className="text-gray">
               Men
             </Link>
-            <Link to={"/women"} className="text-gray-200">
+            <Link to={"/women"} className="text-gray">
               Women
             </Link>
-            <Link to={"/kids"} className="text-gray-200">
+            <Link to={"/kids"} className="text-gray">
               Kids
             </Link>
             {loggedInUserToken ? (
-              <Link to={"logout"} className="text-gray-200">
+              <Link to={"logout"} className="text-gray">
                 Logout
               </Link>
             ) : (
-              <Link to={"/login"} className="text-gray-200">
+              <Link to={"/login"} className="text-gray">
                 Login
               </Link>
             )}
@@ -47,7 +48,7 @@ const LandingPage = () => {
 
         <div className="w-full flex justify-center py-8">
           <img
-            src="https://www.shutterstock.com/image-vector/flat-50-percent-off-sale-260nw-2196408347.jpg"
+            src="https://www.shutterstock.com/image-vector/50-percent-price-off-icon-260nw-1929725999.jpg"
             alt="Model"
             className="h-auto max-w-full"
           />
@@ -67,7 +68,7 @@ const LandingPage = () => {
 
         {/* Small Div */}
         <div className="w-full py-4 flex justify-center">
-          <div className="bg-gray-200 p-4 w-1/2 text-center">
+          <div className="bg-gray-100 p-4 w-1/2 text-center">
             <p className="text-gray-600">Check out our latest arrivals!</p>
           </div>
         </div>
@@ -75,11 +76,11 @@ const LandingPage = () => {
         {/* Product Section */}
         <div className="w-full py-8 flex justify-center">
           <div className="flex justify-between space-x-4 max-w-7xl mx-auto">
-            <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
+            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
                 src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
                 alt="Product 1"
-                className="h-auto max-w-full mb-4"
+                className="h-auto max-w-full mb-4 bg-gray-100"
               />
               <Link
                 to={"/product-detail/66b3343be5c4892830b83eba"}
@@ -89,11 +90,11 @@ const LandingPage = () => {
               </Link>
             </div>
 
-            <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
+            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
                 src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
                 alt="Product 2"
-                className="h-auto max-w-full mb-4"
+                className="h-auto max-w-full mb-4 bg-gray-100"
               />
               <Link
                 to={"/product-detail/66b3343be5c4892830b83ebb"}
@@ -103,11 +104,11 @@ const LandingPage = () => {
               </Link>
             </div>
 
-            <div className="bg-white shadow-lg p-4 w-1/3 flex flex-col items-center">
+            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
               <img
                 src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
                 alt="Product 3"
-                className="h-auto max-w-full mb-4"
+                className="bg-gray-100 h-auto max-w-full mb-4"
               />
               <Link
                 to={"/product-detail/66b3343be5c4892830b83ebc"}
@@ -121,18 +122,18 @@ const LandingPage = () => {
       </main>
       {/* Small Div */}
       <div className="w-full py-4 flex justify-center">
-        <div className="bg-gray-200 p-4 w-1/2 text-center">
+        <div className="bg-gray-100 p-4 w-1/2 text-center">
           <p className="text-gray-600">Check out our latest arrivals!</p>
         </div>
       </div>
 
       {/* Product 1 */}
       <div className="w-full py-8 flex justify-center">
-        <div className="bg-white shadow-lg p-4 w-1/2 flex flex-col items-center">
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64  overflow-hidden">
           <img
             src="https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
             alt="Product 1"
-            className="h-auto max-w-full mb-4"
+            className="h-auto max-w-full mb-4 bg-gray-100  w-full h-full object-contain"
           />
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebd"}
@@ -144,12 +145,12 @@ const LandingPage = () => {
       </div>
 
       {/* Product 2 */}
-      <div className="w-full py-8 flex justify-center">
-        <div className="bg-white shadow-lg p-4 w-1/2 flex flex-col items-center">
+      <div className="w-full py-8 flex justify-center bg-gray-100">
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
           <img
             src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
             alt="Product 2"
-            className="h-auto max-w-full mb-4"
+            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           />
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebe"}
@@ -162,11 +163,11 @@ const LandingPage = () => {
 
       {/* Product 3 */}
       <div className="w-full py-8 flex justify-center">
-        <div className="bg-white shadow-lg p-4 w-1/2 flex flex-col items-center">
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
           <img
             src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png"
             alt="Product 3"
-            className="h-auto max-w-full mb-4"
+            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           />
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebf"}

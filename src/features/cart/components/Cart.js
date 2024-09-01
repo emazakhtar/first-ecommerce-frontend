@@ -35,8 +35,7 @@ function Cart() {
   };
 
   const totalAmount = cartItems.reduce(
-    (amount, item) =>
-      item.product.discountedPrice * item.quantity + amount,
+    (amount, item) => item.product.discountedPrice * item.quantity + amount,
     0
   );
 
@@ -146,7 +145,7 @@ function Cart() {
           <div className="mt-6">
             <Link
               to="/checkout"
-              className="flex items-center justify-center rounded-md border border-transparent bg-red-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-red-700"
+              className="flex items-center justify-center rounded-md border border-transparent bg-gray-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700"
             >
               Checkout
             </Link>
@@ -157,7 +156,7 @@ function Cart() {
               <Link to="/">
                 <button
                   type="button"
-                  className="font-medium text-red-600 hover:text-red-500"
+                  className="font-medium text-gray-600 hover:text-gray-500"
                   onClick={() => setOpen(false)}
                 >
                   Continue Shopping
