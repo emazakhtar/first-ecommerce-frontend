@@ -77,44 +77,50 @@ const LandingPage = () => {
         <div className="w-full py-8 flex justify-center">
           <div className="flex justify-between space-x-4 max-w-7xl mx-auto">
             <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
-              <img
-                src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-                alt="Product 1"
-                className="h-auto max-w-full mb-4 bg-gray-100"
-              />
-              <Link
-                to={"/product-detail/66b3343be5c4892830b83eba"}
-                className="text-gray-600"
-              >
-                Essence Mascara
+              <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
+                <img
+                  src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+                  alt="Product 1"
+                  className="h-auto max-w-full mb-4 bg-gray-100"
+                />
+                <Link
+                  to={"/product-detail/66b3343be5c4892830b83eba"}
+                  className="text-gray-600"
+                >
+                  Essence Mascara
+                </Link>
               </Link>
             </div>
 
             <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
-              <img
-                src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-                alt="Product 2"
-                className="h-auto max-w-full mb-4 bg-gray-100"
-              />
-              <Link
-                to={"/product-detail/66b3343be5c4892830b83ebb"}
-                className="text-gray-600"
-              >
-                Eyeshadow Palette
+              <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
+                <img
+                  src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+                  alt="Product 2"
+                  className="h-auto max-w-full mb-4 bg-gray-100"
+                />
+                <Link
+                  to={"/product-detail/66b3343be5c4892830b83ebb"}
+                  className="text-gray-600"
+                >
+                  Eyeshadow Palette
+                </Link>
               </Link>
             </div>
 
             <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
-              <img
-                src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
-                alt="Product 3"
-                className="bg-gray-100 h-auto max-w-full mb-4"
-              />
-              <Link
-                to={"/product-detail/66b3343be5c4892830b83ebc"}
-                className="text-gray-600"
-              >
-                Powder Canister
+              <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
+                <img
+                  src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
+                  alt="Product 3"
+                  className="bg-gray-100 h-auto max-w-full mb-4"
+                />
+                <Link
+                  to={"/product-detail/66b3343be5c4892830b83ebc"}
+                  className="text-gray-600"
+                >
+                  Powder Canister
+                </Link>
               </Link>
             </div>
           </div>
@@ -129,52 +135,67 @@ const LandingPage = () => {
 
       {/* Product 1 */}
       <div className="w-full py-8 flex justify-center">
-        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64  overflow-hidden">
-          <img
-            src="https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
-            alt="Product 1"
-            className="h-auto max-w-full mb-4 bg-gray-100  w-full h-full object-contain"
-          />
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebd"}
+            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+          >
+            <img
+              src="https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
+              alt="product-1"
+              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+            />
+          </Link>
+          {/* <Link
+            to={"/product-detail/66b3343be5c4892830b83ebd"}
+            io09ui7
             className="text-gray-600"
           >
             Red Lipstick
-          </Link>
+          </Link> */}
         </div>
       </div>
-
       {/* Product 2 */}
-      <div className="w-full py-8 flex justify-center bg-gray-100">
+      <div className="w-full py-8 flex justify-center">
         <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
-          <img
-            src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
-            alt="Product 2"
-            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
-          />
           <Link
+            to={"/product-detail/66b3343be5c4892830b83ebe"}
+            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+          >
+            <img
+              src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+              alt="Product 2"
+              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+            />
+          </Link>
+          {/* <Link
             to={"/product-detail/66b3343be5c4892830b83ebe"}
             className="text-gray-600"
           >
             Red Nail Polish
-          </Link>
+          </Link> */}
         </div>
       </div>
 
       {/* Product 3 */}
       <div className="w-full py-8 flex justify-center">
         <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
-          <img
-            src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png"
-            alt="Product 3"
-            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
-          />
           <Link
+            to={"/product-detail/66b3343be5c4892830b83ebf"}
+            className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+          >
+            <img
+              src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png"
+              alt="Product 3"
+              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+            />
+          </Link>
+          {/* <Link
             to={"/product-detail/66b3343be5c4892830b83ebf"}
             className="text-gray-600"
           >
             Calvin Klein CK One
-          </Link>
+          </Link> */}
         </div>
       </div>
 

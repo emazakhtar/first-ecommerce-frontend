@@ -30,6 +30,7 @@ const highlights = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
 function ProductDetail() {
   const dispatch = useDispatch();
   const [selectedColor, setSelectedColor] = useState();
@@ -186,7 +187,7 @@ function ProductDetail() {
                   <img
                     src={image}
                     alt={product.title}
-                    className="w-full h-auto object-contain h-64 w-auto"
+                    className="w-full h-64 object-contain mx-auto"
                   />
                 </div>
               ))}

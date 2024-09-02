@@ -59,7 +59,10 @@ function Navbar({ children }) {
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Link to="/">
-                          <h1 className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-white text-center text-black ml-2">
+                          <h1
+                            className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
+                           text-center text-black ml-4"
+                          >
                             E-commerce
                           </h1>
                         </Link>
