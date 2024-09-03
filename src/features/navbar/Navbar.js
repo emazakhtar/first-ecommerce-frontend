@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 import { selectCart } from "../cart/cartSlice";
 import { selectLoggedInUserInfo } from "../users/usersSlice";
 import { selectLoggedInUserToken } from "../auth/authSlice";
-
 const navigation = [
   // { name: "Products", link: "/", user: true },
   { name: "Admin Products", link: "/admin/home", admin: true },
@@ -24,7 +23,9 @@ function Navbar({ children }) {
   const cartItems = useSelector(selectCart);
   const userInfo = useSelector(selectLoggedInUserInfo);
   const user = useSelector(selectLoggedInUserToken);
+  const loggedInUserToken = useSelector(selectLoggedInUserToken);
 
+  const [menuOpen, setMenuOpen] = useState(false);
   // login logout logic for navbar
 
   let loginLogout = "Login";
@@ -41,6 +42,10 @@ function Navbar({ children }) {
   const userNavigation = [
     { name: "My Profile", link: "/profile", href: "#" },
     { name: "My Orders", link: "/my-orders", href: "#" },
+    { name: "All Products", link: "/all-products", href: "#" },
+    { name: "Men", link: "/men", href: "#" },
+    { name: "Women", link: "/women", href: "#" },
+    { name: "Kids", link: "/kids", href: "#" },
     { name: loginLogout, link: link, href: "#" },
   ];
 
@@ -50,14 +55,15 @@ function Navbar({ children }) {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-white ${userInfo && "fixed top-0 w-full z-50"}`}
+            className={`bg-gradient-to-r from-slate-100 to-slate-200 shadow-lg fixed top-0 w-full z-50 "
+            }`}
           >
             {({ open }) => (
               <>
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                   <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
-                      <div className="flex-shrink-0">
+                      {/* <div className="flex-shrink-0">
                         <Link to="/">
                           <h1
                             className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
@@ -66,7 +72,75 @@ function Navbar({ children }) {
                             E-commerce
                           </h1>
                         </Link>
-                      </div>
+                      </div> */}
+                      <nav className="container mx-auto flex justify-between items-center p-4">
+                        {/* Logo */}
+                        <div className="text-xl font-bold text-black mr-64">
+                          <Link to="/">MyShop</Link>
+                        </div>
+
+                        {/* Links */}
+                        <div
+                          className={`${
+                            menuOpen ? "block" : "hidden"
+                          } w-full md:flex md:items-center md:w-auto`}
+                        >
+                          <ul className="md:flex md:space-x-6 text-gray-700">
+                            <li className="py-2 md:py-0">
+                              <Link
+                                to={"/all-products"}
+                                className="hover:text-blue-500 transition duration-300"
+                              >
+                                All Products
+                              </Link>
+                            </li>
+                            <li className="py-2 md:py-0">
+                              <Link
+                                to={"/men"}
+                                className="hover:text-blue-500 transition duration-300"
+                              >
+                                Men
+                              </Link>
+                            </li>
+                            <li className="py-2 md:py-0">
+                              <Link
+                                to={"/women"}
+                                className="hover:text-blue-500 transition duration-300"
+                              >
+                                Women
+                              </Link>
+                            </li>
+                            <li className="py-2 md:py-0">
+                              <Link
+                                to={"/kids"}
+                                className="hover:text-blue-500 transition duration-300"
+                              >
+                                Kids
+                              </Link>
+                            </li>
+                            {loggedInUserToken ? (
+                              <li className="py-2 md:py-0">
+                                <Link
+                                  to={"/logout"}
+                                  className="hover:text-blue-500 transition duration-300"
+                                >
+                                  Logout
+                                </Link>
+                              </li>
+                            ) : (
+                              <li className="py-2 md:py-0">
+                                <Link
+                                  to={"/login"}
+                                  className="hover:text-blue-500 transition duration-300"
+                                >
+                                  Login
+                                </Link>
+                              </li>
+                            )}
+                          </ul>
+                        </div>
+                      </nav>
+
                       <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                           {userInfo &&
@@ -234,9 +308,9 @@ function Navbar({ children }) {
                         <div className="text-base font-medium leading-none text-white">
                           {userInfo && userInfo.name}
                         </div>
-                        <div className="text-sm font-medium leading-none text-gray-400">
+                        {/* <div className="text-sm font-medium leading-none text-gray-400">
                           {userInfo && userInfo.email}
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className="mt-3 space-y-1 px-2">

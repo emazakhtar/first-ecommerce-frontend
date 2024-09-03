@@ -8,39 +8,14 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
-      {/* Big Header */}
+      {/* Big Header with Slideshow */}
       <header
-        className="bg-white mt-16 w-full h-[60vh] flex flex-col justify-end relative"
-        style={{ width: "100%" }}
-      >
-        {/* Sub-header */}
-        <div className="py-4 shadow-md w-3/4 mx-auto mt-2 bg-white p-4 text-center relative z-10">
-          <nav className="container mx-auto flex justify-around items-center">
-            <Link to={"/all-products"} className="text-gray">
-              All Products
-            </Link>
-
-            <Link to={"/men"} className="text-gray">
-              Men
-            </Link>
-            <Link to={"/women"} className="text-gray">
-              Women
-            </Link>
-            <Link to={"/kids"} className="text-gray">
-              Kids
-            </Link>
-            {loggedInUserToken ? (
-              <Link to={"logout"} className="text-gray">
-                Logout
-              </Link>
-            ) : (
-              <Link to={"/login"} className="text-gray">
-                Login
-              </Link>
-            )}
-          </nav>
-        </div>
-      </header>
+        className="bg-slate-100 mt-16 w-full h-[60vh] flex flex-col justify-end relative bg-cover bg-center bg-contain"
+        style={{
+          backgroundImage:
+            "url(https://www.shutterstock.com/image-vector/e-commerce-banner-web-icon-260nw-2188254163.jpg)",
+        }}
+      ></header>
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center p-4">
