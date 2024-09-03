@@ -13,7 +13,7 @@ const LandingPage = () => {
         className="bg-slate-100 mt-16 w-full h-[60vh] flex flex-col justify-end relative bg-cover bg-center bg-contain"
         style={{
           backgroundImage:
-            "url(https://www.shutterstock.com/image-vector/e-commerce-banner-web-icon-260nw-2188254163.jpg)",
+            "url(https://img.freepik.com/free-psd/horizontal-banner-online-fashion-sale_23-2148585404.jpg?w=1060&t=st=1725386658~exp=1725387258~hmac=b2874a64a1fb6ebf3a324c8d6cc562032e5aa4240c9a35c0d26163be3661c3b6)",
         }}
       ></header>
 
