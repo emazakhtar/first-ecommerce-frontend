@@ -235,7 +235,6 @@ function Navbar({ children }) {
 
                       <Link className="mt-2" to="/my-cart">
                         <button
-                          cursor-pointer="true"
                           type="button"
                           className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                         >
