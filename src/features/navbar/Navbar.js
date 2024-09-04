@@ -73,7 +73,7 @@ function Navbar({ children }) {
                           </h1>
                         </Link>
                       </div> */}
-                      <nav className="container mx-auto flex justify-between items-center p-4">
+                      <nav className="container mx-auto flex justify-between items-center p-4 ">
                         {/* Logo */}
                         <div className="text-xl font-bold text-black mr-64">
                           <Link to="/">MyShop</Link>
@@ -252,7 +252,7 @@ function Navbar({ children }) {
                           {cartItems.length}
                         </span>
                       )}
-                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
+                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-slate-200 mr-4 p-2 text-gray-400 hover:bg-gray hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
                         <span className="absolute -inset-0.5" />
                         <span className="sr-only">Open main menu</span>
 
