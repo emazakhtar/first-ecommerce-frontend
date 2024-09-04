@@ -6,6 +6,8 @@ import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import App from "./App";
 import "./index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const options = {
   // you can also just use 'bottom center'

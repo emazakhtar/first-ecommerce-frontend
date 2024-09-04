@@ -2,20 +2,54 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectLoggedInUserToken } from "../features/auth/authSlice";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
 
 const LandingPage = () => {
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500, // Slide change interval
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Big Header with Slideshow */}
-      <header
-        className="bg-slate-100 mt-16 w-full h-[60vh] flex flex-col justify-end relative bg-cover bg-center bg-contain"
-        style={{
-          backgroundImage:
-            "url(https://img.freepik.com/free-psd/horizontal-banner-online-fashion-sale_23-2148585404.jpg?w=1060&t=st=1725386658~exp=1725387258~hmac=b2874a64a1fb6ebf3a324c8d6cc562032e5aa4240c9a35c0d26163be3661c3b6)",
-        }}
-      ></header>
+
+      {/* Slideshow */}
+      <div className="w-full h-64 mb-64 flex justify-center">
+        <Slider
+          {...sliderSettings}
+          className="w-full sm:max-w-sm md:max-w-sm lg:max-w-m xl:max-w-m h-64 mt-16"
+        >
+          <div className="w-full h-full flex items-center justify-center overflow-hidden">
+            <img
+              src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+              alt="Slide 1"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-full h-full flex items-center justify-center overflow-hidden">
+            <img
+              src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+              alt="Slide 2"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-full h-full flex items-center justify-center overflow-hidden">
+            <img
+              src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+              alt="Slide 3"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Add more slides as needed */}
+        </Slider>
+      </div>
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center p-4">
