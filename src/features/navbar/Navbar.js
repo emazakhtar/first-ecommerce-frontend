@@ -63,21 +63,21 @@ function Navbar({ children }) {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                   <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
-                      {/* <div className="flex-shrink-0">
+                      <div className="flex-shrink-0">
                         <Link to="/">
                           <h1
-                            className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
-                           text-center text-black ml-4"
+                            className="hover:text-gray bg-slate-100 text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
+                           text-center text-black ml-4 md:mr-16 lg:mr-64 xl:mr-64"
                           >
                             E-commerce
                           </h1>
                         </Link>
-                      </div> */}
+                      </div>
                       <nav className="container mx-auto flex justify-between items-center p-4 ">
                         {/* Logo */}
-                        <div className="text-xl font-bold text-black mr-64">
+                        {/* <div className="text-xl font-bold text-black mr-64">
                           <Link to="/">MyShop</Link>
-                        </div>
+                        </div> */}
 
                         {/* Links */}
                         <div
