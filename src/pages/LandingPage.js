@@ -66,7 +66,7 @@ const LandingPage = () => {
         {/* Information Section */}
         <div className="bg-wheatsmoke w-full p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Welcome to Our Store
+            Welcome to Our Store 6d93452
           </h2>
           <p className="text-gray-600">
             Discover the best products and enjoy your shopping experience with

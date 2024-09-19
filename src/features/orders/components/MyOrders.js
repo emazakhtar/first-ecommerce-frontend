@@ -86,6 +86,7 @@ function MyOrders() {
                             alt={item.product.title}
                             className="w-16 h-16 object-cover rounded"
                           />
+
                           <div className="flex flex-col">
                             <h3 className="text-lg font-semibold">
                               {item.product.title}
