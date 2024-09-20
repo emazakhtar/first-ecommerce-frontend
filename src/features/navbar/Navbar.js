@@ -55,18 +55,18 @@ function Navbar({ children }) {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-gradient-to-r from-slate-100 to-slate-200 shadow-lg fixed top-0 w-full z-50 "
+            className={`bg-gradient-to-r from-white to-white fixed top-0 w-full z-50"
             }`}
           >
             {({ open }) => (
               <>
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                  <div className="flex h-16 items-center justify-between">
+                  <div className="flex h-12 items-center justify-between">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Link to="/">
                           <h1
-                            className="hover:text-gray bg-slate-100 text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
+                            className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
                            text-center text-black ml-4 md:mr-16 lg:mr-64 xl:mr-64"
                           >
                             E-commerce

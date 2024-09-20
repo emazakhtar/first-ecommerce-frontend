@@ -209,11 +209,11 @@ const LandingPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-white w-full py-4 shadow mt-8">
+      {/* <footer className="bg-white w-full py-4 shadow mt-8">
         <div className="container mx-auto text-center text-gray-600">
           &copy; 2024 Emaz Store. All rights reserved.
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

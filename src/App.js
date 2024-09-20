@@ -18,7 +18,10 @@ import {
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import PageNotFound from "./pages/404";
 import MyOrdersPage from "./pages/MyOrdersPage";
-import { fetchAllUsersOrdersAsync, loadUsersInfoAsync } from "./features/users/usersSlice";
+import {
+  fetchAllUsersOrdersAsync,
+  loadUsersInfoAsync,
+} from "./features/users/usersSlice";
 import Logout from "./features/auth/components/Logout";
 import ProfilePage from "./pages/ProfilePage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
@@ -35,9 +38,9 @@ import StripeCheckout from "./pages/StripeCheckout";
 import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
 import QuickView from "./features/products/components/QuickView";
-import LandingPage from "./pages/LandingPage";
-import Return from "./features/orders/components/Return";
 
+import Return from "./features/orders/components/Return";
+import LandingPageWithFooter from "./pages/LandingPageWithFooter";
 
 const router = createBrowserRouter([
   {
@@ -46,11 +49,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element:
-    <Navbar>
-    <LandingPage />
-    </Navbar>
-   
+    element: <LandingPageWithFooter></LandingPageWithFooter>,
   },
   {
     path: "/login",

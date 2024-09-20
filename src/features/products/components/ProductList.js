@@ -153,7 +153,7 @@ function ProductList() {
   };
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-gray-100">
         <div>
           {/* Mobile filter dialog */}
           <MobileFilter
@@ -402,7 +402,7 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
           {({ open }) => (
             <>
               <h3 className="-my-3 flow-root">
-                <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                <Disclosure.Button className="flex w-full items-center justify-between bg-gray-100 py-3 text-sm text-gray-400 hover:text-gray-500">
                   <span className="font-medium text-gray-900">
                     {section.name}
                   </span>
@@ -450,7 +450,7 @@ function ProductGrid({ products, status, handleCart }) {
     <div className="lg:col-span-3 sm:col-span-6 md:col-span-4">
       {/* this is our products list  */}
 
-      <div className="bg-white">
+      <div className="bg-gray-100">
         <div className="mx-auto max-w-2xl px-0 py-0 sm:px-0 sm:py-0 lg:max-w-7xl lg:px-0">
           <div className="mt-6 grid grid-cols-2 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {status === "loading" ? (
@@ -521,7 +521,7 @@ function ProductGrid({ products, status, handleCart }) {
 
                     {product.stock <= 0 ? (
                       <div className="flex justify-center">
-                        <p className="w-4/5 mt-4 bg-gray-800 text-white font-semibold py-2 px-6 rounded-full hover:bg-gray-600 transition duration-300">
+                        <p className="w-4/5 mt-4 bg-red-900 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-800 transition duration-300">
                           Out of Stock
                         </p>
                       </div>
@@ -529,7 +529,7 @@ function ProductGrid({ products, status, handleCart }) {
                       <div className="flex justify-center mb-4">
                         <button
                           onClick={() => handleCart(product.id)}
-                          className="w-4/5 mt-4 bg-gray-800 text-white font-semibold py-2 px-4 rounded-full hover:bg-gray-400 transition duration-300"
+                          className="w-4/5 mt-4 bg-gray-800 text-white font-semibold py-2 px-4 rounded-full hover:bg-gray-600 transition duration-300"
                         >
                           Add to Cart
                         </button>
