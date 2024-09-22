@@ -279,7 +279,7 @@ function MobileFilter({
     <Transition.Root show={mobileFiltersOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="relative z-40 lg:hidden"
+        className="relative z-40 lg:hidden z-50"
         onClose={setMobileFiltersOpen}
       >
         <Transition.Child

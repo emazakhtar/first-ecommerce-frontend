@@ -7,7 +7,7 @@ import Slider from "react-slick";
 const LandingPage = () => {
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
   const sliderSettings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -24,27 +24,27 @@ const LandingPage = () => {
       <div className="w-full h-64 mb-64 flex justify-center">
         <Slider
           {...sliderSettings}
-          className="w-full sm:max-w-sm md:max-w-sm lg:max-w-m xl:max-w-m h-64 mt-16"
+          className="w-4/5 sm:max-w-sm md:max-w-sm lg:max-w-m xl:max-w-m h-64 mt-16"
         >
-          <div className="w-full h-full flex items-center justify-center overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden z-0">
             <img
-              src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+              src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-creative-promotion-banner-png-image_4273851.jpg"
               alt="Slide 1"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover z-0 rounded-xl"
             />
           </div>
-          <div className="w-full h-full flex items-center justify-center overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden z-0">
             <img
-              src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+              src="https://cdn2.vectorstock.com/i/1000x1000/80/81/mega-sale-concept-promotion-banner-vector-26198081.jpg"
               alt="Slide 2"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover z-0 rounded-xl"
             />
           </div>
-          <div className="w-full h-full flex items-center justify-center overflow-hidden">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden z-0">
             <img
-              src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+              src="https://img.freepik.com/premium-vector/abstract-sales-promotion-banner_23-2148340030.jpg"
               alt="Slide 3"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover z-0 rounded-xl"
             />
           </div>
           {/* Add more slides as needed */}
@@ -59,13 +59,13 @@ const LandingPage = () => {
           <img
             src="https://www.shutterstock.com/image-vector/50-percent-price-off-icon-260nw-1929725999.jpg"
             alt="Model"
-            className="h-auto max-w-full"
+            className="h-auto max-w-full rounded-xl"
           />
         </div>
 
         {/* Information Section */}
-        <div className="bg-wheatsmoke w-full p-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+        <div className="bg-wheatsmoke w-full p-8 text-center border border-gray-200">
+          <h2 className="text-3xl font-bold text-gray-500 mb-4">
             Welcome to Our Store 6d93452
           </h2>
           <p className="text-gray-600">
@@ -85,7 +85,7 @@ const LandingPage = () => {
         {/* Product Section */}
         <div className="w-full py-8 flex justify-center">
           <div className="flex justify-between space-x-4 max-w-7xl mx-auto">
-            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
+            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center rounded-xl">
               <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
                 <img
                   src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
@@ -101,7 +101,7 @@ const LandingPage = () => {
               </Link>
             </div>
 
-            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
+            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center rounded-xl">
               <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
                 <img
                   src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
@@ -117,7 +117,7 @@ const LandingPage = () => {
               </Link>
             </div>
 
-            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center">
+            <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center rounded-xl">
               <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
                 <img
                   src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
@@ -144,7 +144,7 @@ const LandingPage = () => {
 
       {/* Product 1 */}
       <div className="w-full py-8 flex justify-center">
-        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebd"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
@@ -166,7 +166,7 @@ const LandingPage = () => {
       </div>
       {/* Product 2 */}
       <div className="w-full py-8 flex justify-center">
-        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebe"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
@@ -188,7 +188,7 @@ const LandingPage = () => {
 
       {/* Product 3 */}
       <div className="w-full py-8 flex justify-center">
-        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden">
+        <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
             to={"/product-detail/66b3343be5c4892830b83ebf"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"

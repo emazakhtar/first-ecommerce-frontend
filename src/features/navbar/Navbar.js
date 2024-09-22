@@ -55,12 +55,12 @@ function Navbar({ children }) {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-gradient-to-r from-white to-white fixed top-0 w-full z-50"
+            className={`bg-gradient-to-r from-white to-white fixed top-0 w-full z-50" 
             }`}
           >
             {({ open }) => (
               <>
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  border-b border-gray-300">
                   <div className="flex h-12 items-center justify-between">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
