@@ -55,7 +55,7 @@ function Navbar({ children }) {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-gradient-to-r from-white to-white fixed top-0 w-full z-50" 
+            className={`bg-gradient-to-r from-white to-white fixed top-0 w-full z-50 shadow-md" 
             }`}
           >
             {({ open }) => (

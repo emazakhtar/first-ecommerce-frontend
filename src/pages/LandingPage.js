@@ -21,26 +21,26 @@ const LandingPage = () => {
       {/* Big Header with Slideshow */}
 
       {/* Slideshow */}
-      <div className="w-full h-64 mb-64 flex justify-center">
+      <div className="w-full h-64 mb-64 flex justify-center pt-4">
         <Slider
           {...sliderSettings}
           className="w-4/5 sm:max-w-sm md:max-w-sm lg:max-w-m xl:max-w-m h-64 mt-16"
         >
-          <div className="w-full h-full flex items-center justify-center overflow-hidden z-0">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden">
             <img
               src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-creative-promotion-banner-png-image_4273851.jpg"
               alt="Slide 1"
               className="w-full h-full object-cover z-0 rounded-xl"
             />
           </div>
-          <div className="w-full h-full flex items-center justify-center overflow-hidden z-0">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden">
             <img
               src="https://cdn2.vectorstock.com/i/1000x1000/80/81/mega-sale-concept-promotion-banner-vector-26198081.jpg"
               alt="Slide 2"
               className="w-full h-full object-cover z-0 rounded-xl"
             />
           </div>
-          <div className="w-full h-full flex items-center justify-center overflow-hidden z-0">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden">
             <img
               src="https://img.freepik.com/premium-vector/abstract-sales-promotion-banner_23-2148340030.jpg"
               alt="Slide 3"
@@ -152,7 +152,7 @@ const LandingPage = () => {
             <img
               src="https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
               alt="product-1"
-              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
+              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain)"
             />
           </Link>
           {/* <Link
