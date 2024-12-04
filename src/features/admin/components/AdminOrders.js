@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllOrdersAsync,
   selectAllOrders,
+  selectOrderStatus,
   selectTotalOrders,
   updateOrderByIdAsync,
 } from "../../orders/ordersSlice";
@@ -14,11 +15,14 @@ import {
 } from "@heroicons/react/24/outline";
 import Pagination from "../../common/Pagination";
 import { ITEMS_PER_PAGE } from "../../../app/constants";
+import { Link } from "react-router-dom";
+import { Grid } from "react-loader-spinner";
 
 function AdminOrders() {
   const dispatch = useDispatch();
   const orders = useSelector(selectAllOrders);
   const totalItems = useSelector(selectTotalOrders);
+  const status = useSelector(selectOrderStatus);
 
   const [orderStatusFormOpen, setOrderStatusFormOpen] = useState(-1);
   const [page, setPage] = useState(1);
@@ -74,6 +78,21 @@ function AdminOrders() {
 
   return (
     <div className="overflow-x-auto">
+      {status === "loading" && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          {/* Loader component */}
+          <Grid
+            className="loader"
+            height={80}
+            width={80}
+            color="#4fa94d"
+            ariaLabel="grid-loading"
+            radius="12.5"
+            visible={true}
+          />
+        </div>
+      )}
+
       <div className="bg-gray-100 font-sans overflow-hidden">
         <div className="bg-white shadow-md rounded my-6">
           <div className="sm:w-full md:w-auto overflow-x-scroll">
@@ -156,14 +175,17 @@ function AdminOrders() {
               <tbody className="text-gray-600 text-sm font-light">
                 {orders.map((order) => (
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
-                    <td className="py-3 px-0 text-left whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="mr-2"></div>
-                        <span className="font-medium">
-                          {order.id.substring(0, 10)} {/* Truncate order id */}
-                        </span>
-                      </div>
-                    </td>
+                    <Link to={`/admin/order-detail/${order.id}`}>
+                      <td className="py-3 px-0 text-left whitespace-nowrap">
+                        <div className="flex items-center">
+                          <div className="mr-2"></div>
+                          <span className="font-medium">
+                            {order.id.substring(0, 10)}{" "}
+                            {/* Truncate order id */}
+                          </span>
+                        </div>
+                      </td>
+                    </Link>
                     <td className="py-3 px-0 text-left">
                       {order.cartItems.map((item) => (
                         <div className="flex items-center" key={item.id}>

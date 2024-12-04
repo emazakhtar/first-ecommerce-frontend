@@ -7,7 +7,7 @@ import Slider from "react-slick";
 const LandingPage = () => {
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,

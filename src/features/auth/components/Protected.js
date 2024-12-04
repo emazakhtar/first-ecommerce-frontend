@@ -1,18 +1,12 @@
 import React, { useEffect, useLayoutEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  selectAuthStatus,
-  selectCheckedUser,
-  selectcheckedUserInitialized,
-  selectLoggedInUserToken,
-} from "../authSlice";
+import { useSelector } from "react-redux";
+import { selectCheckedUser, selectLoggedInUserToken } from "../authSlice";
 import { Navigate } from "react-router-dom";
 import { Grid } from "react-loader-spinner";
 
 function Protected({ children }) {
   const user = useSelector(selectLoggedInUserToken);
-  const checkedUserInitialized = useSelector(selectcheckedUserInitialized);
-  const authStatus = useSelector(selectAuthStatus);
+
   const checkedUser = useSelector(selectCheckedUser);
   // useEffect(() => {
   //   if (!user) {

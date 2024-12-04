@@ -11,6 +11,7 @@ export function updateUser(userData) {
     resolve({ data });
   });
 }
+
 export function fetchAllUsersOrders() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
@@ -22,7 +23,22 @@ export function fetchAllUsersOrders() {
     resolve({ data });
   });
 }
-  
+
+export function fetchAllUsersReturns(email) {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    console.log("reached api");
+    const response = await fetch("/return/users/" + email, {
+      credentials: "include",
+    });
+    console.log("2nd");
+
+    const data = await response.json();
+    console.log("3nd");
+    resolve({ data });
+  });
+}
+
 export function loadUsersInfo() {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here

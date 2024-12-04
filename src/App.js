@@ -39,8 +39,14 @@ import ResetPassword from "./features/auth/components/ResetPassword";
 import Navbar from "./features/navbar/Navbar";
 import QuickView from "./features/products/components/QuickView";
 
-import Return from "./features/orders/components/Return";
 import LandingPageWithFooter from "./pages/LandingPageWithFooter";
+import ReturnExchangeForm from "./features/orders/components/Return";
+import AdminReturn from "./features/admin/components/AdminReturn";
+import UserReturns from "./features/users/components/UserReturns";
+import OrderDetailsPage from "./pages/OrderDetailsPage";
+import RatingReviewPage from "./pages/ReviewPage";
+import AdminReviews from "./features/admin/components/AdminReviews";
+import AdminOrdersDetail from "./features/admin/components/AdminOrderDetails";
 
 const router = createBrowserRouter([
   {
@@ -184,8 +190,66 @@ const router = createBrowserRouter([
     path: "/exchange/:orderId",
     element: (
       <Protected>
-        <Return></Return>
+        <Navbar>
+          <ReturnExchangeForm></ReturnExchangeForm>
+        </Navbar>
       </Protected>
+    ),
+  },
+  {
+    path: "/admin-returns",
+    element: (
+      <Protected>
+        <Navbar>
+          <AdminReturn></AdminReturn>
+        </Navbar>
+      </Protected>
+    ),
+  },
+  {
+    path: "/user-returns",
+    element: (
+      <Protected>
+        <Navbar>
+          <UserReturns></UserReturns>
+        </Navbar>
+      </Protected>
+    ),
+  },
+  {
+    path: "/rate-review/:productId",
+    element: (
+      <Protected>
+        <RatingReviewPage></RatingReviewPage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/order-detail/:orderId",
+    element: (
+      <Protected>
+        <OrderDetailsPage></OrderDetailsPage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/admin/reviews",
+    element: (
+      <ProtectedAdmin>
+        <Navbar>
+          <AdminReviews></AdminReviews>
+        </Navbar>
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/order-detail/:orderId",
+    element: (
+      <ProtectedAdmin>
+        <Navbar>
+          <AdminOrdersDetail></AdminOrdersDetail>
+        </Navbar>
+      </ProtectedAdmin>
     ),
   },
 

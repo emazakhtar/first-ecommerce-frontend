@@ -4,6 +4,7 @@ import {
   Bars3Icon,
   XMarkIcon,
   ShoppingCartIcon,
+  BellIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -14,6 +15,8 @@ const navigation = [
   // { name: "Products", link: "/", user: true },
   { name: "Admin Products", link: "/admin/home", admin: true },
   { name: "Admin Orders", link: "/admin/orders", admin: true },
+  { name: "Admin Returns", link: "/admin-returns", admin: true },
+  { name: "Admin Reviews", link: "/admin/reviews", admin: true },
 ];
 
 function classNames(...classes) {
@@ -24,8 +27,8 @@ function Navbar({ children }) {
   const userInfo = useSelector(selectLoggedInUserInfo);
   const user = useSelector(selectLoggedInUserToken);
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
-
   const [menuOpen, setMenuOpen] = useState(false);
+
   // login logout logic for navbar
 
   let loginLogout = "Login";
@@ -40,13 +43,14 @@ function Navbar({ children }) {
   }
 
   const userNavigation = [
-    { name: "My Profile", link: "/profile", href: "#" },
-    { name: "My Orders", link: "/my-orders", href: "#" },
-    { name: "All Products", link: "/all-products", href: "#" },
-    { name: "Men", link: "/men", href: "#" },
-    { name: "Women", link: "/women", href: "#" },
-    { name: "Kids", link: "/kids", href: "#" },
-    { name: loginLogout, link: link, href: "#" },
+    { name: "My Profile", link: "/profile" },
+    { name: "My Orders", link: "/my-orders" },
+    { name: "My Returns", link: "/user-returns" },
+    { name: "All Products", link: "/all-products" },
+    { name: "Men", link: "/men" },
+    { name: "Women", link: "/women" },
+    { name: "Kids", link: "/kids" },
+    { name: loginLogout, link: link },
   ];
 
   return (
@@ -55,21 +59,21 @@ function Navbar({ children }) {
         <div className="min-h-full">
           <Disclosure
             as="nav"
-            className={`bg-gradient-to-r from-white to-white fixed top-0 w-full z-50 shadow-md" 
+            className={`bg-gray-100 fixed top-0 w-full z-50 shadow-md" 
             }`}
           >
             {({ open }) => (
               <>
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8  border-b border-gray-300">
-                  <div className="flex h-12 items-center justify-between">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                  <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Link to="/">
                           <h1
                             className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
-                           text-center text-black ml-4 md:mr-16 lg:mr-64 xl:mr-64"
+                           text-center text-gray-500 ml-4 md:mr-16 lg:mr-64 xl:mr-64"
                           >
-                            E-commerce
+                            <span class="bg-gray-100 italic">Ecommerce</span>
                           </h1>
                         </Link>
                       </div>
@@ -91,7 +95,7 @@ function Navbar({ children }) {
                                 to={"/all-products"}
                                 className="hover:text-blue-500 transition duration-300"
                               >
-                                All Products
+                                <span class="text-gray-800">Products</span>
                               </Link>
                             </li>
                             <li className="py-2 md:py-0">
@@ -99,7 +103,7 @@ function Navbar({ children }) {
                                 to={"/men"}
                                 className="hover:text-blue-500 transition duration-300"
                               >
-                                Men
+                                <span class="text-gray-800">Men</span>
                               </Link>
                             </li>
                             <li className="py-2 md:py-0">
@@ -107,7 +111,7 @@ function Navbar({ children }) {
                                 to={"/women"}
                                 className="hover:text-blue-500 transition duration-300"
                               >
-                                Women
+                                <span class="text-gray-800">Women</span>
                               </Link>
                             </li>
                             <li className="py-2 md:py-0">
@@ -115,7 +119,7 @@ function Navbar({ children }) {
                                 to={"/kids"}
                                 className="hover:text-blue-500 transition duration-300"
                               >
-                                Kids
+                                <span class="text-gray-800">Kids</span>
                               </Link>
                             </li>
                             {loggedInUserToken ? (
@@ -124,7 +128,7 @@ function Navbar({ children }) {
                                   to={"/logout"}
                                   className="hover:text-blue-500 transition duration-300"
                                 >
-                                  Logout
+                                  <span class="text-gray-800">Logout</span>
                                 </Link>
                               </li>
                             ) : (
@@ -133,7 +137,7 @@ function Navbar({ children }) {
                                   to={"/login"}
                                   className="hover:text-blue-500 transition duration-300"
                                 >
-                                  Login
+                                  <span class="text-gray-800">Login</span>
                                 </Link>
                               </li>
                             )}
@@ -190,7 +194,7 @@ function Navbar({ children }) {
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3">
                           <div>
-                            <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-red-700 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
+                            <Menu.Button className="relative flex max-w -xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
                               <span className="absolute -inset-1.5" />
                               <span className="sr-only">Open user menu</span>
                               <img
@@ -230,13 +234,25 @@ function Navbar({ children }) {
                         </Menu>
                       </div>
                     </div>
-                    <div className="-mr-2 flex md:hidden">
-                      {/* Mobile menu button */}
 
+                    <div className="flex items-center justify-end flex-1 ml-auto -mr-2 flex md:hidden">
+                      {/* Mobile menu button */}
+                      <Link className="mt-2 mr-2" to="/notifications">
+                        <button
+                          type="button"
+                          className="relative ml-auto flex-shrink-0 rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                        >
+                          {/* Notification Badge if needed */}
+                          <span className="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500" />
+
+                          {/* Bell Icon */}
+                          <BellIcon className="h-6 w-6" aria-hidden="true" />
+                        </button>
+                      </Link>
                       <Link className="mt-2" to="/my-cart">
                         <button
                           type="button"
-                          className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                          className="relative ml-auto flex-shrink-0 rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                         >
                           <span className="absolute -inset-1.5" />
 
@@ -251,7 +267,7 @@ function Navbar({ children }) {
                           {cartItems.length}
                         </span>
                       )}
-                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-slate-200 mr-4 p-2 text-gray-400 hover:bg-gray hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-800">
+                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-gray-100 p-2 text-gray-400 hover:bg-gray hover:text-black focus:outline-none focus:ring-2 focus:ring-white  focus:ring-offset-red-800">
                         <span className="absolute -inset-0.5" />
                         <span className="sr-only">Open main menu</span>
 
@@ -294,7 +310,7 @@ function Navbar({ children }) {
                           )
                       )}
                   </div>
-                  <div className="border-t border-gray-700 pb-3 pt-4">
+                  <div className="border border-gray-300 pb-3 pt-4 -mt-5">
                     <div className="flex items-center px-5">
                       <div className="flex-shrink-0">
                         {/* <img
@@ -312,7 +328,7 @@ function Navbar({ children }) {
                         </div> */}
                       </div>
                     </div>
-                    <div className="mt-3 space-y-1 px-2">
+                    <div className=" space-y-1 px-2">
                       {userNavigation.map((item) => (
                         <Link
                           key={item.name}

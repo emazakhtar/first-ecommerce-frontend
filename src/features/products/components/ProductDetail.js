@@ -19,6 +19,7 @@ import { Grid } from "react-loader-spinner";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { selectLoggedInUserToken } from "../../auth/authSlice";
+import { selectAllReviews } from "../../review/reviewSlice";
 
 const highlights = [
   "Hand cut and sewn locally",
@@ -43,6 +44,8 @@ function ProductDetail() {
   const cartStatus = useSelector(selectCartStatus);
   const userLoggedIn = useSelector(selectLoggedInUserToken);
   const navigate = useNavigate();
+
+  const reviews = useSelector(selectAllReviews);
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
@@ -187,7 +190,7 @@ function ProductDetail() {
                   <img
                     src={image}
                     alt={product.title}
-                    className="w-full h-64 object-contain mx-auto"
+                    className="w-full h-24 object-contain mx-auto transform scale-125"
                   />
                 </div>
               ))}
@@ -205,10 +208,10 @@ function ProductDetail() {
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
               <p className="text-3xl tracking-tight text-gray-900">
-                ${product.discountedPrice}
+                ₹{product.discountedPrice}
               </p>
               <p className="text-xl tracking-tight text-gray-600 line-through">
-                ${product.price}
+                ₹{product.price}
               </p>
               {/* Reviews */}
               <div className="mt-6">
@@ -399,6 +402,14 @@ function ProductDetail() {
                   </p>
                 </div>
               </div>
+              {/* Return Policy */}
+              <div className="mt-4 p-4 bg-gray-100 rounded">
+                <h2 className="text-lg font-semibold mb-2">Return Policy</h2>
+                <p className="text-sm text-gray-600">
+                  Easy returns within 7 days. See return policy for more
+                  details.
+                </p>
+              </div>
               <div className="mt-10">
                 <h3 className="text-sm font-medium text-gray-900">
                   Highlights
@@ -445,6 +456,58 @@ function ProductDetail() {
                     {product.dimensions.depth}
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+          {/* Reviews....  */}
+          <div className="bg-gray-100 py-8">
+            <div className="container mx-auto px-4">
+              <h2 className="text-2xl font-bold text-center text-gray-600 italic mb-6">
+                Customer Reviews
+              </h2>
+              <div className="flex flex-col space-y-4">
+                {reviews &&
+                  reviews.map((review) => (
+                    <>
+                      {review.status === "verified" && (
+                        <div
+                          key={review.id}
+                          className="p-4 bg-white shadow-sm rounded-lg border border-gray-200"
+                        >
+                          <div className="flex items-center mb-2">
+                            <img
+                              src={
+                                review.userAvatar ||
+                                "https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png"
+                              }
+                              alt={`${review.user}'s avatar`}
+                              className="w-10 h-10 rounded-full mr-3"
+                            />
+                            <div>
+                              <p className="font-semibold text-gray-800">
+                                {review.email}
+                              </p>
+                              <div className="flex">
+                                {[...Array(5)].map((_, index) => (
+                                  <span
+                                    key={index}
+                                    className={`h-5 w-5 ${
+                                      index < review.rating
+                                        ? "text-yellow-400"
+                                        : "text-gray-300"
+                                    }`}
+                                  >
+                                    ★
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          <p className="text-gray-600">{review.comment}</p>
+                        </div>
+                      )}
+                    </>
+                  ))}
               </div>
             </div>
           </div>

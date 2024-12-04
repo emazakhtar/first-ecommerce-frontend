@@ -22,6 +22,30 @@ export function createOrder(orderData) {
   });
 }
 
+export function createReturn(data) {
+  return new Promise(async (resolve, reject) => {
+    // TODO: we will not hardcode server url here
+    try {
+      const response = await fetch("/return", {
+        method: "POST",
+        body: JSON.stringify(data),
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        console.log(error);
+        reject({ error });
+      }
+    } catch (err) {
+      reject(err);
+    }
+  });
+}
+
 export function fetchAllOrders({ pagination, sort }) {
   let queryString = "";
   for (let key in pagination) {
@@ -57,6 +81,40 @@ export function fetchOrderById(id) {
   return new Promise(async (resolve) => {
     // TODO: we will not hardcode server url here
     const response = await fetch("/orders/" + id, {
+      credentials: "include",
+    });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function fetchReturnById(id) {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch("/return/" + id, {
+      credentials: "include",
+    });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function updateReturnById(id, updatedReturnItem) {
+  return new Promise(async (resolve) => {
+    // TODO: we will not hardcode server url here
+    const response = await fetch("/return/update/" + id, {
+      method: "PATCH",
+      credentials: "include",
+      body: JSON.stringify(updatedReturnItem),
+      headers: { "content-type": "application/json" },
+    });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function fetchAllReturns() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("/return/all", {
+      method: "GET",
       credentials: "include",
     });
     const data = await response.json();

@@ -506,10 +506,10 @@ function ProductGrid({ products, status, handleCart }) {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-gray-900">
-                              ${product.discountedPrice}
+                              ₹{product.discountedPrice}
                             </p>
                             <p className="line-through text-sm font-medium text-gray-400">
-                              ${product.price}
+                              ₹{product.price}
                             </p>
                           </div>
                         </div>
