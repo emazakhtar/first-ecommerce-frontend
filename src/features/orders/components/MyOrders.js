@@ -153,7 +153,7 @@ function MyOrders() {
                               </Link>
                               <div className="mt-4 px-4 py-3 bg-gray-100 border border-gray-300 rounded-md text-center shadow-md sm:text-sm md:text-base lg:text-lg">
                                 <p className="cursor-default text-gray-700 font-medium">
-                                  Return ends in{" "}
+                                  Return Period Ends in{" "}
                                   <span className="text-indigo-600 font-semibold">
                                     {isReturnable(order)} days
                                   </span>

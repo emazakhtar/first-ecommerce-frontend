@@ -61,7 +61,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `http://first-ecommerce.emazakhtar.com/order-success/${orderSuccess.id}`,
+        return_url: `http://ec2-51-20-8-32.eu-north-1.compute.amazonaws.com/order-success/${orderSuccess.id}`,
       },
     });
 

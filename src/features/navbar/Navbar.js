@@ -177,7 +177,7 @@ function Navbar({ children }) {
                           <button
                             cursor-pointer="true"
                             type="button"
-                            className="relative rounded-full bg-white p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
+                            className="relative rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                           >
                             <span className="absolute -inset-1.5" />
                             <ShoppingCartIcon
@@ -194,7 +194,7 @@ function Navbar({ children }) {
                         {/* Profile dropdown */}
                         <Menu as="div" className="relative ml-3">
                           <div>
-                            <Menu.Button className="relative flex max-w -xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+                            <Menu.Button className="relative flex max-w -xs items-center rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
                               <span className="absolute -inset-1.5" />
                               <span className="sr-only">Open user menu</span>
                               <img
@@ -213,7 +213,7 @@ function Navbar({ children }) {
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                           >
-                            <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-100 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                               {userNavigation.map((item) => (
                                 <Menu.Item key={item.name}>
                                   {({ active }) => (
