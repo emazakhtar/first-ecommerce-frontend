@@ -129,12 +129,14 @@ function Checkout() {
                       address: [...user.address, data],
                     })
                   );
+
                   reset();
                   setAddNewAddressFormOpen(false);
                 })}
                 className="bg-white px-5 py-12 mt-12"
               >
                 <div className="border-b border-gray-900/10 pb-12">
+                  <h2 className="text-lg font-bold mb-4">Checkout Details</h2>
                   <h2 className="text-2xl font-semibold leading-7 text-gray-900">
                     Personal Information
                   </h2>

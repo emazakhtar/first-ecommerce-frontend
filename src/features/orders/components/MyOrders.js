@@ -53,7 +53,7 @@ function MyOrders() {
           />
         </div>
       )}
-      {status !== "idle" && orders && orders.length === 0 && (
+      {status === "idle" && orders && orders.length === 0 && (
         <div className="text-center mt-6">
           <p className="text-gray-600 text-lg">
             Currently, you have no orders...

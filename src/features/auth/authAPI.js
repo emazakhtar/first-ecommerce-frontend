@@ -50,6 +50,33 @@ export function loginUser(userData) {
     }
   });
 }
+
+// Google Login Api...
+export function loginUserGoogleOAuth(credential) {
+  return new Promise(async (resolve, reject) => {
+    console.log("Sending data:", JSON.stringify(credential));
+
+    try {
+      const response = await fetch("/auth/google", {
+        method: "POST",
+        body: JSON.stringify({ token: credential }),
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+      });
+
+      if (response.status === 200) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
 export function checkUser() {
   return new Promise(async (resolve, reject) => {
     try {

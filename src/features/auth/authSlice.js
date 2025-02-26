@@ -6,6 +6,7 @@ import {
   resetPassword,
   resetPasswordRequest,
   signOut,
+  loginUserGoogleOAuth,
 } from "./authAPI";
 
 const initialState = {
@@ -44,6 +45,18 @@ export const loginUserAsync = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const response = await loginUser(data);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const loginUserGoogleOAuthAsync = createAsyncThunk(
+  "auth/loginUserGoogleOAuth",
+  async (credential, { rejectWithValue }) => {
+    try {
+      const response = await loginUserGoogleOAuth(credential);
       return response.data;
     } catch (error) {
       return rejectWithValue(error);
@@ -192,6 +205,18 @@ export const authSlice = createSlice({
         state.error = null;
         state.emailSent = null;
         state.resetPasswordStatus = action.payload;
+      })
+      .addCase(loginUserGoogleOAuthAsync.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
+      })
+      .addCase(loginUserGoogleOAuthAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(loginUserGoogleOAuthAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.error = null;
+        state.LoggedInUserToken = action.payload;
       });
   },
 });

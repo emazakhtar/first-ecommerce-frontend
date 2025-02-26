@@ -150,9 +150,9 @@ const LandingPage = () => {
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           >
             <img
-              src="https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
+              src="https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/1.png"
               alt="product-1"
-              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain)"
+              className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
             />
           </Link>
           {/* <Link
@@ -172,7 +172,7 @@ const LandingPage = () => {
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           >
             <img
-              src="https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+              src="https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png"
               alt="Product 2"
               className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
             />
