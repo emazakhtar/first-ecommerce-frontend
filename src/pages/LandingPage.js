@@ -168,11 +168,11 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
-            to={"/product-detail/66b3343be5c4892830b83f0e"}
+            to={"/product-detail/66b3343be5c4892830b83f16"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           >
             <img
-              src="https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
+              src="https://cdn.dummyjson.com/products/images/mens-watches/Brown%20Leather%20Belt%20Watch/thumbnail.png"
               alt="Product 2"
               className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
             />
