@@ -86,49 +86,49 @@ const LandingPage = () => {
         <div className="w-full py-8 flex justify-center">
           <div className="flex justify-between space-x-4 max-w-7xl mx-auto">
             <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center rounded-xl">
-              <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
+              <Link to={"/product-detail/66b3343be5c4892830b83f07"}>
                 <img
-                  src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+                  src="https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png"
                   alt="Product 1"
                   className="h-auto max-w-full mb-4 bg-gray-100"
                 />
                 <Link
-                  to={"/product-detail/66b3343be5c4892830b83eba"}
+                  to={"/product-detail/66b3343be5c4892830b83f07"}
                   className="text-gray-600"
                 >
-                  Essence Mascara
+                  Apple MacBook Pro 14 Inch
                 </Link>
               </Link>
             </div>
 
             <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center rounded-xl">
-              <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
+              <Link to={"/product-detail/66b3343be5c4892830b83f1d"}>
                 <img
-                  src="https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+                  src="https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
                   alt="Product 2"
                   className="h-auto max-w-full mb-4 bg-gray-100"
                 />
                 <Link
-                  to={"/product-detail/66b3343be5c4892830b83ebb"}
+                  to={"/product-detail/66b3343be5c4892830b83f1d"}
                   className="text-gray-600"
                 >
-                  Eyeshadow Palette
+                  Apple Airpods
                 </Link>
               </Link>
             </div>
 
             <div className="bg-gray-100 shadow-lg p-4 w-1/3 flex flex-col items-center rounded-xl">
-              <Link to={"/product-detail/66b3343be5c4892830b83eba"}>
+              <Link to={"/product-detail/66b3343be5c4892830b83efb"}>
                 <img
-                  src="https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
+                  src="https://cdn.dummyjson.com/products/images/kitchen-accessories/Microwave%20Oven/thumbnail.png"
                   alt="Product 3"
                   className="bg-gray-100 h-auto max-w-full mb-4"
                 />
                 <Link
-                  to={"/product-detail/66b3343be5c4892830b83ebc"}
+                  to={"/product-detail/66b3343be5c4892830b83efb"}
                   className="text-gray-600"
                 >
-                  Powder Canister
+                  Microwave Oven
                 </Link>
               </Link>
             </div>
@@ -146,11 +146,11 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
-            to={"/product-detail/66b3343be5c4892830b83ebd"}
+            to={"/product-detail/66b3343be5c4892830b83f0c"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           >
             <img
-              src="https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/1.png"
+              src="https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
               alt="product-1"
               className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
             />
@@ -168,11 +168,11 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
-            to={"/product-detail/66b3343be5c4892830b83ebe"}
+            to={"/product-detail/66b3343be5c4892830b83f0e"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           >
             <img
-              src="https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png"
+              src="https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
               alt="Product 2"
               className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
             />
@@ -190,11 +190,11 @@ const LandingPage = () => {
       <div className="w-full py-8 flex justify-center">
         <div className="bg-gray-100 shadow-lg p-4 w-1/2 flex flex-col items-center w-3/4 h-64 overflow-hidden rounded-xl">
           <Link
-            to={"/product-detail/66b3343be5c4892830b83ebf"}
+            to={"/product-detail/66b3343be5c4892830b83f11"}
             className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
           >
             <img
-              src="https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png"
+              src="https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/thumbnail.png"
               alt="Product 3"
               className="h-auto max-w-full mb-4 bg-gray-100 w-full h-full object-contain"
             />
