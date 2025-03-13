@@ -61,7 +61,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `http://ec2-51-20-8-32.eu-north-1.compute.amazonaws.com/order-success/${orderSuccess.id}`,
+        return_url: `http://ec2-3-27-138-152.ap-southeast-2.compute.amazonaws.com/${orderSuccess.id}`,
       },
     });
 
