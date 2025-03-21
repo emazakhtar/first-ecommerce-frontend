@@ -162,7 +162,6 @@ function Checkout() {
                         />
                       </div>
                     </div>
-
                     <div className="sm:col-span-4">
                       <label
                         htmlFor="email"
@@ -207,7 +206,7 @@ function Checkout() {
                         />
                       </div>
                     </div>
-
+                    er
                     <div className="col-span-full">
                       <label
                         htmlFor="street"
@@ -226,7 +225,6 @@ function Checkout() {
                         />
                       </div>
                     </div>
-
                     <div className="sm:col-span-2 sm:col-start-1">
                       <label
                         htmlFor="city"
@@ -246,7 +244,6 @@ function Checkout() {
                         />
                       </div>
                     </div>
-
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="state"
@@ -266,7 +263,6 @@ function Checkout() {
                         />
                       </div>
                     </div>
-
                     <div className="sm:col-span-2">
                       <label
                         htmlFor="pincode"
