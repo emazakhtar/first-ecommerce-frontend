@@ -73,7 +73,7 @@ function Navbar({ children }) {
                             className="hover:text-gray bg-white text-xl sm:text-xl md:text-xl lg:text-xl font-bold font-sans text-black
                            text-center text-gray-500 ml-4 md:mr-16 lg:mr-64 xl:mr-64"
                           >
-                            <span class="bg-gray-100 italic">Ecommerce</span>
+                            <span class="bg-gray-100 italic">E-commerce</span>
                           </h1>
                         </Link>
                       </div>
