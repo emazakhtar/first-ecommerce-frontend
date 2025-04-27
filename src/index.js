@@ -1,4 +1,3 @@
-import React from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
@@ -9,6 +8,13 @@ import "./index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { SocketContext } from "./features/notification/socketContext";
+import { io } from "socket.io-client";
+import React from "react";
+
+// Create a single socket connection to the backend.
+// Ensure the URL matches your backend server (port 3000 in this case).
+const socket = io("http://localhost:8081");
 
 const clientId =
   "445187668823-nch4gt1eorfsf5hergsie4o6qcqr7eil.apps.googleusercontent.com";
@@ -26,12 +32,14 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <GoogleOAuthProvider clientId={clientId}>
-      <AlertProvider template={AlertTemplate} {...options}>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </AlertProvider>
-    </GoogleOAuthProvider>
+    <SocketContext.Provider value={socket || undefined}>
+      <GoogleOAuthProvider clientId={clientId}>
+        <AlertProvider template={AlertTemplate} {...options}>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </AlertProvider>
+      </GoogleOAuthProvider>
+    </SocketContext.Provider>
   </React.StrictMode>
 );

@@ -47,6 +47,7 @@ import OrderDetailsPage from "./pages/OrderDetailsPage";
 import RatingReviewPage from "./pages/ReviewPage";
 import AdminReviews from "./features/admin/components/AdminReviews";
 import AdminOrdersDetail from "./features/admin/components/AdminOrderDetails";
+import Notifications from "./features/notification/components/Notification";
 
 const router = createBrowserRouter([
   {
@@ -229,6 +230,14 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <OrderDetailsPage></OrderDetailsPage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/notifications",
+    element: (
+      <Protected>
+        <Notifications></Notifications>
       </Protected>
     ),
   },

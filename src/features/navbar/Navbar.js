@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -6,11 +6,12 @@ import {
   ShoppingCartIcon,
   BellIcon,
 } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCart } from "../cart/cartSlice";
 import { selectLoggedInUserInfo } from "../users/usersSlice";
 import { selectLoggedInUserToken } from "../auth/authSlice";
+import { SocketContext } from "../notification/socketContext";
 const navigation = [
   // { name: "Products", link: "/", user: true },
   { name: "Admin Products", link: "/admin/home", admin: true },
@@ -28,6 +29,59 @@ function Navbar({ children }) {
   const user = useSelector(selectLoggedInUserToken);
   const loggedInUserToken = useSelector(selectLoggedInUserToken);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  // Access the socket instance from context.
+  const socket = useContext(SocketContext);
+  // Local state to store notifications.
+  const [notifications, setNotifications] = useState([]);
+  // State to toggle the visibility of the notifications list.
+  const [showList, setShowList] = useState(false);
+
+  useEffect(() => {
+    // When the component mounts, request existing notifications.
+    socket.emit("getNotifications");
+
+    // Listen for the server to send the list of saved notifications.
+    socket.on("loadNotifications", (data) => {
+      setNotifications(data);
+    });
+
+    // Listen for new notifications emitted by the server.
+    socket.on("newNotification", (data) => {
+      console.log("Received new notification:", data);
+      // Add the new notification to the beginning of the notifications array.
+      setNotifications((prev) => [data, ...prev]);
+    });
+
+    // Clean up event listeners when the component unmounts.
+    return () => {
+      socket.off("loadNotifications");
+      socket.off("newNotification");
+    };
+  }, [socket]);
+
+  // Function to toggle the notification list's visibility.
+  const toggleNotificationList = () => {
+    setShowList(!showList);
+  };
+
+  // Function to mark a notification as read.
+  const markNotificationAsRead = (notificationId) => {
+    // Emit the "markAsRead" event with the notification ID and provide a callback.
+    socket.emit("markAsRead", notificationId, (response) => {
+      if (response.status === "success") {
+        // Update the local state to reflect the read status.
+        setNotifications((prev) =>
+          prev.map((n) =>
+            n._id === notificationId ? response.notification : n
+          )
+        );
+        console.log("Notification marked as read");
+      } else {
+        console.error("Failed to mark notification as read:", response.error);
+      }
+    });
+  };
 
   // login logout logic for navbar
 
@@ -237,8 +291,9 @@ function Navbar({ children }) {
 
                     <div className="flex items-center justify-end flex-1 ml-auto -mr-2 flex md:hidden">
                       {/* Mobile menu button */}
-                      <Link className="mt-2 mr-2" to="/notifications">
+                      <Link className="mt-2 mr-2">
                         <button
+                          onClick={toggleNotificationList}
                           type="button"
                           className="relative ml-auto flex-shrink-0 rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-750"
                         >
@@ -247,8 +302,62 @@ function Navbar({ children }) {
 
                           {/* Bell Icon */}
                           <BellIcon className="h-6 w-6" aria-hidden="true" />
+                          <span
+                            id="notificationCount"
+                            style={{
+                              position: "absolute",
+                              top: "-5px",
+                              right: "-5px",
+                              background: "red",
+                              color: "white",
+                              borderRadius: "50%",
+                              padding: "2px 6px",
+                              fontSize: "12px",
+                            }}
+                          >
+                            {notifications.length}
+                          </span>
                         </button>
                       </Link>
+                      {/* Notification List (shown when showList is true) */}
+                      {showList && (
+                        <div
+                          id="notificationList"
+                          style={{
+                            border: "1px solid #ccc",
+                            padding: "10px",
+                            maxWidth: "300px",
+                            marginTop: "10px",
+                          }}
+                        >
+                          {notifications.length === 0 ? (
+                            <p>No notifications.</p>
+                          ) : (
+                            notifications.map((n, index) => (
+                              <div
+                                key={index}
+                                className="notificationItem"
+                                style={{
+                                  borderBottom: "1px solid #eee",
+                                  padding: "5px 0",
+                                }}
+                              >
+                                <p>{n.message}</p>
+                                {/* Button to mark as read */}
+                                {!n.read && (
+                                  <button
+                                    onClick={() =>
+                                      markNotificationAsRead(n._id)
+                                    }
+                                  >
+                                    Mark as Read
+                                  </button>
+                                )}
+                              </div>
+                            ))
+                          )}
+                        </div>
+                      )}
                       <Link className="mt-2" to="/my-cart">
                         <button
                           type="button"
