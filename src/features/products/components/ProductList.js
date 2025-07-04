@@ -9,6 +9,8 @@ import {
   PlusIcon,
   Squares2X2Icon,
   StarIcon,
+  HeartIcon,
+  ShoppingCartIcon,
 } from "@heroicons/react/20/solid";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,6 +29,7 @@ import { addToCartAsync, selectCart } from "../../cart/cartSlice";
 import { useAlert } from "react-alert";
 import { selectLoggedInUserInfo } from "../../users/usersSlice";
 import { selectLoggedInUserToken } from "../../auth/authSlice";
+import { motion, AnimatePresence } from "framer-motion";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -152,122 +155,131 @@ function ProductList() {
     }
   };
   return (
-    <>
-      <div className="bg-gray-100">
-        <div>
-          {/* Mobile filter dialog */}
-          <MobileFilter
-            mobileFiltersOpen={mobileFiltersOpen}
-            setMobileFiltersOpen={setMobileFiltersOpen}
-            handleFilter={handleFilter}
-            setPage={setPage}
-            filters={filters}
-          ></MobileFilter>
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-xl font-bold tracking-tight text-gray-600">
-                All Items
-              </h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen"
+    >
+      <div>
+        <MobileFilter
+          mobileFiltersOpen={mobileFiltersOpen}
+          setMobileFiltersOpen={setMobileFiltersOpen}
+          handleFilter={handleFilter}
+          setPage={setPage}
+          filters={filters}
+        />
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ y: -20 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24"
+          >
+            <h1 className="text-3xl font-bold tracking-tight text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
+              Discover Amazing Products
+            </h1>
 
-              <div className="flex items-center">
-                <Menu as="div" className="relative inline-block text-left">
-                  <div>
-                    <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                      Sort
-                      <ChevronDownIcon
-                        className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                        aria-hidden="true"
-                      />
-                    </Menu.Button>
-                  </div>
+            <div className="flex items-center space-x-4">
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button className="group inline-flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-900 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-200">
+                    Sort
+                    <ChevronDownIcon
+                      className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                      aria-hidden="true"
+                    />
+                  </Menu.Button>
+                </div>
 
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <div className="py-1">
-                        {sortOptions.map((option, index) => (
-                          <Menu.Item key={index}>
-                            {({ active }) => (
-                              <p
-                                key={index}
-                                onClick={(e) => handleSort(e, option)}
-                                className={classNames(
-                                  option.current
-                                    ? "font-medium text-gray-900"
-                                    : "text-gray-500",
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm"
-                                )}
-                              >
-                                {option.name}
-                              </p>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </div>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
-
-                <button
-                  type="button"
-                  className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
                 >
-                  <span className="sr-only">View grid</span>
-                  <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
-                </button>
-                <button
-                  type="button"
-                  className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
-                  onClick={() => setMobileFiltersOpen(true)}
-                >
-                  <span className="sr-only">Filters</span>
-                  <FunnelIcon className="h-5 w-5" aria-hidden="true" />
-                </button>
-              </div>
+                  <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-1">
+                      {sortOptions.map((option, index) => (
+                        <Menu.Item key={index}>
+                          {({ active }) => (
+                            <motion.p
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              onClick={(e) => handleSort(e, option)}
+                              className={`${
+                                option.current
+                                  ? "font-medium text-gray-900"
+                                  : "text-gray-500"
+                              } ${
+                                active ? "bg-gray-50" : ""
+                              } block px-4 py-2 text-sm cursor-pointer hover:bg-gray-50 transition-colors duration-200`}
+                            >
+                              {option.name}
+                            </motion.p>
+                          )}
+                        </Menu.Item>
+                      ))}
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="button"
+                className="p-2 text-gray-400 hover:text-gray-500 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+              >
+                <span className="sr-only">View grid</span>
+                <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="button"
+                className="p-2 text-gray-400 hover:text-gray-500 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 lg:hidden"
+                onClick={() => setMobileFiltersOpen(true)}
+              >
+                <span className="sr-only">Filters</span>
+                <FunnelIcon className="h-5 w-5" aria-hidden="true" />
+              </motion.button>
             </div>
+          </motion.div>
 
-            <section aria-labelledby="products-heading" className="pb-24 pt-6">
-              <h2 id="products-heading" className="sr-only">
-                Products
-              </h2>
+          <section aria-labelledby="products-heading" className="pb-24 pt-6">
+            <h2 id="products-heading" className="sr-only">
+              Products
+            </h2>
 
-              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-                {/* Filters */}
-                <DesktopFilter
-                  handleFilter={handleFilter}
-                  setPage={setPage}
-                  filters={filters}
-                ></DesktopFilter>
-                {/* Product grid */}
-                <ProductGrid
-                  products={products}
-                  status={status}
-                  handleCart={handleCart}
-                ></ProductGrid>
-                {/* Product grid end  */}
-              </div>
-            </section>
-            {/* section of product and filters ends  */}
-            <Pagination
-              page={page}
-              setPage={setPage}
-              handlePage={handlePage}
-              totalItems={totalItems}
-            ></Pagination>
-          </main>
-        </div>
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+              <DesktopFilter
+                handleFilter={handleFilter}
+                setPage={setPage}
+                filters={filters}
+              />
+              <ProductGrid
+                products={products}
+                status={status}
+                handleCart={handleCart}
+              />
+            </div>
+          </section>
+          <Pagination
+            page={page}
+            setPage={setPage}
+            handlePage={handlePage}
+            totalItems={totalItems}
+          />
+        </main>
       </div>
-    </>
+    </motion.div>
   );
 }
+
 function MobileFilter({
   mobileFiltersOpen,
   setMobileFiltersOpen,
@@ -389,9 +401,15 @@ function MobileFilter({
     </Transition.Root>
   );
 }
+
 function DesktopFilter({ handleFilter, setPage, filters }) {
   return (
-    <form className="hidden lg:block">
+    <motion.form
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="hidden lg:block"
+    >
       <h3 className="sr-only">Categories</h3>
       {filters.map((section, index) => (
         <Disclosure
@@ -402,7 +420,7 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
           {({ open }) => (
             <>
               <h3 className="-my-3 flow-root">
-                <Disclosure.Button className="flex w-full items-center justify-between bg-gray-100 py-3 text-sm text-gray-400 hover:text-gray-500">
+                <Disclosure.Button className="flex w-full items-center justify-between bg-white px-4 py-3 text-sm text-gray-400 hover:text-gray-500 rounded-lg shadow-sm hover:shadow-md transition-all duration-200">
                   <span className="font-medium text-gray-900">
                     {section.name}
                   </span>
@@ -418,7 +436,11 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
               <Disclosure.Panel className="pt-6">
                 <div className="space-y-4">
                   {section.options.map((option, optionIdx) => (
-                    <div key={optionIdx} className="flex items-center">
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      key={optionIdx}
+                      className="flex items-center"
+                    >
                       <input
                         id={`filter-${section.id}-${optionIdx}`}
                         name={`${section.id}[]`}
@@ -434,7 +456,7 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
                       >
                         {option.label}
                       </label>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </Disclosure.Panel>
@@ -442,20 +464,18 @@ function DesktopFilter({ handleFilter, setPage, filters }) {
           )}
         </Disclosure>
       ))}
-    </form>
+    </motion.form>
   );
 }
+
 function ProductGrid({ products, status, handleCart }) {
   return (
     <div className="lg:col-span-3 sm:col-span-6 md:col-span-4">
-      {/* this is our products list  */}
-
-      <div className="bg-gray-100">
+      <div className="bg-transparent">
         <div className="mx-auto max-w-2xl px-0 py-0 sm:px-0 sm:py-0 lg:max-w-7xl lg:px-0">
-          <div className="mt-6 grid grid-cols-2 gap-x-0 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {status === "loading" ? (
               <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-                {/* Loader component */}
                 <Grid
                   className="loader"
                   height="80"
@@ -469,75 +489,85 @@ function ProductGrid({ products, status, handleCart }) {
                 />
               </div>
             ) : null}
-            {products.map(
-              (product, index) =>
-                !product.deleted && (
-                  <div key={index}>
-                    <Link to={`/product-detail/${product.id}`}>
-                      <div
-                        className={`group relative border-solid border-2 border-gray-200 p-2 w-full ${
-                          status === "loading" ? "blur" : ""
-                        }`}
-                      >
-                        <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
-                          <img
-                            src={product.thumbnail}
-                            alt={product.title}
-                            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                          />
-                        </div>
-                        <div className="mt-4 flex justify-between">
-                          <div>
-                            <h3 className="text-sm text-gray-700">
-                              <div href={product.thumbnail}>
-                                <span
-                                  aria-hidden="true"
-                                  className="absolute inset-0"
-                                />
-                                {product.title}
-                              </div>
-                            </h3>
-                            <p className="mt-1 text-sm text-gray-500">
-                              <StarIcon className="w-6 h-6 inline "></StarIcon>
-                              <span className="align-bottom">
-                                {product.rating}
-                              </span>
-                            </p>
-                          </div>
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">
-                              ₹{product.discountedPrice}
-                            </p>
-                            <p className="line-through text-sm font-medium text-gray-400">
-                              ₹{product.price}
-                            </p>
-                          </div>
-                        </div>
-                        {/* {product.stock <= 0 && (
-                          <p className="text-red-500">Out Of Stock</p>
-                        )} */}
-                      </div>
-                    </Link>
-
-                    {product.stock <= 0 ? (
-                      <div className="flex justify-center">
-                        <p className="w-4/5 mt-4 bg-red-900 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-800 transition duration-300">
-                          Out of Stock
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="flex justify-center mb-4">
-                        <button
-                          onClick={() => handleCart(product.id)}
-                          className="w-4/5 mt-4 bg-gray-800 text-white font-semibold py-2 px-4 rounded-full hover:bg-gray-600 transition duration-300"
+            <AnimatePresence>
+              {products.map(
+                (product, index) =>
+                  !product.deleted && (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      whileHover={{ y: -5 }}
+                      className="group"
+                    >
+                      <Link to={`/product-detail/${product.id}`}>
+                        <div
+                          className={`relative border-solid border-2 border-gray-200 p-2 w-full rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 ${
+                            status === "loading" ? "blur" : ""
+                          }`}
                         >
-                          Add to Cart
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                )
-            )}
+                          <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 group-hover:opacity-90 transition-opacity duration-300">
+                            <motion.img
+                              whileHover={{ scale: 1.1 }}
+                              transition={{ duration: 0.3 }}
+                              src={product.thumbnail}
+                              alt={product.title}
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div className="mt-4 flex justify-between">
+                            <div>
+                              <h3 className="text-sm font-medium text-gray-900 line-clamp-2">
+                                {product.title}
+                              </h3>
+                              <div className="mt-1 flex items-center">
+                                <StarIcon className="w-5 h-5 text-yellow-400" />
+                                <span className="ml-1 text-sm text-gray-600">
+                                  {product.rating}
+                                </span>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <p className="text-lg font-bold text-gray-900">
+                                ₹{product.discountedPrice}
+                              </p>
+                              <p className="text-sm line-through text-gray-400">
+                                ₹{product.price}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {product.stock <= 0 ? (
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          className="flex justify-center mt-4"
+                        >
+                          <p className="w-4/5 bg-red-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-600 transition duration-300 shadow-sm">
+                            Out of Stock
+                          </p>
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          whileHover={{ scale: 1.02 }}
+                          className="flex justify-center mt-4"
+                        >
+                          <button
+                            onClick={() => handleCart(product.id)}
+                            className="w-4/5 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-semibold py-2 px-4 rounded-full hover:from-purple-700 hover:to-blue-600 transition duration-300 shadow-sm flex items-center justify-center space-x-2"
+                          >
+                            <ShoppingCartIcon className="w-5 h-5" />
+                            <span>Add to Cart</span>
+                          </button>
+                        </motion.div>
+                      )}
+                    </motion.div>
+                  )
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

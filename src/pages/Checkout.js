@@ -28,6 +28,7 @@ function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const orderSuccess = useSelector(selectOrderSuccess);
+  console.log("orderSuccess", orderSuccess);
   const orderStatus = useSelector(selectOrderStatus);
   const cartStatus = useSelector(selectCartStatus);
   const userStatus = useSelector(selectUserStatus);
@@ -85,10 +86,13 @@ function Checkout() {
 
   return (
     <>
-      {orderSuccess && orderSuccess.paymentMethod === "cash" && (
-        <Navigate to={`/order-success/${orderSuccess.id}`} replace={true} />
+      {orderSuccess && orderSuccess._doc.paymentMethod === "cash" && (
+        <Navigate
+          to={`/order-success/${orderSuccess._doc._id}`}
+          replace={true}
+        />
       )}
-      {orderSuccess && orderSuccess.paymentMethod === "card" && (
+      {orderSuccess && orderSuccess._doc.paymentMethod === "card" && (
         <Navigate to={`/stripe-checkout`} replace={true} />
       )}
       {(orderStatus === "loading" ||

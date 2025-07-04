@@ -9,7 +9,6 @@ function LandingPageWithFooter() {
       <Navbar>
         <LandingPage></LandingPage>
       </Navbar>
-      <Footer></Footer>
     </div>
   );
 }

@@ -25,6 +25,7 @@ export const createOrderAsync = createAsyncThunk(
   "order/createOrder",
   async (orderData, { rejectWithValue }) => {
     try {
+      console.log("orderData", orderData);
       const response = await createOrder(orderData);
       return response.data;
     } catch (error) {

@@ -14,7 +14,9 @@ import React from "react";
 
 // Create a single socket connection to the backend.
 // Ensure the URL matches your backend server (port 3000 in this case).
-const socket = io("http://localhost:8081");
+
+const socket = io("/");
+console.log("socket url updated");
 
 const clientId =
   "445187668823-nch4gt1eorfsf5hergsie4o6qcqr7eil.apps.googleusercontent.com";
